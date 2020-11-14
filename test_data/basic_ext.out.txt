@@ -1,0 +1,603 @@
+Classes found by scanning the development classpath: 1956
+Loading data from database connection.
+Invoking parsers.
+Parsing as stream.
+de.lmu.ifi.dbs.elki.datasource.FileBasedDatabaseConnection.load: 750 ms
+Result added: de.lmu.ifi.dbs.elki.database.relation.DBIDView@148080bb <- de.lmu.ifi.dbs.elki.database.StaticArrayDatabase@64bf3bbf
+Result added: de.lmu.ifi.dbs.elki.database.relation.MaterializedRelation@21213b92 <- de.lmu.ifi.dbs.elki.database.StaticArrayDatabase@64bf3bbf
+Result added: de.lmu.ifi.dbs.elki.database.relation.MaterializedRelation@a67c67e <- de.lmu.ifi.dbs.elki.database.StaticArrayDatabase@64bf3bbf
+OPTICS: 0 [  0%]
+Fallback to linear scan - no index was able to accelerate this query.
+Distance query: de.lmu.ifi.dbs.elki.database.query.distance.SpatialPrimitiveDistanceQuery@2b552920
+Hints: 3
+OPTICS: 0 [  0%] 
+Preprocessing preference vector: 0 [  0%]
+Variances for id 1 / neighbors:kNNList[0.0:1,0.36311847928740826:2,0.589783061811714:7]
+(0.6159 - 0.6159)^2 = sumsq[0] = 0.0
+(0.3099 - 0.3099)^2 = sumsq[1] = 0.0
+(0.6391 - 0.6391)^2 = sumsq[2] = 0.0
+(0.449 - 0.449)^2 = sumsq[3] = 0.0
+(0.5742 - 0.5742)^2 = sumsq[4] = 0.0
+(0.8037 - 0.6159)^2 = sumsq[0] = 0.03526883999999999
+(0.3863 - 0.3099)^2 = sumsq[1] = 0.005836959999999995
+(0.455 - 0.6391)^2 = sumsq[2] = 0.033892809999999995
+(0.6191 - 0.449)^2 = sumsq[3] = 0.028934009999999993
+(0.7413 - 0.5742)^2 = sumsq[4] = 0.02792240999999997
+(0.8373 - 0.6159)^2 = sumsq[0] = 0.08428680000000001
+(0.4308 - 0.3099)^2 = sumsq[1] = 0.020453769999999996
+(0.1505 - 0.6391)^2 = sumsq[2] = 0.27262277
+(0.5493 - 0.449)^2 = sumsq[3] = 0.03899409999999999
+(0.7624 - 0.5742)^2 = sumsq[4] = 0.06334164999999994
+
+Preference vector for id 1
+sumsq[0]=0.08428680000000001 ; alpha=0.006 ; k = 3 ; comparison: 0
+sumsq[1]=0.020453769999999996 ; alpha=0.006 ; k = 3 ; comparison: 0
+sumsq[2]=0.27262277 ; alpha=0.006 ; k = 3 ; comparison: 0
+sumsq[3]=0.03899409999999999 ; alpha=0.006 ; k = 3 ; comparison: 0
+sumsq[4]=0.06334164999999994 ; alpha=0.006 ; k = 3 ; comparison: 0
+                                         OPTICS: 0 [  0%] 
+Preprocessing preference vector: 1 [ 11%]
+Variances for id 2 / neighbors:kNNList[0.0:2,0.31803570554263244:7,0.340089841071444:9]
+(0.8037 - 0.8037)^2 = sumsq[0] = 0.0
+(0.3863 - 0.3863)^2 = sumsq[1] = 0.0
+(0.455 - 0.455)^2 = sumsq[2] = 0.0
+(0.6191 - 0.6191)^2 = sumsq[3] = 0.0
+(0.7413 - 0.7413)^2 = sumsq[4] = 0.0
+(0.8373 - 0.8037)^2 = sumsq[0] = 0.001128960000000005
+(0.4308 - 0.3863)^2 = sumsq[1] = 0.0019802500000000037
+(0.1505 - 0.455)^2 = sumsq[2] = 0.09272024999999999
+(0.5493 - 0.6191)^2 = sumsq[3] = 0.004872039999999996
+(0.7624 - 0.7413)^2 = sumsq[4] = 4.452100000000003E-4
+(0.8144 - 0.8037)^2 = sumsq[0] = 0.001243450000000006
+(0.4259 - 0.3863)^2 = sumsq[1] = 0.0035484100000000053
+(0.1298 - 0.455)^2 = sumsq[2] = 0.19847529000000003
+(0.5337 - 0.6191)^2 = sumsq[3] = 0.012165200000000001
+(0.7718 - 0.7413)^2 = sumsq[4] = 0.0013754600000000054
+
+Preference vector for id 2
+sumsq[0]=0.001243450000000006 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[1]=0.0035484100000000053 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[2]=0.19847529000000003 ; alpha=0.006 ; k = 3 ; comparison: 0
+sumsq[3]=0.012165200000000001 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[4]=0.0013754600000000054 ; alpha=0.006 ; k = 3 ; comparison: 1
+
+Variances for id 3 / neighbors:kNNList[0.0:3,0.5513212221563759:4,0.6491037436342515:5]
+(0.3978 - 0.3978)^2 = sumsq[0] = 0.0
+(0.8662 - 0.8662)^2 = sumsq[1] = 0.0
+(0.7579 - 0.7579)^2 = sumsq[2] = 0.0
+(0.1714 - 0.1714)^2 = sumsq[3] = 0.0
+(0.4108 - 0.4108)^2 = sumsq[4] = 0.0
+(0.0071 - 0.3978)^2 = sumsq[0] = 0.15264649
+(0.8387 - 0.8662)^2 = sumsq[1] = 7.562499999999982E-4
+(0.3702 - 0.7579)^2 = sumsq[2] = 0.15031129000000004
+(0.1559 - 0.1714)^2 = sumsq[3] = 2.4024999999999958E-4
+(0.4117 - 0.4108)^2 = sumsq[4] = 8.100000000000215E-7
+(0.6302 - 0.3978)^2 = sumsq[0] = 0.20665624999999999
+(0.8667 - 0.8662)^2 = sumsq[1] = 7.564999999999983E-4
+(0.1538 - 0.7579)^2 = sumsq[2] = 0.5152481000000002
+(0.1633 - 0.1714)^2 = sumsq[3] = 3.058599999999995E-4
+(0.459 - 0.4108)^2 = sumsq[4] = 0.002324050000000002
+
+Preference vector for id 3
+sumsq[0]=0.20665624999999999 ; alpha=0.006 ; k = 3 ; comparison: 0
+sumsq[1]=7.564999999999983E-4 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[2]=0.5152481000000002 ; alpha=0.006 ; k = 3 ; comparison: 0
+sumsq[3]=3.058599999999995E-4 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[4]=0.002324050000000002 ; alpha=0.006 ; k = 3 ; comparison: 1
+
+Variances for id 4 / neighbors:kNNList[0.0:4,0.5513212221563759:3,0.6619355104540018:5]
+(0.0071 - 0.0071)^2 = sumsq[0] = 0.0
+(0.8387 - 0.8387)^2 = sumsq[1] = 0.0
+(0.3702 - 0.3702)^2 = sumsq[2] = 0.0
+(0.1559 - 0.1559)^2 = sumsq[3] = 0.0
+(0.4117 - 0.4117)^2 = sumsq[4] = 0.0
+(0.3978 - 0.0071)^2 = sumsq[0] = 0.15264649
+(0.8662 - 0.8387)^2 = sumsq[1] = 7.562499999999982E-4
+(0.7579 - 0.3702)^2 = sumsq[2] = 0.15031129000000004
+(0.1714 - 0.1559)^2 = sumsq[3] = 2.4024999999999958E-4
+(0.4108 - 0.4117)^2 = sumsq[4] = 8.100000000000215E-7
+(0.6302 - 0.0071)^2 = sumsq[0] = 0.5409001
+(0.8667 - 0.8387)^2 = sumsq[1] = 0.0015402499999999995
+(0.1538 - 0.3702)^2 = sumsq[2] = 0.19714025000000002
+(0.1633 - 0.1559)^2 = sumsq[3] = 2.950099999999994E-4
+(0.459 - 0.4117)^2 = sumsq[4] = 0.0022381000000000007
+
+Preference vector for id 4
+sumsq[0]=0.5409001 ; alpha=0.006 ; k = 3 ; comparison: 0
+sumsq[1]=0.0015402499999999995 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[2]=0.19714025000000002 ; alpha=0.006 ; k = 3 ; comparison: 0
+sumsq[3]=2.950099999999994E-4 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[4]=0.0022381000000000007 ; alpha=0.006 ; k = 3 ; comparison: 1
+
+Variances for id 5 / neighbors:kNNList[0.0:5,0.6471302341878333:6,0.6491037436342515:3]
+(0.6302 - 0.6302)^2 = sumsq[0] = 0.0
+(0.8667 - 0.8667)^2 = sumsq[1] = 0.0
+(0.1538 - 0.1538)^2 = sumsq[2] = 0.0
+(0.1633 - 0.1633)^2 = sumsq[3] = 0.0
+(0.459 - 0.459)^2 = sumsq[4] = 0.0
+(0.8406 - 0.6302)^2 = sumsq[0] = 0.044268160000000015
+(0.4278 - 0.8667)^2 = sumsq[1] = 0.19263321
+(0.1288 - 0.1538)^2 = sumsq[2] = 6.249999999999997E-4
+(0.4899 - 0.1633)^2 = sumsq[3] = 0.10666756
+(0.7321 - 0.459)^2 = sumsq[4] = 0.07458360999999998
+(0.3978 - 0.6302)^2 = sumsq[0] = 0.09827792000000002
+(0.8662 - 0.8667)^2 = sumsq[1] = 0.19263346
+(0.7579 - 0.1538)^2 = sumsq[2] = 0.3655618100000001
+(0.1714 - 0.1633)^2 = sumsq[3] = 0.10673316999999999
+(0.4108 - 0.459)^2 = sumsq[4] = 0.07690684999999998
+
+Preference vector for id 5
+sumsq[0]=0.09827792000000002 ; alpha=0.006 ; k = 3 ; comparison: 0
+sumsq[1]=0.19263346 ; alpha=0.006 ; k = 3 ; comparison: 0
+sumsq[2]=0.3655618100000001 ; alpha=0.006 ; k = 3 ; comparison: 0
+sumsq[3]=0.10673316999999999 ; alpha=0.006 ; k = 3 ; comparison: 0
+sumsq[4]=0.07690684999999998 ; alpha=0.006 ; k = 3 ; comparison: 0
+
+Variances for id 6 / neighbors:kNNList[0.0:6,0.06469605861256156:9,0.07026542535272949:7]
+(0.8406 - 0.8406)^2 = sumsq[0] = 0.0
+(0.4278 - 0.4278)^2 = sumsq[1] = 0.0
+(0.1288 - 0.1288)^2 = sumsq[2] = 0.0
+(0.4899 - 0.4899)^2 = sumsq[3] = 0.0
+(0.7321 - 0.7321)^2 = sumsq[4] = 0.0
+(0.8144 - 0.8406)^2 = sumsq[0] = 6.864400000000001E-4
+(0.4259 - 0.4278)^2 = sumsq[1] = 3.6100000000000484E-6
+(0.1298 - 0.1288)^2 = sumsq[2] = 1.0000000000000019E-6
+(0.5337 - 0.4899)^2 = sumsq[3] = 0.0019184399999999957
+(0.7718 - 0.7321)^2 = sumsq[4] = 0.0015760900000000055
+(0.8373 - 0.8406)^2 = sumsq[0] = 6.973299999999999E-4
+(0.4308 - 0.4278)^2 = sumsq[1] = 1.2610000000000064E-5
+(0.1505 - 0.1288)^2 = sumsq[2] = 4.718899999999999E-4
+(0.5493 - 0.4899)^2 = sumsq[3] = 0.0054467999999999964
+(0.7624 - 0.7321)^2 = sumsq[4] = 0.002494180000000005
+
+Preference vector for id 6
+sumsq[0]=6.973299999999999E-4 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[1]=1.2610000000000064E-5 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[2]=4.718899999999999E-4 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[3]=0.0054467999999999964 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[4]=0.002494180000000005 ; alpha=0.006 ; k = 3 ; comparison: 1
+
+Variances for id 7 / neighbors:kNNList[0.0:7,0.03617499136143649:9,0.07026542535272949:6]
+(0.8373 - 0.8373)^2 = sumsq[0] = 0.0
+(0.4308 - 0.4308)^2 = sumsq[1] = 0.0
+(0.1505 - 0.1505)^2 = sumsq[2] = 0.0
+(0.5493 - 0.5493)^2 = sumsq[3] = 0.0
+(0.7624 - 0.7624)^2 = sumsq[4] = 0.0
+(0.8144 - 0.8373)^2 = sumsq[0] = 5.244100000000014E-4
+(0.4259 - 0.4308)^2 = sumsq[1] = 2.401000000000015E-5
+(0.1298 - 0.1505)^2 = sumsq[2] = 4.2848999999999985E-4
+(0.5337 - 0.5493)^2 = sumsq[3] = 2.4336000000000182E-4
+(0.7718 - 0.7624)^2 = sumsq[4] = 8.836000000000141E-5
+(0.8406 - 0.8373)^2 = sumsq[0] = 5.353000000000012E-4
+(0.4278 - 0.4308)^2 = sumsq[1] = 3.301000000000017E-5
+(0.1288 - 0.1505)^2 = sumsq[2] = 8.993799999999998E-4
+(0.4899 - 0.5493)^2 = sumsq[3] = 0.0037717200000000027
+(0.7321 - 0.7624)^2 = sumsq[4] = 0.0010064500000000012
+
+Preference vector for id 7
+sumsq[0]=5.353000000000012E-4 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[1]=3.301000000000017E-5 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[2]=8.993799999999998E-4 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[3]=0.0037717200000000027 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[4]=0.0010064500000000012 ; alpha=0.006 ; k = 3 ; comparison: 1
+
+Variances for id 8 / neighbors:kNNList[0.0:8,0.06929949494765449:9,0.0945983615080092:7]
+(0.8102 - 0.8102)^2 = sumsq[0] = 0.0
+(0.4599 - 0.4599)^2 = sumsq[1] = 0.0
+(0.0872 - 0.0872)^2 = sumsq[2] = 0.0
+(0.5188 - 0.5188)^2 = sumsq[3] = 0.0
+(0.8117 - 0.8117)^2 = sumsq[4] = 0.0
+(0.8144 - 0.8102)^2 = sumsq[0] = 1.7639999999999845E-5
+(0.4259 - 0.4599)^2 = sumsq[1] = 0.0011559999999999982
+(0.1298 - 0.0872)^2 = sumsq[2] = 0.00181476
+(0.5337 - 0.5188)^2 = sumsq[3] = 2.2200999999999742E-4
+(0.7718 - 0.8117)^2 = sumsq[4] = 0.0015920099999999948
+(0.8373 - 0.8102)^2 = sumsq[0] = 7.520500000000005E-4
+(0.4308 - 0.4599)^2 = sumsq[1] = 0.002002809999999996
+(0.1505 - 0.0872)^2 = sumsq[2] = 0.005821649999999999
+(0.5493 - 0.5188)^2 = sumsq[3] = 0.0011522599999999957
+(0.7624 - 0.8117)^2 = sumsq[4] = 0.004022499999999996
+
+Preference vector for id 8
+sumsq[0]=7.520500000000005E-4 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[1]=0.002002809999999996 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[2]=0.005821649999999999 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[3]=0.0011522599999999957 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[4]=0.004022499999999996 ; alpha=0.006 ; k = 3 ; comparison: 1
+
+Variances for id 9 / neighbors:kNNList[0.0:9,0.03617499136143649:7,0.06469605861256156:6]
+(0.8144 - 0.8144)^2 = sumsq[0] = 0.0
+(0.4259 - 0.4259)^2 = sumsq[1] = 0.0
+(0.1298 - 0.1298)^2 = sumsq[2] = 0.0
+(0.5337 - 0.5337)^2 = sumsq[3] = 0.0
+(0.7718 - 0.7718)^2 = sumsq[4] = 0.0
+(0.8373 - 0.8144)^2 = sumsq[0] = 5.244100000000014E-4
+(0.4308 - 0.4259)^2 = sumsq[1] = 2.401000000000015E-5
+(0.1505 - 0.1298)^2 = sumsq[2] = 4.2848999999999985E-4
+(0.5493 - 0.5337)^2 = sumsq[3] = 2.4336000000000182E-4
+(0.7624 - 0.7718)^2 = sumsq[4] = 8.836000000000141E-5
+(0.8406 - 0.8144)^2 = sumsq[0] = 0.0012108500000000016
+(0.4278 - 0.4259)^2 = sumsq[1] = 2.76200000000002E-5
+(0.1288 - 0.1298)^2 = sumsq[2] = 4.294899999999999E-4
+(0.4899 - 0.5337)^2 = sumsq[3] = 0.0021617999999999976
+(0.7321 - 0.7718)^2 = sumsq[4] = 0.001664450000000007
+
+Preference vector for id 9
+sumsq[0]=0.0012108500000000016 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[1]=2.76200000000002E-5 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[2]=4.294899999999999E-4 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[3]=0.0021617999999999976 ; alpha=0.006 ; k = 3 ; comparison: 1
+sumsq[4]=0.001664450000000007 ; alpha=0.006 ; k = 3 ; comparison: 1
+                                         
+Preprocessing preference vector: 9 [100%]
+OPTICS: 0 [  0%]
+de.lmu.ifi.dbs.elki.index.preprocessed.preference.HiSCPreferenceVectorIndex.runtime.ms: 465
+main HISC loop, id1 = 1 ; id2 = 2
+v1: 0.6159 0.3099 0.6391 0.449 0.5742 ; v2: 0.8037 0.3863 0.455 0.6191 0.7413 ; pv1 = 00000 ; pv2 = 11011
+weighted dist1: 0.0
+weighted dist2: 0.31298916914168123
+subspaceDim 6
+common pv 00000
+prevdim: 2147483647 ; current subspaceDim: 6
+orthogonal distance with common preference vector: 0.0
+set predecessor 2 --> 1
+
+---
+main HISC loop, id1 = 1 ; id2 = 3
+v1: 0.6159 0.3099 0.6391 0.449 0.5742 ; v2: 0.3978 0.8662 0.7579 0.1714 0.4108 ; pv1 = 00000 ; pv2 = 01011
+weighted dist1: 0.0
+weighted dist2: 0.6428304675417928
+subspaceDim 6
+common pv 00000
+prevdim: 2147483647 ; current subspaceDim: 6
+orthogonal distance with common preference vector: 0.0
+set predecessor 3 --> 1
+
+---
+main HISC loop, id1 = 1 ; id2 = 4
+v1: 0.6159 0.3099 0.6391 0.449 0.5742 ; v2: 0.0071 0.8387 0.3702 0.1559 0.4117 ; pv1 = 00000 ; pv2 = 01011
+weighted dist1: 0.0
+weighted dist2: 0.6260537516859076
+subspaceDim 6
+common pv 00000
+prevdim: 2147483647 ; current subspaceDim: 6
+orthogonal distance with common preference vector: 0.0
+set predecessor 4 --> 1
+
+---
+main HISC loop, id1 = 1 ; id2 = 5
+v1: 0.6159 0.3099 0.6391 0.449 0.5742 ; v2: 0.6302 0.8667 0.1538 0.1633 0.459 ; pv1 = 00000 ; pv2 = 00000
+prevdim: 2147483647 ; current subspaceDim: 5
+orthogonal distance with common preference vector: 0.0
+set predecessor 5 --> 1
+
+---
+main HISC loop, id1 = 1 ; id2 = 6
+v1: 0.6159 0.3099 0.6391 0.449 0.5742 ; v2: 0.8406 0.4278 0.1288 0.4899 0.7321 ; pv1 = 00000 ; pv2 = 11111
+weighted dist1: 0.0
+weighted dist2: 0.5927915400880819
+subspaceDim 6
+common pv 00000
+prevdim: 2147483647 ; current subspaceDim: 6
+orthogonal distance with common preference vector: 0.0
+set predecessor 6 --> 1
+
+---
+main HISC loop, id1 = 1 ; id2 = 7
+v1: 0.6159 0.3099 0.6391 0.449 0.5742 ; v2: 0.8373 0.4308 0.1505 0.5493 0.7624 ; pv1 = 00000 ; pv2 = 11111
+weighted dist1: 0.0
+weighted dist2: 0.589783061811714
+subspaceDim 6
+common pv 00000
+prevdim: 2147483647 ; current subspaceDim: 6
+orthogonal distance with common preference vector: 0.0
+set predecessor 7 --> 1
+
+---
+main HISC loop, id1 = 1 ; id2 = 8
+v1: 0.6159 0.3099 0.6391 0.449 0.5742 ; v2: 0.8102 0.4599 0.0872 0.5188 0.8117 ; pv1 = 00000 ; pv2 = 11111
+weighted dist1: 0.0
+weighted dist2: 0.652782038662217
+subspaceDim 6
+common pv 00000
+prevdim: 2147483647 ; current subspaceDim: 6
+orthogonal distance with common preference vector: 0.0
+set predecessor 8 --> 1
+
+---
+main HISC loop, id1 = 1 ; id2 = 9
+v1: 0.6159 0.3099 0.6391 0.449 0.5742 ; v2: 0.8144 0.4259 0.1298 0.5337 0.7718 ; pv1 = 00000 ; pv2 = 11111
+weighted dist1: 0.0
+weighted dist2: 0.5987191244648862
+subspaceDim 6
+common pv 00000
+prevdim: 2147483647 ; current subspaceDim: 6
+orthogonal distance with common preference vector: 0.0
+set predecessor 9 --> 1
+
+---
+OPTICS: 1 [ 11%]main HISC loop, id1 = 9 ; id2 = 2
+v1: 0.8144 0.4259 0.1298 0.5337 0.7718 ; v2: 0.8037 0.3863 0.455 0.6191 0.7413 ; pv1 = 11111 ; pv2 = 11011
+
+weighted dist1: 0.340089841071444
+weighted dist2: 0.09952919169771256
+subspaceDim 2
+common pv 11011
+prevdim: 6 ; current subspaceDim: 2
+orthogonal distance with common preference vector: 0.09952919169771256
+set predecessor 2 --> 9
+
+---
+main HISC loop, id1 = 9 ; id2 = 3
+v1: 0.8144 0.4259 0.1298 0.5337 0.7718 ; v2: 0.3978 0.8662 0.7579 0.1714 0.4108 ; pv1 = 11111 ; pv2 = 01011
+weighted dist1: 1.0116874764471486
+weighted dist2: 0.6748676759187685
+subspaceDim 3
+common pv 01011
+prevdim: 6 ; current subspaceDim: 3
+orthogonal distance with common preference vector: 0.6748676759187685
+set predecessor 3 --> 9
+
+---
+main HISC loop, id1 = 9 ; id2 = 4
+v1: 0.8144 0.4259 0.1298 0.5337 0.7718 ; v2: 0.0071 0.8387 0.3702 0.1559 0.4117 ; pv1 = 11111 ; pv2 = 01011
+weighted dist1: 1.073468276196367
+weighted dist2: 0.665438719943467
+subspaceDim 3
+common pv 01011
+prevdim: 6 ; current subspaceDim: 3
+orthogonal distance with common preference vector: 0.665438719943467
+set predecessor 4 --> 9
+
+---
+main HISC loop, id1 = 9 ; id2 = 5
+v1: 0.8144 0.4259 0.1298 0.5337 0.7718 ; v2: 0.6302 0.8667 0.1538 0.1633 0.459 ; pv1 = 11111 ; pv2 = 00000
+weighted dist1: 0.6810655475062588
+weighted dist2: 0.0
+subspaceDim 6
+common pv 00000
+prevdim: 5 ; current subspaceDim: 6 : cannot be better, ignore & continue
+main HISC loop, id1 = 9 ; id2 = 6
+v1: 0.8144 0.4259 0.1298 0.5337 0.7718 ; v2: 0.8406 0.4278 0.1288 0.4899 0.7321 ; pv1 = 11111 ; pv2 = 11111
+weighted dist1: 0.06469605861256156
+weighted dist2: 0.06469605861256156
+subspaceDim 1
+common pv 11111
+prevdim: 6 ; current subspaceDim: 1
+orthogonal distance with common preference vector: 0.06469605861256156
+set predecessor 6 --> 9
+
+---
+main HISC loop, id1 = 9 ; id2 = 7
+v1: 0.8144 0.4259 0.1298 0.5337 0.7718 ; v2: 0.8373 0.4308 0.1505 0.5493 0.7624 ; pv1 = 11111 ; pv2 = 11111
+weighted dist1: 0.03617499136143649
+weighted dist2: 0.03617499136143649
+subspaceDim 1
+common pv 11111
+prevdim: 6 ; current subspaceDim: 1
+orthogonal distance with common preference vector: 0.03617499136143649
+set predecessor 7 --> 9
+
+---
+main HISC loop, id1 = 9 ; id2 = 8
+v1: 0.8144 0.4259 0.1298 0.5337 0.7718 ; v2: 0.8102 0.4599 0.0872 0.5188 0.8117 ; pv1 = 11111 ; pv2 = 11111
+weighted dist1: 0.06929949494765449
+weighted dist2: 0.06929949494765449
+subspaceDim 1
+common pv 11111
+prevdim: 6 ; current subspaceDim: 1
+orthogonal distance with common preference vector: 0.06929949494765449
+set predecessor 8 --> 9
+
+---
+main HISC loop, id1 = 5 ; id2 = 2
+v1: 0.6302 0.8667 0.1538 0.1633 0.459 ; v2: 0.8037 0.3863 0.455 0.6191 0.7413 ; pv1 = 00000 ; pv2 = 11011
+weighted dist1: 0.0
+weighted dist2: 0.7404953342189267
+subspaceDim 6
+common pv 00000
+prevdim: 2 ; current subspaceDim: 6 : cannot be better, ignore & continue
+main HISC loop, id1 = 5 ; id2 = 3
+v1: 0.6302 0.8667 0.1538 0.1633 0.459 ; v2: 0.3978 0.8662 0.7579 0.1714 0.4108 ; pv1 = 00000 ; pv2 = 01011
+weighted dist1: 0.0
+weighted dist2: 0.04887842059641455
+subspaceDim 6
+common pv 00000
+prevdim: 3 ; current subspaceDim: 6 : cannot be better, ignore & continue
+main HISC loop, id1 = 5 ; id2 = 4
+v1: 0.6302 0.8667 0.1538 0.1633 0.459 ; v2: 0.0071 0.8387 0.3702 0.1559 0.4117 ; pv1 = 00000 ; pv2 = 01011
+weighted dist1: 0.0
+weighted dist2: 0.05546214925514519
+subspaceDim 6
+common pv 00000
+prevdim: 3 ; current subspaceDim: 6 : cannot be better, ignore & continue
+main HISC loop, id1 = 5 ; id2 = 6
+v1: 0.6302 0.8667 0.1538 0.1633 0.459 ; v2: 0.8406 0.4278 0.1288 0.4899 0.7321 ; pv1 = 00000 ; pv2 = 11111
+weighted dist1: 0.0
+weighted dist2: 0.6471302341878333
+subspaceDim 6
+common pv 00000
+prevdim: 1 ; current subspaceDim: 6 : cannot be better, ignore & continue
+main HISC loop, id1 = 5 ; id2 = 7
+v1: 0.6302 0.8667 0.1538 0.1633 0.459 ; v2: 0.8373 0.4308 0.1505 0.5493 0.7624 ; pv1 = 00000 ; pv2 = 11111
+weighted dist1: 0.0
+weighted dist2: 0.6884458366494782
+subspaceDim 6
+common pv 00000
+prevdim: 1 ; current subspaceDim: 6 : cannot be better, ignore & continue
+main HISC loop, id1 = 5 ; id2 = 8
+v1: 0.6302 0.8667 0.1538 0.1633 0.459 ; v2: 0.8102 0.4599 0.0872 0.5188 0.8117 ; pv1 = 00000 ; pv2 = 11111
+weighted dist1: 0.0
+weighted dist2: 0.6731265408524612
+subspaceDim 6
+common pv 00000
+prevdim: 1 ; current subspaceDim: 6 : cannot be better, ignore & continue
+main HISC loop, id1 = 4 ; id2 = 2
+v1: 0.0071 0.8387 0.3702 0.1559 0.4117 ; v2: 0.8037 0.3863 0.455 0.6191 0.7413 ; pv1 = 01011 ; pv2 = 11011
+weighted dist1: 0.7265371015990855
+weighted dist2: 1.0781594130739665
+subspaceDim 3
+common pv 01011
+prevdim: 2 ; current subspaceDim: 3 : cannot be better, ignore & continue
+main HISC loop, id1 = 4 ; id2 = 3
+v1: 0.0071 0.8387 0.3702 0.1559 0.4117 ; v2: 0.3978 0.8662 0.7579 0.1714 0.4108 ; pv1 = 01011 ; pv2 = 01011
+weighted dist1: 0.03158021532542167
+weighted dist2: 0.03158021532542167
+subspaceDim 3
+common pv 01011
+prevdim: 3 ; current subspaceDim: 3
+orthogonal distance with common preference vector: 0.03158021532542167
+set predecessor 3 --> 4
+
+---
+main HISC loop, id1 = 4 ; id2 = 6
+v1: 0.0071 0.8387 0.3702 0.1559 0.4117 ; v2: 0.8406 0.4278 0.1288 0.4899 0.7321 ; pv1 = 01011 ; pv2 = 11111
+weighted dist1: 0.618911116397177
+weighted dist2: 1.0658551402512444
+subspaceDim 3
+common pv 01011
+prevdim: 1 ; current subspaceDim: 3 : cannot be better, ignore & continue
+main HISC loop, id1 = 4 ; id2 = 7
+v1: 0.0071 0.8387 0.3702 0.1559 0.4117 ; v2: 0.8373 0.4308 0.1505 0.5493 0.7624 ; pv1 = 01011 ; pv2 = 11111
+weighted dist1: 0.6664356383027545
+weighted dist2: 1.0870310897117892
+subspaceDim 3
+common pv 01011
+prevdim: 1 ; current subspaceDim: 3 : cannot be better, ignore & continue
+main HISC loop, id1 = 4 ; id2 = 8
+v1: 0.0071 0.8387 0.3702 0.1559 0.4117 ; v2: 0.8102 0.4599 0.0872 0.5188 0.8117 ; pv1 = 01011 ; pv2 = 11111
+weighted dist1: 0.6596861753894802
+weighted dist2: 1.0771464431543187
+subspaceDim 3
+common pv 01011
+prevdim: 1 ; current subspaceDim: 3 : cannot be better, ignore & continue
+main HISC loop, id1 = 3 ; id2 = 2
+v1: 0.3978 0.8662 0.7579 0.1714 0.4108 ; v2: 0.8037 0.3863 0.455 0.6191 0.7413 ; pv1 = 01011 ; pv2 = 11011
+weighted dist1: 0.7348262039421294
+weighted dist2: 0.8394786239089117
+subspaceDim 3
+common pv 01011
+prevdim: 2 ; current subspaceDim: 3 : cannot be better, ignore & continue
+main HISC loop, id1 = 3 ; id2 = 6
+v1: 0.3978 0.8662 0.7579 0.1714 0.4108 ; v2: 0.8406 0.4278 0.1288 0.4899 0.7321 ; pv1 = 01011 ; pv2 = 11111
+weighted dist1: 0.6299765868665279
+weighted dist2: 0.9943385489862092
+subspaceDim 3
+common pv 01011
+prevdim: 1 ; current subspaceDim: 3 : cannot be better, ignore & continue
+main HISC loop, id1 = 3 ; id2 = 7
+v1: 0.3978 0.8662 0.7579 0.1714 0.4108 ; v2: 0.8373 0.4308 0.1505 0.5493 0.7624 ; pv1 = 01011 ; pv2 = 11111
+weighted dist1: 0.6752807786395226
+weighted dist2: 1.0090089890580758
+subspaceDim 3
+common pv 01011
+prevdim: 1 ; current subspaceDim: 3 : cannot be better, ignore & continue
+main HISC loop, id1 = 3 ; id2 = 8
+v1: 0.3978 0.8662 0.7579 0.1714 0.4108 ; v2: 0.8102 0.4599 0.0872 0.5188 0.8117 ; pv1 = 01011 ; pv2 = 11111
+weighted dist1: 0.6681970218431088
+weighted dist2: 1.0326662142241316
+subspaceDim 3
+common pv 01011
+prevdim: 1 ; current subspaceDim: 3 : cannot be better, ignore & continue
+main HISC loop, id1 = 2 ; id2 = 6
+v1: 0.8037 0.3863 0.455 0.6191 0.7413 ; v2: 0.8406 0.4278 0.1288 0.4899 0.7321 ; pv1 = 11011 ; pv2 = 11111
+weighted dist1: 0.1409295568715094
+weighted dist2: 0.3553414977173367
+subspaceDim 2
+common pv 11011
+prevdim: 1 ; current subspaceDim: 2 : cannot be better, ignore & continue
+main HISC loop, id1 = 2 ; id2 = 7
+v1: 0.8037 0.3863 0.455 0.6191 0.7413 ; v2: 0.8373 0.4308 0.1505 0.5493 0.7624 ; pv1 = 11011 ; pv2 = 11111
+weighted dist1: 0.09179575153567841
+weighted dist2: 0.31803570554263244
+subspaceDim 2
+common pv 11011
+prevdim: 1 ; current subspaceDim: 2 : cannot be better, ignore & continue
+main HISC loop, id1 = 2 ; id2 = 8
+v1: 0.8037 0.3863 0.455 0.6191 0.7413 ; v2: 0.8102 0.4599 0.0872 0.5188 0.8117 ; pv1 = 11011 ; pv2 = 11111
+weighted dist1: 0.14309248757359694
+weighted dist2: 0.39465465916418624
+subspaceDim 2
+common pv 11011
+prevdim: 1 ; current subspaceDim: 2 : cannot be better, ignore & continue
+main HISC loop, id1 = 7 ; id2 = 6
+v1: 0.8373 0.4308 0.1505 0.5493 0.7624 ; v2: 0.8406 0.4278 0.1288 0.4899 0.7321 ; pv1 = 11111 ; pv2 = 11111
+weighted dist1: 0.07026542535272949
+weighted dist2: 0.07026542535272949
+subspaceDim 1
+common pv 11111
+prevdim: 1 ; current subspaceDim: 1
+orthogonal distance with common preference vector: 0.07026542535272949
+prevdist <= orthogonalDistance, ignore & continue
+main HISC loop, id1 = 7 ; id2 = 8
+v1: 0.8373 0.4308 0.1505 0.5493 0.7624 ; v2: 0.8102 0.4599 0.0872 0.5188 0.8117 ; pv1 = 11111 ; pv2 = 11111
+weighted dist1: 0.0945983615080092
+weighted dist2: 0.0945983615080092
+subspaceDim 1
+common pv 11111
+prevdim: 1 ; current subspaceDim: 1
+orthogonal distance with common preference vector: 0.0945983615080092
+prevdist <= orthogonalDistance, ignore & continue
+main HISC loop, id1 = 6 ; id2 = 8
+v1: 0.8406 0.4278 0.1288 0.4899 0.7321 ; v2: 0.8102 0.4599 0.0872 0.5188 0.8117 ; pv1 = 11111 ; pv2 = 11111
+weighted dist1: 0.10419452960688483
+weighted dist2: 0.10419452960688483
+subspaceDim 1
+common pv 11111
+prevdim: 1 ; current subspaceDim: 1
+orthogonal distance with common preference vector: 0.10419452960688483
+prevdist <= orthogonalDistance, ignore & continue
+OPTICS: 9 [100%]
+Result added: de.lmu.ifi.dbs.elki.database.relation.MaterializedDoubleRelation@10bbd20a <- de.lmu.ifi.dbs.elki.algorithm.clustering.optics.CorrelationClusterOrder@64729b1e
+Result added: de.lmu.ifi.dbs.elki.database.relation.MaterializedRelation@48503868 <- de.lmu.ifi.dbs.elki.algorithm.clustering.optics.CorrelationClusterOrder@64729b1e
+de.lmu.ifi.dbs.elki.algorithm.clustering.subspace.HiSC.runtime: 1342 ms
+Result added: de.lmu.ifi.dbs.elki.database.relation.MaterializedDoubleRelation@10bbd20a <- de.lmu.ifi.dbs.elki.algorithm.clustering.optics.CorrelationClusterOrder@64729b1e
+Result added: de.lmu.ifi.dbs.elki.database.relation.MaterializedRelation@48503868 <- de.lmu.ifi.dbs.elki.algorithm.clustering.optics.CorrelationClusterOrder@64729b1e
+Result added: de.lmu.ifi.dbs.elki.algorithm.clustering.optics.CorrelationClusterOrder@64729b1e <- de.lmu.ifi.dbs.elki.database.StaticArrayDatabase@64bf3bbf
+Result added: de.lmu.ifi.dbs.elki.result.SettingsResult@184f6be2 <- de.lmu.ifi.dbs.elki.database.StaticArrayDatabase@64bf3bbf
+Number of new outlier results: 0
+# Settings:
+# de.lmu.ifi.dbs.elki.workflow.InputStep
+# -db StaticArrayDatabase
+# 
+# de.lmu.ifi.dbs.elki.database.StaticArrayDatabase
+# -dbc FileBasedDatabaseConnection
+# 
+# de.lmu.ifi.dbs.elki.datasource.FileBasedDatabaseConnection
+# -dbc.in /mnt/c/Users/Max/Google Drive/Vorlesungsunterlagen/Data Mining/elki-0.7.5/sources/basic_ext.csv
+# -dbc.parser NumberVectorLabelParser
+# 
+# de.lmu.ifi.dbs.elki.datasource.parser.CSVReaderFormat
+# -parser.colsep \s*[,;\s]\s*
+# -parser.quote "'
+# -string.comment ^\s*(#|//|;).*$
+# 
+# de.lmu.ifi.dbs.elki.datasource.parser.NumberVectorLabelParser
+# -parser.labelIndices [unset]
+# -parser.vector-type DoubleVector
+# 
+# de.lmu.ifi.dbs.elki.datasource.FileBasedDatabaseConnection
+# -dbc.filter [unset]
+# 
+# de.lmu.ifi.dbs.elki.database.StaticArrayDatabase
+# -db.index [unset]
+# 
+# de.lmu.ifi.dbs.elki.workflow.AlgorithmStep
+# -time false
+# -algorithm clustering.subspace.HiSC
+# 
+# de.lmu.ifi.dbs.elki.index.preprocessed.preference.HiSCPreferenceVectorIndex$Factory
+# -hisc.alpha 0.006
+# -hisc.k 3
+# 
+# de.lmu.ifi.dbs.elki.workflow.EvaluationStep
+# -evaluator AutomaticEvaluation
+ID=1 0.6159 0.3099 0.6391 0.449 0.5742 Noise reachdist=Infinity predecessor=null
+ID=9 0.8144 0.4259 0.1298 0.5337 0.7718 Cluster3 reachdist=0.0 predecessor=1
+ID=5 0.6302 0.8667 0.1538 0.1633 0.459 Cluster2 reachdist=0.0 predecessor=1
+ID=4 0.0071 0.8387 0.3702 0.1559 0.4117 Cluster2 reachdist=0.665438719943467 predecessor=9
+ID=3 0.3978 0.8662 0.7579 0.1714 0.4108 Cluster2 reachdist=0.03158021532542167 predecessor=4
+ID=2 0.8037 0.3863 0.455 0.6191 0.7413 Noise reachdist=0.09952919169771256 predecessor=9
+ID=7 0.8373 0.4308 0.1505 0.5493 0.7624 Cluster3 reachdist=0.03617499136143649 predecessor=9
+ID=6 0.8406 0.4278 0.1288 0.4899 0.7321 Cluster3 reachdist=0.06469605861256156 predecessor=9
+ID=8 0.8102 0.4599 0.0872 0.5188 0.8117 Cluster3 reachdist=0.06929949494765449 predecessor=9

@@ -1,0 +1,3447 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="text/ecmascript" width="20cm" zoomAndPan="magnify" contentStyleType="text/css" height="11.0756972112cm" viewBox="0 0 8.4870503597 4.7" preserveAspectRatio="xMidYMid meet" version="1.0">
+<defs>
+<filter width="140%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:actuate="onLoad" id="shadow-effect" height="140%" xlink:show="other">
+<feOffset dx="0.1" dy="0.1" in="SourceAlpha" result="off"/>
+<feGaussianBlur result="blur" stdDeviation="0.1" in="off"/>
+<feBlend in2="blur" mode="normal" in="SourceGraphic"/>
+</filter>
+<linearGradient x1="0" xmlns:xlink="http://www.w3.org/1999/xlink" y1="0" x2="0" y2="1" xlink:type="simple" xlink:actuate="onLoad" id="light-gradient" xlink:show="other">
+<stop stop-color="white" stop-opacity="1" offset="0"/>
+<stop stop-color="white" stop-opacity="0" offset=".4"/>
+<stop stop-color="black" stop-opacity="0" offset=".6"/>
+<stop stop-color="black" stop-opacity=".5" offset="1"/>
+</linearGradient>
+</defs>
+<style type="text/css" xml:space="preserve">
+.s0_100{stroke:#ed420e;
+stroke-width:0.16666666666666666;
+}
+
+.opticsPlotMarker{fill:darkblue;
+opacity:0.25;
+}
+
+.DObutton{opacity:0.01;
+fill:grey;
+cursor:pointer;
+}
+
+.opticsPlotLine{stroke:black ;
+stroke-width:0.25;
+}
+
+.Dataline_2{stroke-linecap:round;
+stroke-linejoin:round;
+fill:none;
+stroke:#4548a5;
+stroke-width:0.25;
+}
+
+.s1_100{stroke:#fdca19;
+stroke-width:0.16666666666666666;
+}
+
+.Dataline_1{stroke-linecap:round;
+stroke-linejoin:round;
+fill:none;
+stroke:#fdca19;
+stroke-width:0.25;
+}
+
+.axis{stroke:black;
+stroke-width:0.2;
+}
+
+.mean-marker{opacity:0.7;
+}
+
+.selectionCube{stroke:darkblue;
+stroke-opacity:0.25;
+stroke-width:0.5;
+stroke-linecap:round;
+stroke-linejoin:round;
+fill:darkblue;
+fill-opacity:0.25;
+}
+
+.selectionConvexHull{stroke:darkblue;
+stroke-width:0.5;
+fill:darkblue;
+opacity:.25;
+stroke-linecap:round;
+stroke-linejoin:round;
+}
+
+.paxis-button{opacity:0.1;
+fill:grey;
+}
+
+.SelectionLine{stroke:darkblue;
+stroke-opacity:0.25;
+stroke-width:1.0;
+stroke-linecap:round;
+stroke-linejoin:round;
+fill:none;
+}
+
+.axis-label{fill:black;
+font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;
+font-size:2.0;
+}
+
+.key-entry{font-size:0.7000000000000001;
+font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;
+fill:black;
+}
+
+.Dataline_0{stroke-linecap:round;
+stroke-linejoin:round;
+fill:none;
+stroke:#ed420e;
+stroke-width:0.25;
+}
+
+.key-caption{font-size:0.7000000000000001;
+font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;
+fill:black;
+font-weight:bold;
+}
+
+.s0_50{stroke:#ed420e;
+stroke-width:0.08333333333333333;
+}
+
+.s2_50{stroke:#4548a5;
+stroke-width:0.08333333333333333;
+fill:none;
+}
+
+.selectionAxisRange{stroke:darkblue;
+stroke-opacity:0.25;
+stroke-width:0.5;
+stroke-linecap:round;
+stroke-linejoin:round;
+fill:darkblue;
+fill-opacity:0.25;
+}
+
+.DOarrow{stroke:darkgrey;
+stroke-width:0.16666666666666666;
+fill:black;
+}
+
+.axis-tick{stroke:grey;
+stroke-width:0.2;
+}
+
+.SelectDimensionOrder{opacity:0.1;
+fill:blue;
+}
+
+.paxis-label{fill:black;
+font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;
+font-size:2.0;
+text-anchor:middle;
+}
+
+.DOborder{stroke:grey;
+stroke-width:0.16666666666666666;
+fill:none;
+}
+
+.bin1{fill:#fdca19;
+}
+
+.bin2{fill:#4548a5;
+}
+
+.bin0{fill:#ed420e;
+}
+
+.h{fill-opacity:0.25;
+}
+
+.mean-center{stroke:black;
+stroke-width:0.1;
+}
+
+.key-hierarchy{stroke:black;
+stroke-width:0.1;
+}
+
+.SAVbutton{opacity:0.01;
+fill:grey;
+cursor:pointer;
+}
+
+.s1_50{stroke:#fdca19;
+stroke-width:0.08333333333333333;
+}
+
+.selectionCubeFrame{stroke:darkblue;
+stroke-opacity:0.25;
+stroke-width:0.5;
+}
+
+.s{fill:red;
+fill-opacity:0;
+cursor:pointer;
+}
+
+.SAVborder{stroke:grey;
+stroke-width:0.25;
+fill:none;
+}
+
+.SAVbuttoncross{stroke:black;
+stroke-width:0.375;
+fill:none;
+}
+
+.background{fill:white;
+}
+
+.s2_100{stroke:#4548a5;
+stroke-width:0.16666666666666666;
+fill:none;
+}
+
+.opticsPlotEpsilonValue{fill:black;
+font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;
+font-size:2.0;
+}
+
+.bin-1{fill:black;
+fill-opacity:1.0;
+}
+
+.SelectAxisVisibility{opacity:0.1;
+fill:blue;
+}
+
+.opticsPlotRangeMarker{fill:darkblue;
+opacity:0.25;
+}
+</style>
+<g>
+<g transform="translate(7.1 0.0)">
+<g>
+<g transform="scale(0.0980392157) translate(0.1 3.6)">
+<text x="0.1" class="key-caption" y="0.7">By Label Clustering</text>
+<g>
+<line y2="1.7272727273" x1="0.3" x2="0.3" class="s0_50" y1="1.2727272727"/>
+<line y2="1.5" x1="0.0727272727" x2="0.5272727273" class="s0_50" y1="1.5"/>
+</g>
+<text x="0.7" class="key-entry" y="1.7">Cluster2</text>
+<g>
+<line y2="2.6767767031" x1="0.1232232969" x2="0.4767767031" class="s1_50" y1="2.3232232969"/>
+<line y2="2.3232232969" x1="0.1232232969" x2="0.4767767031" class="s1_50" y1="2.6767767031"/>
+</g>
+<text x="0.7" class="key-entry" y="2.7">Cluster3</text>
+<g>
+<circle r="0.2272727273" class="s2_50" cx="0.3" cy="3.5"/>
+</g>
+<text x="0.7" class="key-entry" y="3.7">Noise</text>
+</g>
+</g>
+</g>
+<g transform="translate(0.0 0.6)"/>
+<g transform="translate(0.1 0.6)">
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<line y2="50" x1="-50" x2="50" class="axis" y1="50"/>
+<line y2="49" x1="-50" x2="-50" class="axis-tick" y1="51"/>
+<text x="-50" y="53.2" class="axis-label" text-anchor="middle">0</text>
+<line y2="49" x1="-38.8888888889" x2="-38.8888888889" class="axis-tick" y1="51"/>
+<text x="-38.8888888889" y="53.2" class="axis-label" text-anchor="middle">0.1</text>
+<line y2="49" x1="-27.7777777778" x2="-27.7777777778" class="axis-tick" y1="51"/>
+<text x="-27.7777777778" y="53.2" class="axis-label" text-anchor="middle">0.2</text>
+<line y2="49" x1="-16.6666666667" x2="-16.6666666667" class="axis-tick" y1="51"/>
+<text x="-16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="49" x1="-5.5555555556" x2="-5.5555555556" class="axis-tick" y1="51"/>
+<text x="-5.5555555556" y="53.2" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="49" x1="5.5555555556" x2="5.5555555556" class="axis-tick" y1="51"/>
+<text x="5.5555555556" y="53.2" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="49" x1="16.6666666667" x2="16.6666666667" class="axis-tick" y1="51"/>
+<text x="16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="49" x1="27.7777777778" x2="27.7777777778" class="axis-tick" y1="51"/>
+<text x="27.7777777778" y="53.2" class="axis-label" text-anchor="middle">0.7</text>
+<line y2="49" x1="38.8888888889" x2="38.8888888889" class="axis-tick" y1="51"/>
+<text x="38.8888888889" y="53.2" class="axis-label" text-anchor="middle">0.8</text>
+<line y2="49" x1="50" x2="50" class="axis-tick" y1="51"/>
+<text x="50" y="53.2" class="axis-label" text-anchor="middle">0.9</text>
+<text x="52" y="52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="start">Column 0</text>
+<line y2="-50" x1="-50" x2="-50" class="axis" y1="50"/>
+<line y2="50" x1="-49" x2="-51" class="axis-tick" y1="50"/>
+<text x="-52.5" y="50.7" class="axis-label" text-anchor="end">0.3</text>
+<line y2="33.3333333333" x1="-49" x2="-51" class="axis-tick" y1="33.3333333333"/>
+<text x="-52.5" y="34.0333333333" class="axis-label" text-anchor="end">0.4</text>
+<line y2="16.6666666667" x1="-49" x2="-51" class="axis-tick" y1="16.6666666667"/>
+<text x="-52.5" y="17.3666666667" class="axis-label" text-anchor="end">0.5</text>
+<line y2="-0" x1="-49" x2="-51" class="axis-tick" y1="-0"/>
+<text x="-52.5" y="0.7" class="axis-label" text-anchor="end">0.6</text>
+<line y2="-16.6666666667" x1="-49" x2="-51" class="axis-tick" y1="-16.6666666667"/>
+<text x="-52.5" y="-15.9666666667" class="axis-label" text-anchor="end">0.7</text>
+<line y2="-33.3333333333" x1="-49" x2="-51" class="axis-tick" y1="-33.3333333333"/>
+<text x="-52.5" y="-32.6333333333" class="axis-label" text-anchor="end">0.8</text>
+<line y2="-50" x1="-49" x2="-51" class="axis-tick" y1="-50"/>
+<text x="-52.5" y="-49.3" class="axis-label" text-anchor="end">0.9</text>
+<text x="-52" y="-52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="end">Column 1</text>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<g>
+<circle r="0.4545454545" class="s2_100" cx="18.4333333333" cy="48.35"/>
+</g>
+<g>
+<circle r="0.4545454545" class="s2_100" cx="39.3" cy="35.6166666667"/>
+</g>
+<g>
+<line y2="-43.9121212121" x1="-5.8" x2="-5.8" class="s0_100" y1="-44.8212121212"/>
+<line y2="-44.3666666667" x1="-6.2545454545" x2="-5.3454545455" class="s0_100" y1="-44.3666666667"/>
+</g>
+<g>
+<line y2="-39.3287878788" x1="-49.2111111111" x2="-49.2111111111" class="s0_100" y1="-40.2378787879"/>
+<line y2="-39.7833333333" x1="-49.6656565657" x2="-48.7565656566" class="s0_100" y1="-39.7833333333"/>
+</g>
+<g>
+<line y2="-43.9954545455" x1="20.0222222222" x2="20.0222222222" class="s0_100" y1="-44.9045454545"/>
+<line y2="-44.45" x1="19.5676767677" x2="20.4767676768" class="s0_100" y1="-44.45"/>
+</g>
+<g>
+<line y2="29.0535534062" x1="43.0464465938" x2="43.7535534062" class="s1_100" y1="28.3464465938"/>
+<line y2="28.3464465938" x1="43.0464465938" x2="43.7535534062" class="s1_100" y1="29.0535534062"/>
+</g>
+<g>
+<line y2="28.5535534062" x1="42.6797799271" x2="43.3868867395" class="s1_100" y1="27.8464465938"/>
+<line y2="27.8464465938" x1="42.6797799271" x2="43.3868867395" class="s1_100" y1="28.5535534062"/>
+</g>
+<g>
+<line y2="23.7035534062" x1="39.668668816" x2="40.3757756284" class="s1_100" y1="22.9964465938"/>
+<line y2="22.9964465938" x1="39.668668816" x2="40.3757756284" class="s1_100" y1="23.7035534062"/>
+</g>
+<g>
+<line y2="29.3702200729" x1="40.1353354827" x2="40.8424422951" class="s1_100" y1="28.6631132605"/>
+<line y2="28.6631132605" x1="40.1353354827" x2="40.8424422951" class="s1_100" y1="29.3702200729"/>
+</g>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+</g>
+<g transform="translate(0.1 1.6)">
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<line y2="50" x1="-50" x2="50" class="axis" y1="50"/>
+<line y2="49" x1="-50" x2="-50" class="axis-tick" y1="51"/>
+<text x="-50" y="53.2" class="axis-label" text-anchor="middle">0</text>
+<line y2="49" x1="-38.8888888889" x2="-38.8888888889" class="axis-tick" y1="51"/>
+<text x="-38.8888888889" y="53.2" class="axis-label" text-anchor="middle">0.1</text>
+<line y2="49" x1="-27.7777777778" x2="-27.7777777778" class="axis-tick" y1="51"/>
+<text x="-27.7777777778" y="53.2" class="axis-label" text-anchor="middle">0.2</text>
+<line y2="49" x1="-16.6666666667" x2="-16.6666666667" class="axis-tick" y1="51"/>
+<text x="-16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="49" x1="-5.5555555556" x2="-5.5555555556" class="axis-tick" y1="51"/>
+<text x="-5.5555555556" y="53.2" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="49" x1="5.5555555556" x2="5.5555555556" class="axis-tick" y1="51"/>
+<text x="5.5555555556" y="53.2" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="49" x1="16.6666666667" x2="16.6666666667" class="axis-tick" y1="51"/>
+<text x="16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="49" x1="27.7777777778" x2="27.7777777778" class="axis-tick" y1="51"/>
+<text x="27.7777777778" y="53.2" class="axis-label" text-anchor="middle">0.7</text>
+<line y2="49" x1="38.8888888889" x2="38.8888888889" class="axis-tick" y1="51"/>
+<text x="38.8888888889" y="53.2" class="axis-label" text-anchor="middle">0.8</text>
+<line y2="49" x1="50" x2="50" class="axis-tick" y1="51"/>
+<text x="50" y="53.2" class="axis-label" text-anchor="middle">0.9</text>
+<text x="52" y="52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="start">Column 0</text>
+<line y2="-50" x1="-50" x2="-50" class="axis" y1="50"/>
+<line y2="50" x1="-49" x2="-51" class="axis-tick" y1="50"/>
+<text x="-52.5" y="50.7" class="axis-label" text-anchor="end">0</text>
+<line y2="37.5" x1="-49" x2="-51" class="axis-tick" y1="37.5"/>
+<text x="-52.5" y="38.2" class="axis-label" text-anchor="end">0.1</text>
+<line y2="25" x1="-49" x2="-51" class="axis-tick" y1="25"/>
+<text x="-52.5" y="25.7" class="axis-label" text-anchor="end">0.2</text>
+<line y2="12.5" x1="-49" x2="-51" class="axis-tick" y1="12.5"/>
+<text x="-52.5" y="13.2" class="axis-label" text-anchor="end">0.3</text>
+<line y2="0" x1="-49" x2="-51" class="axis-tick" y1="0"/>
+<text x="-52.5" y="0.7" class="axis-label" text-anchor="end">0.4</text>
+<line y2="-12.5" x1="-49" x2="-51" class="axis-tick" y1="-12.5"/>
+<text x="-52.5" y="-11.8" class="axis-label" text-anchor="end">0.5</text>
+<line y2="-25" x1="-49" x2="-51" class="axis-tick" y1="-25"/>
+<text x="-52.5" y="-24.3" class="axis-label" text-anchor="end">0.6</text>
+<line y2="-37.5" x1="-49" x2="-51" class="axis-tick" y1="-37.5"/>
+<text x="-52.5" y="-36.8" class="axis-label" text-anchor="end">0.7</text>
+<line y2="-50" x1="-49" x2="-51" class="axis-tick" y1="-50"/>
+<text x="-52.5" y="-49.3" class="axis-label" text-anchor="end">0.8</text>
+<text x="-52" y="-52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="end">Column 2</text>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<g>
+<circle r="0.4545454545" class="s2_100" cx="18.4333333333" cy="-29.8875"/>
+</g>
+<g>
+<circle r="0.4545454545" class="s2_100" cx="39.3" cy="-6.875"/>
+</g>
+<g>
+<line y2="-44.2829545455" x1="-5.8" x2="-5.8" class="s0_100" y1="-45.1920454545"/>
+<line y2="-44.7375" x1="-6.2545454545" x2="-5.3454545455" class="s0_100" y1="-44.7375"/>
+</g>
+<g>
+<line y2="4.1795454545" x1="-49.2111111111" x2="-49.2111111111" class="s0_100" y1="3.2704545455"/>
+<line y2="3.725" x1="-49.6656565657" x2="-48.7565656566" class="s0_100" y1="3.725"/>
+</g>
+<g>
+<line y2="31.2295454545" x1="20.0222222222" x2="20.0222222222" class="s0_100" y1="30.3204545455"/>
+<line y2="30.775" x1="19.5676767677" x2="20.4767676768" class="s0_100" y1="30.775"/>
+</g>
+<g>
+<line y2="34.2535534062" x1="43.0464465938" x2="43.7535534062" class="s1_100" y1="33.5464465938"/>
+<line y2="33.5464465938" x1="43.0464465938" x2="43.7535534062" class="s1_100" y1="34.2535534062"/>
+</g>
+<g>
+<line y2="31.5410534062" x1="42.6797799271" x2="43.3868867395" class="s1_100" y1="30.8339465938"/>
+<line y2="30.8339465938" x1="42.6797799271" x2="43.3868867395" class="s1_100" y1="31.5410534062"/>
+</g>
+<g>
+<line y2="39.4535534062" x1="39.668668816" x2="40.3757756284" class="s1_100" y1="38.7464465938"/>
+<line y2="38.7464465938" x1="39.668668816" x2="40.3757756284" class="s1_100" y1="39.4535534062"/>
+</g>
+<g>
+<line y2="34.1285534062" x1="40.1353354827" x2="40.8424422951" class="s1_100" y1="33.4214465938"/>
+<line y2="33.4214465938" x1="40.1353354827" x2="40.8424422951" class="s1_100" y1="34.1285534062"/>
+</g>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+</g>
+<g transform="translate(0.1 2.6)">
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<line y2="50" x1="-50" x2="50" class="axis" y1="50"/>
+<line y2="49" x1="-50" x2="-50" class="axis-tick" y1="51"/>
+<text x="-50" y="53.2" class="axis-label" text-anchor="middle">0</text>
+<line y2="49" x1="-38.8888888889" x2="-38.8888888889" class="axis-tick" y1="51"/>
+<text x="-38.8888888889" y="53.2" class="axis-label" text-anchor="middle">0.1</text>
+<line y2="49" x1="-27.7777777778" x2="-27.7777777778" class="axis-tick" y1="51"/>
+<text x="-27.7777777778" y="53.2" class="axis-label" text-anchor="middle">0.2</text>
+<line y2="49" x1="-16.6666666667" x2="-16.6666666667" class="axis-tick" y1="51"/>
+<text x="-16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="49" x1="-5.5555555556" x2="-5.5555555556" class="axis-tick" y1="51"/>
+<text x="-5.5555555556" y="53.2" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="49" x1="5.5555555556" x2="5.5555555556" class="axis-tick" y1="51"/>
+<text x="5.5555555556" y="53.2" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="49" x1="16.6666666667" x2="16.6666666667" class="axis-tick" y1="51"/>
+<text x="16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="49" x1="27.7777777778" x2="27.7777777778" class="axis-tick" y1="51"/>
+<text x="27.7777777778" y="53.2" class="axis-label" text-anchor="middle">0.7</text>
+<line y2="49" x1="38.8888888889" x2="38.8888888889" class="axis-tick" y1="51"/>
+<text x="38.8888888889" y="53.2" class="axis-label" text-anchor="middle">0.8</text>
+<line y2="49" x1="50" x2="50" class="axis-tick" y1="51"/>
+<text x="50" y="53.2" class="axis-label" text-anchor="middle">0.9</text>
+<text x="52" y="52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="start">Column 0</text>
+<line y2="-50" x1="-50" x2="-50" class="axis" y1="50"/>
+<line y2="50" x1="-49" x2="-51" class="axis-tick" y1="50"/>
+<text x="-52.5" y="50.7" class="axis-label" text-anchor="end">0.1</text>
+<line y2="33.3333333333" x1="-49" x2="-51" class="axis-tick" y1="33.3333333333"/>
+<text x="-52.5" y="34.0333333333" class="axis-label" text-anchor="end">0.2</text>
+<line y2="16.6666666667" x1="-49" x2="-51" class="axis-tick" y1="16.6666666667"/>
+<text x="-52.5" y="17.3666666667" class="axis-label" text-anchor="end">0.3</text>
+<line y2="0" x1="-49" x2="-51" class="axis-tick" y1="0"/>
+<text x="-52.5" y="0.7" class="axis-label" text-anchor="end">0.4</text>
+<line y2="-16.6666666667" x1="-49" x2="-51" class="axis-tick" y1="-16.6666666667"/>
+<text x="-52.5" y="-15.9666666667" class="axis-label" text-anchor="end">0.5</text>
+<line y2="-33.3333333333" x1="-49" x2="-51" class="axis-tick" y1="-33.3333333333"/>
+<text x="-52.5" y="-32.6333333333" class="axis-label" text-anchor="end">0.6</text>
+<line y2="-50" x1="-49" x2="-51" class="axis-tick" y1="-50"/>
+<text x="-52.5" y="-49.3" class="axis-label" text-anchor="end">0.7</text>
+<text x="-52" y="-52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="end">Column 3</text>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<g>
+<circle r="0.4545454545" class="s2_100" cx="18.4333333333" cy="-8.1666666667"/>
+</g>
+<g>
+<circle r="0.4545454545" class="s2_100" cx="39.3" cy="-36.5166666667"/>
+</g>
+<g>
+<line y2="38.5545454545" x1="-5.8" x2="-5.8" class="s0_100" y1="37.6454545455"/>
+<line y2="38.1" x1="-6.2545454545" x2="-5.3454545455" class="s0_100" y1="38.1"/>
+</g>
+<g>
+<line y2="41.1378787879" x1="-49.2111111111" x2="-49.2111111111" class="s0_100" y1="40.2287878788"/>
+<line y2="40.6833333333" x1="-49.6656565657" x2="-48.7565656566" class="s0_100" y1="40.6833333333"/>
+</g>
+<g>
+<line y2="39.9045454545" x1="20.0222222222" x2="20.0222222222" class="s0_100" y1="38.9954545455"/>
+<line y2="39.45" x1="19.5676767677" x2="20.4767676768" class="s0_100" y1="39.45"/>
+</g>
+<g>
+<line y2="-14.6297799271" x1="43.0464465938" x2="43.7535534062" class="s1_100" y1="-15.3368867395"/>
+<line y2="-15.3368867395" x1="43.0464465938" x2="43.7535534062" class="s1_100" y1="-14.6297799271"/>
+</g>
+<g>
+<line y2="-24.5297799271" x1="42.6797799271" x2="43.3868867395" class="s1_100" y1="-25.2368867395"/>
+<line y2="-25.2368867395" x1="42.6797799271" x2="43.3868867395" class="s1_100" y1="-24.5297799271"/>
+</g>
+<g>
+<line y2="-19.4464465938" x1="39.668668816" x2="40.3757756284" class="s1_100" y1="-20.1535534062"/>
+<line y2="-20.1535534062" x1="39.668668816" x2="40.3757756284" class="s1_100" y1="-19.4464465938"/>
+</g>
+<g>
+<line y2="-21.9297799271" x1="40.1353354827" x2="40.8424422951" class="s1_100" y1="-22.6368867395"/>
+<line y2="-22.6368867395" x1="40.1353354827" x2="40.8424422951" class="s1_100" y1="-21.9297799271"/>
+</g>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+</g>
+<g transform="translate(0.1 3.6)">
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<line y2="50" x1="-50" x2="50" class="axis" y1="50"/>
+<line y2="49" x1="-50" x2="-50" class="axis-tick" y1="51"/>
+<text x="-50" y="53.2" class="axis-label" text-anchor="middle">0</text>
+<line y2="49" x1="-38.8888888889" x2="-38.8888888889" class="axis-tick" y1="51"/>
+<text x="-38.8888888889" y="53.2" class="axis-label" text-anchor="middle">0.1</text>
+<line y2="49" x1="-27.7777777778" x2="-27.7777777778" class="axis-tick" y1="51"/>
+<text x="-27.7777777778" y="53.2" class="axis-label" text-anchor="middle">0.2</text>
+<line y2="49" x1="-16.6666666667" x2="-16.6666666667" class="axis-tick" y1="51"/>
+<text x="-16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="49" x1="-5.5555555556" x2="-5.5555555556" class="axis-tick" y1="51"/>
+<text x="-5.5555555556" y="53.2" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="49" x1="5.5555555556" x2="5.5555555556" class="axis-tick" y1="51"/>
+<text x="5.5555555556" y="53.2" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="49" x1="16.6666666667" x2="16.6666666667" class="axis-tick" y1="51"/>
+<text x="16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="49" x1="27.7777777778" x2="27.7777777778" class="axis-tick" y1="51"/>
+<text x="27.7777777778" y="53.2" class="axis-label" text-anchor="middle">0.7</text>
+<line y2="49" x1="38.8888888889" x2="38.8888888889" class="axis-tick" y1="51"/>
+<text x="38.8888888889" y="53.2" class="axis-label" text-anchor="middle">0.8</text>
+<line y2="49" x1="50" x2="50" class="axis-tick" y1="51"/>
+<text x="50" y="53.2" class="axis-label" text-anchor="middle">0.9</text>
+<text x="52" y="52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="start">Column 0</text>
+<line y2="-50" x1="-50" x2="-50" class="axis" y1="50"/>
+<line y2="50" x1="-49" x2="-51" class="axis-tick" y1="50"/>
+<text x="-52.5" y="50.7" class="axis-label" text-anchor="end">0.4</text>
+<line y2="30" x1="-49" x2="-51" class="axis-tick" y1="30"/>
+<text x="-52.5" y="30.7" class="axis-label" text-anchor="end">0.5</text>
+<line y2="10" x1="-49" x2="-51" class="axis-tick" y1="10"/>
+<text x="-52.5" y="10.7" class="axis-label" text-anchor="end">0.6</text>
+<line y2="-10" x1="-49" x2="-51" class="axis-tick" y1="-10"/>
+<text x="-52.5" y="-9.3" class="axis-label" text-anchor="end">0.7</text>
+<line y2="-30" x1="-49" x2="-51" class="axis-tick" y1="-30"/>
+<text x="-52.5" y="-29.3" class="axis-label" text-anchor="end">0.8</text>
+<line y2="-50" x1="-49" x2="-51" class="axis-tick" y1="-50"/>
+<text x="-52.5" y="-49.3" class="axis-label" text-anchor="end">0.9</text>
+<text x="-52" y="-52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="end">Column 4</text>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<g>
+<circle r="0.4545454545" class="s2_100" cx="18.4333333333" cy="15.16"/>
+</g>
+<g>
+<circle r="0.4545454545" class="s2_100" cx="39.3" cy="-18.26"/>
+</g>
+<g>
+<line y2="48.2945454545" x1="-5.8" x2="-5.8" class="s0_100" y1="47.3854545455"/>
+<line y2="47.84" x1="-6.2545454545" x2="-5.3454545455" class="s0_100" y1="47.84"/>
+</g>
+<g>
+<line y2="48.1145454545" x1="-49.2111111111" x2="-49.2111111111" class="s0_100" y1="47.2054545455"/>
+<line y2="47.66" x1="-49.6656565657" x2="-48.7565656566" class="s0_100" y1="47.66"/>
+</g>
+<g>
+<line y2="38.6545454545" x1="20.0222222222" x2="20.0222222222" class="s0_100" y1="37.7454545455"/>
+<line y2="38.2" x1="19.5676767677" x2="20.4767676768" class="s0_100" y1="38.2"/>
+</g>
+<g>
+<line y2="-16.0664465938" x1="43.0464465938" x2="43.7535534062" class="s1_100" y1="-16.7735534062"/>
+<line y2="-16.7735534062" x1="43.0464465938" x2="43.7535534062" class="s1_100" y1="-16.0664465938"/>
+</g>
+<g>
+<line y2="-22.1264465938" x1="42.6797799271" x2="43.3868867395" class="s1_100" y1="-22.8335534062"/>
+<line y2="-22.8335534062" x1="42.6797799271" x2="43.3868867395" class="s1_100" y1="-22.1264465938"/>
+</g>
+<g>
+<line y2="-31.9864465938" x1="39.668668816" x2="40.3757756284" class="s1_100" y1="-32.6935534062"/>
+<line y2="-32.6935534062" x1="39.668668816" x2="40.3757756284" class="s1_100" y1="-31.9864465938"/>
+</g>
+<g>
+<line y2="-24.0064465938" x1="40.1353354827" x2="40.8424422951" class="s1_100" y1="-24.7135534062"/>
+<line y2="-24.7135534062" x1="40.1353354827" x2="40.8424422951" class="s1_100" y1="-24.0064465938"/>
+</g>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+</g>
+<g transform="translate(1.1 1.6)">
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<line y2="50" x1="-50" x2="50" class="axis" y1="50"/>
+<line y2="49" x1="-50" x2="-50" class="axis-tick" y1="51"/>
+<text x="-50" y="53.2" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="49" x1="-33.3333333333" x2="-33.3333333333" class="axis-tick" y1="51"/>
+<text x="-33.3333333333" y="53.2" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="49" x1="-16.6666666667" x2="-16.6666666667" class="axis-tick" y1="51"/>
+<text x="-16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="49" x1="0" x2="0" class="axis-tick" y1="51"/>
+<text x="0" y="53.2" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="49" x1="16.6666666667" x2="16.6666666667" class="axis-tick" y1="51"/>
+<text x="16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.7</text>
+<line y2="49" x1="33.3333333333" x2="33.3333333333" class="axis-tick" y1="51"/>
+<text x="33.3333333333" y="53.2" class="axis-label" text-anchor="middle">0.8</text>
+<line y2="49" x1="50" x2="50" class="axis-tick" y1="51"/>
+<text x="50" y="53.2" class="axis-label" text-anchor="middle">0.9</text>
+<text x="52" y="52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="start">Column 1</text>
+<line y2="-50" x1="-50" x2="-50" class="axis" y1="50"/>
+<line y2="50" x1="-49" x2="-51" class="axis-tick" y1="50"/>
+<text x="-52.5" y="50.7" class="axis-label" text-anchor="end">0</text>
+<line y2="37.5" x1="-49" x2="-51" class="axis-tick" y1="37.5"/>
+<text x="-52.5" y="38.2" class="axis-label" text-anchor="end">0.1</text>
+<line y2="25" x1="-49" x2="-51" class="axis-tick" y1="25"/>
+<text x="-52.5" y="25.7" class="axis-label" text-anchor="end">0.2</text>
+<line y2="12.5" x1="-49" x2="-51" class="axis-tick" y1="12.5"/>
+<text x="-52.5" y="13.2" class="axis-label" text-anchor="end">0.3</text>
+<line y2="0" x1="-49" x2="-51" class="axis-tick" y1="0"/>
+<text x="-52.5" y="0.7" class="axis-label" text-anchor="end">0.4</text>
+<line y2="-12.5" x1="-49" x2="-51" class="axis-tick" y1="-12.5"/>
+<text x="-52.5" y="-11.8" class="axis-label" text-anchor="end">0.5</text>
+<line y2="-25" x1="-49" x2="-51" class="axis-tick" y1="-25"/>
+<text x="-52.5" y="-24.3" class="axis-label" text-anchor="end">0.6</text>
+<line y2="-37.5" x1="-49" x2="-51" class="axis-tick" y1="-37.5"/>
+<text x="-52.5" y="-36.8" class="axis-label" text-anchor="end">0.7</text>
+<line y2="-50" x1="-49" x2="-51" class="axis-tick" y1="-50"/>
+<text x="-52.5" y="-49.3" class="axis-label" text-anchor="end">0.8</text>
+<text x="-52" y="-52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="end">Column 2</text>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<g>
+<circle r="0.4545454545" class="s2_100" cx="-48.35" cy="-29.8875"/>
+</g>
+<g>
+<circle r="0.4545454545" class="s2_100" cx="-35.6166666667" cy="-6.875"/>
+</g>
+<g>
+<line y2="-44.2829545455" x1="44.3666666667" x2="44.3666666667" class="s0_100" y1="-45.1920454545"/>
+<line y2="-44.7375" x1="43.9121212121" x2="44.8212121212" class="s0_100" y1="-44.7375"/>
+</g>
+<g>
+<line y2="4.1795454545" x1="39.7833333333" x2="39.7833333333" class="s0_100" y1="3.2704545455"/>
+<line y2="3.725" x1="39.3287878788" x2="40.2378787879" class="s0_100" y1="3.725"/>
+</g>
+<g>
+<line y2="31.2295454545" x1="44.45" x2="44.45" class="s0_100" y1="30.3204545455"/>
+<line y2="30.775" x1="43.9954545455" x2="44.9045454545" class="s0_100" y1="30.775"/>
+</g>
+<g>
+<line y2="34.2535534062" x1="-29.0535534062" x2="-28.3464465938" class="s1_100" y1="33.5464465938"/>
+<line y2="33.5464465938" x1="-29.0535534062" x2="-28.3464465938" class="s1_100" y1="34.2535534062"/>
+</g>
+<g>
+<line y2="31.5410534062" x1="-28.5535534062" x2="-27.8464465938" class="s1_100" y1="30.8339465938"/>
+<line y2="30.8339465938" x1="-28.5535534062" x2="-27.8464465938" class="s1_100" y1="31.5410534062"/>
+</g>
+<g>
+<line y2="39.4535534062" x1="-23.7035534062" x2="-22.9964465938" class="s1_100" y1="38.7464465938"/>
+<line y2="38.7464465938" x1="-23.7035534062" x2="-22.9964465938" class="s1_100" y1="39.4535534062"/>
+</g>
+<g>
+<line y2="34.1285534062" x1="-29.3702200729" x2="-28.6631132605" class="s1_100" y1="33.4214465938"/>
+<line y2="33.4214465938" x1="-29.3702200729" x2="-28.6631132605" class="s1_100" y1="34.1285534062"/>
+</g>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+</g>
+<g transform="translate(1.1 2.6)">
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<line y2="50" x1="-50" x2="50" class="axis" y1="50"/>
+<line y2="49" x1="-50" x2="-50" class="axis-tick" y1="51"/>
+<text x="-50" y="53.2" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="49" x1="-33.3333333333" x2="-33.3333333333" class="axis-tick" y1="51"/>
+<text x="-33.3333333333" y="53.2" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="49" x1="-16.6666666667" x2="-16.6666666667" class="axis-tick" y1="51"/>
+<text x="-16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="49" x1="0" x2="0" class="axis-tick" y1="51"/>
+<text x="0" y="53.2" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="49" x1="16.6666666667" x2="16.6666666667" class="axis-tick" y1="51"/>
+<text x="16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.7</text>
+<line y2="49" x1="33.3333333333" x2="33.3333333333" class="axis-tick" y1="51"/>
+<text x="33.3333333333" y="53.2" class="axis-label" text-anchor="middle">0.8</text>
+<line y2="49" x1="50" x2="50" class="axis-tick" y1="51"/>
+<text x="50" y="53.2" class="axis-label" text-anchor="middle">0.9</text>
+<text x="52" y="52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="start">Column 1</text>
+<line y2="-50" x1="-50" x2="-50" class="axis" y1="50"/>
+<line y2="50" x1="-49" x2="-51" class="axis-tick" y1="50"/>
+<text x="-52.5" y="50.7" class="axis-label" text-anchor="end">0.1</text>
+<line y2="33.3333333333" x1="-49" x2="-51" class="axis-tick" y1="33.3333333333"/>
+<text x="-52.5" y="34.0333333333" class="axis-label" text-anchor="end">0.2</text>
+<line y2="16.6666666667" x1="-49" x2="-51" class="axis-tick" y1="16.6666666667"/>
+<text x="-52.5" y="17.3666666667" class="axis-label" text-anchor="end">0.3</text>
+<line y2="0" x1="-49" x2="-51" class="axis-tick" y1="0"/>
+<text x="-52.5" y="0.7" class="axis-label" text-anchor="end">0.4</text>
+<line y2="-16.6666666667" x1="-49" x2="-51" class="axis-tick" y1="-16.6666666667"/>
+<text x="-52.5" y="-15.9666666667" class="axis-label" text-anchor="end">0.5</text>
+<line y2="-33.3333333333" x1="-49" x2="-51" class="axis-tick" y1="-33.3333333333"/>
+<text x="-52.5" y="-32.6333333333" class="axis-label" text-anchor="end">0.6</text>
+<line y2="-50" x1="-49" x2="-51" class="axis-tick" y1="-50"/>
+<text x="-52.5" y="-49.3" class="axis-label" text-anchor="end">0.7</text>
+<text x="-52" y="-52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="end">Column 3</text>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<g>
+<circle r="0.4545454545" class="s2_100" cx="-48.35" cy="-8.1666666667"/>
+</g>
+<g>
+<circle r="0.4545454545" class="s2_100" cx="-35.6166666667" cy="-36.5166666667"/>
+</g>
+<g>
+<line y2="38.5545454545" x1="44.3666666667" x2="44.3666666667" class="s0_100" y1="37.6454545455"/>
+<line y2="38.1" x1="43.9121212121" x2="44.8212121212" class="s0_100" y1="38.1"/>
+</g>
+<g>
+<line y2="41.1378787879" x1="39.7833333333" x2="39.7833333333" class="s0_100" y1="40.2287878788"/>
+<line y2="40.6833333333" x1="39.3287878788" x2="40.2378787879" class="s0_100" y1="40.6833333333"/>
+</g>
+<g>
+<line y2="39.9045454545" x1="44.45" x2="44.45" class="s0_100" y1="38.9954545455"/>
+<line y2="39.45" x1="43.9954545455" x2="44.9045454545" class="s0_100" y1="39.45"/>
+</g>
+<g>
+<line y2="-14.6297799271" x1="-29.0535534062" x2="-28.3464465938" class="s1_100" y1="-15.3368867395"/>
+<line y2="-15.3368867395" x1="-29.0535534062" x2="-28.3464465938" class="s1_100" y1="-14.6297799271"/>
+</g>
+<g>
+<line y2="-24.5297799271" x1="-28.5535534062" x2="-27.8464465938" class="s1_100" y1="-25.2368867395"/>
+<line y2="-25.2368867395" x1="-28.5535534062" x2="-27.8464465938" class="s1_100" y1="-24.5297799271"/>
+</g>
+<g>
+<line y2="-19.4464465938" x1="-23.7035534062" x2="-22.9964465938" class="s1_100" y1="-20.1535534062"/>
+<line y2="-20.1535534062" x1="-23.7035534062" x2="-22.9964465938" class="s1_100" y1="-19.4464465938"/>
+</g>
+<g>
+<line y2="-21.9297799271" x1="-29.3702200729" x2="-28.6631132605" class="s1_100" y1="-22.6368867395"/>
+<line y2="-22.6368867395" x1="-29.3702200729" x2="-28.6631132605" class="s1_100" y1="-21.9297799271"/>
+</g>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+</g>
+<g transform="translate(1.1 3.6)">
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<line y2="50" x1="-50" x2="50" class="axis" y1="50"/>
+<line y2="49" x1="-50" x2="-50" class="axis-tick" y1="51"/>
+<text x="-50" y="53.2" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="49" x1="-33.3333333333" x2="-33.3333333333" class="axis-tick" y1="51"/>
+<text x="-33.3333333333" y="53.2" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="49" x1="-16.6666666667" x2="-16.6666666667" class="axis-tick" y1="51"/>
+<text x="-16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="49" x1="0" x2="0" class="axis-tick" y1="51"/>
+<text x="0" y="53.2" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="49" x1="16.6666666667" x2="16.6666666667" class="axis-tick" y1="51"/>
+<text x="16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.7</text>
+<line y2="49" x1="33.3333333333" x2="33.3333333333" class="axis-tick" y1="51"/>
+<text x="33.3333333333" y="53.2" class="axis-label" text-anchor="middle">0.8</text>
+<line y2="49" x1="50" x2="50" class="axis-tick" y1="51"/>
+<text x="50" y="53.2" class="axis-label" text-anchor="middle">0.9</text>
+<text x="52" y="52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="start">Column 1</text>
+<line y2="-50" x1="-50" x2="-50" class="axis" y1="50"/>
+<line y2="50" x1="-49" x2="-51" class="axis-tick" y1="50"/>
+<text x="-52.5" y="50.7" class="axis-label" text-anchor="end">0.4</text>
+<line y2="30" x1="-49" x2="-51" class="axis-tick" y1="30"/>
+<text x="-52.5" y="30.7" class="axis-label" text-anchor="end">0.5</text>
+<line y2="10" x1="-49" x2="-51" class="axis-tick" y1="10"/>
+<text x="-52.5" y="10.7" class="axis-label" text-anchor="end">0.6</text>
+<line y2="-10" x1="-49" x2="-51" class="axis-tick" y1="-10"/>
+<text x="-52.5" y="-9.3" class="axis-label" text-anchor="end">0.7</text>
+<line y2="-30" x1="-49" x2="-51" class="axis-tick" y1="-30"/>
+<text x="-52.5" y="-29.3" class="axis-label" text-anchor="end">0.8</text>
+<line y2="-50" x1="-49" x2="-51" class="axis-tick" y1="-50"/>
+<text x="-52.5" y="-49.3" class="axis-label" text-anchor="end">0.9</text>
+<text x="-52" y="-52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="end">Column 4</text>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<g>
+<circle r="0.4545454545" class="s2_100" cx="-48.35" cy="15.16"/>
+</g>
+<g>
+<circle r="0.4545454545" class="s2_100" cx="-35.6166666667" cy="-18.26"/>
+</g>
+<g>
+<line y2="48.2945454545" x1="44.3666666667" x2="44.3666666667" class="s0_100" y1="47.3854545455"/>
+<line y2="47.84" x1="43.9121212121" x2="44.8212121212" class="s0_100" y1="47.84"/>
+</g>
+<g>
+<line y2="48.1145454545" x1="39.7833333333" x2="39.7833333333" class="s0_100" y1="47.2054545455"/>
+<line y2="47.66" x1="39.3287878788" x2="40.2378787879" class="s0_100" y1="47.66"/>
+</g>
+<g>
+<line y2="38.6545454545" x1="44.45" x2="44.45" class="s0_100" y1="37.7454545455"/>
+<line y2="38.2" x1="43.9954545455" x2="44.9045454545" class="s0_100" y1="38.2"/>
+</g>
+<g>
+<line y2="-16.0664465938" x1="-29.0535534062" x2="-28.3464465938" class="s1_100" y1="-16.7735534062"/>
+<line y2="-16.7735534062" x1="-29.0535534062" x2="-28.3464465938" class="s1_100" y1="-16.0664465938"/>
+</g>
+<g>
+<line y2="-22.1264465938" x1="-28.5535534062" x2="-27.8464465938" class="s1_100" y1="-22.8335534062"/>
+<line y2="-22.8335534062" x1="-28.5535534062" x2="-27.8464465938" class="s1_100" y1="-22.1264465938"/>
+</g>
+<g>
+<line y2="-31.9864465938" x1="-23.7035534062" x2="-22.9964465938" class="s1_100" y1="-32.6935534062"/>
+<line y2="-32.6935534062" x1="-23.7035534062" x2="-22.9964465938" class="s1_100" y1="-31.9864465938"/>
+</g>
+<g>
+<line y2="-24.0064465938" x1="-29.3702200729" x2="-28.6631132605" class="s1_100" y1="-24.7135534062"/>
+<line y2="-24.7135534062" x1="-29.3702200729" x2="-28.6631132605" class="s1_100" y1="-24.0064465938"/>
+</g>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+</g>
+<g transform="translate(2.1 2.6)">
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<line y2="50" x1="-50" x2="50" class="axis" y1="50"/>
+<line y2="49" x1="-50" x2="-50" class="axis-tick" y1="51"/>
+<text x="-50" y="53.2" class="axis-label" text-anchor="middle">0</text>
+<line y2="49" x1="-37.5" x2="-37.5" class="axis-tick" y1="51"/>
+<text x="-37.5" y="53.2" class="axis-label" text-anchor="middle">0.1</text>
+<line y2="49" x1="-25" x2="-25" class="axis-tick" y1="51"/>
+<text x="-25" y="53.2" class="axis-label" text-anchor="middle">0.2</text>
+<line y2="49" x1="-12.5" x2="-12.5" class="axis-tick" y1="51"/>
+<text x="-12.5" y="53.2" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="49" x1="0" x2="0" class="axis-tick" y1="51"/>
+<text x="0" y="53.2" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="49" x1="12.5" x2="12.5" class="axis-tick" y1="51"/>
+<text x="12.5" y="53.2" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="49" x1="25" x2="25" class="axis-tick" y1="51"/>
+<text x="25" y="53.2" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="49" x1="37.5" x2="37.5" class="axis-tick" y1="51"/>
+<text x="37.5" y="53.2" class="axis-label" text-anchor="middle">0.7</text>
+<line y2="49" x1="50" x2="50" class="axis-tick" y1="51"/>
+<text x="50" y="53.2" class="axis-label" text-anchor="middle">0.8</text>
+<text x="52" y="52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="start">Column 2</text>
+<line y2="-50" x1="-50" x2="-50" class="axis" y1="50"/>
+<line y2="50" x1="-49" x2="-51" class="axis-tick" y1="50"/>
+<text x="-52.5" y="50.7" class="axis-label" text-anchor="end">0.1</text>
+<line y2="33.3333333333" x1="-49" x2="-51" class="axis-tick" y1="33.3333333333"/>
+<text x="-52.5" y="34.0333333333" class="axis-label" text-anchor="end">0.2</text>
+<line y2="16.6666666667" x1="-49" x2="-51" class="axis-tick" y1="16.6666666667"/>
+<text x="-52.5" y="17.3666666667" class="axis-label" text-anchor="end">0.3</text>
+<line y2="0" x1="-49" x2="-51" class="axis-tick" y1="0"/>
+<text x="-52.5" y="0.7" class="axis-label" text-anchor="end">0.4</text>
+<line y2="-16.6666666667" x1="-49" x2="-51" class="axis-tick" y1="-16.6666666667"/>
+<text x="-52.5" y="-15.9666666667" class="axis-label" text-anchor="end">0.5</text>
+<line y2="-33.3333333333" x1="-49" x2="-51" class="axis-tick" y1="-33.3333333333"/>
+<text x="-52.5" y="-32.6333333333" class="axis-label" text-anchor="end">0.6</text>
+<line y2="-50" x1="-49" x2="-51" class="axis-tick" y1="-50"/>
+<text x="-52.5" y="-49.3" class="axis-label" text-anchor="end">0.7</text>
+<text x="-52" y="-52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="end">Column 3</text>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<g>
+<circle r="0.4545454545" class="s2_100" cx="29.8875" cy="-8.1666666667"/>
+</g>
+<g>
+<circle r="0.4545454545" class="s2_100" cx="6.875" cy="-36.5166666667"/>
+</g>
+<g>
+<line y2="38.5545454545" x1="44.7375" x2="44.7375" class="s0_100" y1="37.6454545455"/>
+<line y2="38.1" x1="44.2829545455" x2="45.1920454545" class="s0_100" y1="38.1"/>
+</g>
+<g>
+<line y2="41.1378787879" x1="-3.725" x2="-3.725" class="s0_100" y1="40.2287878788"/>
+<line y2="40.6833333333" x1="-4.1795454545" x2="-3.2704545455" class="s0_100" y1="40.6833333333"/>
+</g>
+<g>
+<line y2="39.9045454545" x1="-30.775" x2="-30.775" class="s0_100" y1="38.9954545455"/>
+<line y2="39.45" x1="-31.2295454545" x2="-30.3204545455" class="s0_100" y1="39.45"/>
+</g>
+<g>
+<line y2="-14.6297799271" x1="-34.2535534062" x2="-33.5464465938" class="s1_100" y1="-15.3368867395"/>
+<line y2="-15.3368867395" x1="-34.2535534062" x2="-33.5464465938" class="s1_100" y1="-14.6297799271"/>
+</g>
+<g>
+<line y2="-24.5297799271" x1="-31.5410534062" x2="-30.8339465938" class="s1_100" y1="-25.2368867395"/>
+<line y2="-25.2368867395" x1="-31.5410534062" x2="-30.8339465938" class="s1_100" y1="-24.5297799271"/>
+</g>
+<g>
+<line y2="-19.4464465938" x1="-39.4535534062" x2="-38.7464465938" class="s1_100" y1="-20.1535534062"/>
+<line y2="-20.1535534062" x1="-39.4535534062" x2="-38.7464465938" class="s1_100" y1="-19.4464465938"/>
+</g>
+<g>
+<line y2="-21.9297799271" x1="-34.1285534062" x2="-33.4214465938" class="s1_100" y1="-22.6368867395"/>
+<line y2="-22.6368867395" x1="-34.1285534062" x2="-33.4214465938" class="s1_100" y1="-21.9297799271"/>
+</g>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+</g>
+<g transform="translate(2.1 3.6)">
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<line y2="50" x1="-50" x2="50" class="axis" y1="50"/>
+<line y2="49" x1="-50" x2="-50" class="axis-tick" y1="51"/>
+<text x="-50" y="53.2" class="axis-label" text-anchor="middle">0</text>
+<line y2="49" x1="-37.5" x2="-37.5" class="axis-tick" y1="51"/>
+<text x="-37.5" y="53.2" class="axis-label" text-anchor="middle">0.1</text>
+<line y2="49" x1="-25" x2="-25" class="axis-tick" y1="51"/>
+<text x="-25" y="53.2" class="axis-label" text-anchor="middle">0.2</text>
+<line y2="49" x1="-12.5" x2="-12.5" class="axis-tick" y1="51"/>
+<text x="-12.5" y="53.2" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="49" x1="0" x2="0" class="axis-tick" y1="51"/>
+<text x="0" y="53.2" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="49" x1="12.5" x2="12.5" class="axis-tick" y1="51"/>
+<text x="12.5" y="53.2" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="49" x1="25" x2="25" class="axis-tick" y1="51"/>
+<text x="25" y="53.2" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="49" x1="37.5" x2="37.5" class="axis-tick" y1="51"/>
+<text x="37.5" y="53.2" class="axis-label" text-anchor="middle">0.7</text>
+<line y2="49" x1="50" x2="50" class="axis-tick" y1="51"/>
+<text x="50" y="53.2" class="axis-label" text-anchor="middle">0.8</text>
+<text x="52" y="52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="start">Column 2</text>
+<line y2="-50" x1="-50" x2="-50" class="axis" y1="50"/>
+<line y2="50" x1="-49" x2="-51" class="axis-tick" y1="50"/>
+<text x="-52.5" y="50.7" class="axis-label" text-anchor="end">0.4</text>
+<line y2="30" x1="-49" x2="-51" class="axis-tick" y1="30"/>
+<text x="-52.5" y="30.7" class="axis-label" text-anchor="end">0.5</text>
+<line y2="10" x1="-49" x2="-51" class="axis-tick" y1="10"/>
+<text x="-52.5" y="10.7" class="axis-label" text-anchor="end">0.6</text>
+<line y2="-10" x1="-49" x2="-51" class="axis-tick" y1="-10"/>
+<text x="-52.5" y="-9.3" class="axis-label" text-anchor="end">0.7</text>
+<line y2="-30" x1="-49" x2="-51" class="axis-tick" y1="-30"/>
+<text x="-52.5" y="-29.3" class="axis-label" text-anchor="end">0.8</text>
+<line y2="-50" x1="-49" x2="-51" class="axis-tick" y1="-50"/>
+<text x="-52.5" y="-49.3" class="axis-label" text-anchor="end">0.9</text>
+<text x="-52" y="-52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="end">Column 4</text>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<g>
+<circle r="0.4545454545" class="s2_100" cx="29.8875" cy="15.16"/>
+</g>
+<g>
+<circle r="0.4545454545" class="s2_100" cx="6.875" cy="-18.26"/>
+</g>
+<g>
+<line y2="48.2945454545" x1="44.7375" x2="44.7375" class="s0_100" y1="47.3854545455"/>
+<line y2="47.84" x1="44.2829545455" x2="45.1920454545" class="s0_100" y1="47.84"/>
+</g>
+<g>
+<line y2="48.1145454545" x1="-3.725" x2="-3.725" class="s0_100" y1="47.2054545455"/>
+<line y2="47.66" x1="-4.1795454545" x2="-3.2704545455" class="s0_100" y1="47.66"/>
+</g>
+<g>
+<line y2="38.6545454545" x1="-30.775" x2="-30.775" class="s0_100" y1="37.7454545455"/>
+<line y2="38.2" x1="-31.2295454545" x2="-30.3204545455" class="s0_100" y1="38.2"/>
+</g>
+<g>
+<line y2="-16.0664465938" x1="-34.2535534062" x2="-33.5464465938" class="s1_100" y1="-16.7735534062"/>
+<line y2="-16.7735534062" x1="-34.2535534062" x2="-33.5464465938" class="s1_100" y1="-16.0664465938"/>
+</g>
+<g>
+<line y2="-22.1264465938" x1="-31.5410534062" x2="-30.8339465938" class="s1_100" y1="-22.8335534062"/>
+<line y2="-22.8335534062" x1="-31.5410534062" x2="-30.8339465938" class="s1_100" y1="-22.1264465938"/>
+</g>
+<g>
+<line y2="-31.9864465938" x1="-39.4535534062" x2="-38.7464465938" class="s1_100" y1="-32.6935534062"/>
+<line y2="-32.6935534062" x1="-39.4535534062" x2="-38.7464465938" class="s1_100" y1="-31.9864465938"/>
+</g>
+<g>
+<line y2="-24.0064465938" x1="-34.1285534062" x2="-33.4214465938" class="s1_100" y1="-24.7135534062"/>
+<line y2="-24.7135534062" x1="-34.1285534062" x2="-33.4214465938" class="s1_100" y1="-24.0064465938"/>
+</g>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+</g>
+<g transform="translate(3.1 3.6)">
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<line y2="50" x1="-50" x2="50" class="axis" y1="50"/>
+<line y2="49" x1="-50" x2="-50" class="axis-tick" y1="51"/>
+<text x="-50" y="53.2" class="axis-label" text-anchor="middle">0.1</text>
+<line y2="49" x1="-33.3333333333" x2="-33.3333333333" class="axis-tick" y1="51"/>
+<text x="-33.3333333333" y="53.2" class="axis-label" text-anchor="middle">0.2</text>
+<line y2="49" x1="-16.6666666667" x2="-16.6666666667" class="axis-tick" y1="51"/>
+<text x="-16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="49" x1="0" x2="0" class="axis-tick" y1="51"/>
+<text x="0" y="53.2" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="49" x1="16.6666666667" x2="16.6666666667" class="axis-tick" y1="51"/>
+<text x="16.6666666667" y="53.2" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="49" x1="33.3333333333" x2="33.3333333333" class="axis-tick" y1="51"/>
+<text x="33.3333333333" y="53.2" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="49" x1="50" x2="50" class="axis-tick" y1="51"/>
+<text x="50" y="53.2" class="axis-label" text-anchor="middle">0.7</text>
+<text x="52" y="52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="start">Column 3</text>
+<line y2="-50" x1="-50" x2="-50" class="axis" y1="50"/>
+<line y2="50" x1="-49" x2="-51" class="axis-tick" y1="50"/>
+<text x="-52.5" y="50.7" class="axis-label" text-anchor="end">0.4</text>
+<line y2="30" x1="-49" x2="-51" class="axis-tick" y1="30"/>
+<text x="-52.5" y="30.7" class="axis-label" text-anchor="end">0.5</text>
+<line y2="10" x1="-49" x2="-51" class="axis-tick" y1="10"/>
+<text x="-52.5" y="10.7" class="axis-label" text-anchor="end">0.6</text>
+<line y2="-10" x1="-49" x2="-51" class="axis-tick" y1="-10"/>
+<text x="-52.5" y="-9.3" class="axis-label" text-anchor="end">0.7</text>
+<line y2="-30" x1="-49" x2="-51" class="axis-tick" y1="-30"/>
+<text x="-52.5" y="-29.3" class="axis-label" text-anchor="end">0.8</text>
+<line y2="-50" x1="-49" x2="-51" class="axis-tick" y1="-50"/>
+<text x="-52.5" y="-49.3" class="axis-label" text-anchor="end">0.9</text>
+<text x="-52" y="-52" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="end">Column 4</text>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)">
+<g>
+<circle r="0.4545454545" class="s2_100" cx="8.1666666667" cy="15.16"/>
+</g>
+<g>
+<circle r="0.4545454545" class="s2_100" cx="36.5166666667" cy="-18.26"/>
+</g>
+<g>
+<line y2="48.2945454545" x1="-38.1" x2="-38.1" class="s0_100" y1="47.3854545455"/>
+<line y2="47.84" x1="-38.5545454545" x2="-37.6454545455" class="s0_100" y1="47.84"/>
+</g>
+<g>
+<line y2="48.1145454545" x1="-40.6833333333" x2="-40.6833333333" class="s0_100" y1="47.2054545455"/>
+<line y2="47.66" x1="-41.1378787879" x2="-40.2287878788" class="s0_100" y1="47.66"/>
+</g>
+<g>
+<line y2="38.6545454545" x1="-39.45" x2="-39.45" class="s0_100" y1="37.7454545455"/>
+<line y2="38.2" x1="-39.9045454545" x2="-38.9954545455" class="s0_100" y1="38.2"/>
+</g>
+<g>
+<line y2="-16.0664465938" x1="14.6297799271" x2="15.3368867395" class="s1_100" y1="-16.7735534062"/>
+<line y2="-16.7735534062" x1="14.6297799271" x2="15.3368867395" class="s1_100" y1="-16.0664465938"/>
+</g>
+<g>
+<line y2="-22.1264465938" x1="24.5297799271" x2="25.2368867395" class="s1_100" y1="-22.8335534062"/>
+<line y2="-22.8335534062" x1="24.5297799271" x2="25.2368867395" class="s1_100" y1="-22.1264465938"/>
+</g>
+<g>
+<line y2="-31.9864465938" x1="19.4464465938" x2="20.1535534062" class="s1_100" y1="-32.6935534062"/>
+<line y2="-32.6935534062" x1="19.4464465938" x2="20.1535534062" class="s1_100" y1="-31.9864465938"/>
+</g>
+<g>
+<line y2="-24.0064465938" x1="21.9297799271" x2="22.6368867395" class="s1_100" y1="-24.7135534062"/>
+<line y2="-24.7135534062" x1="21.9297799271" x2="22.6368867395" class="s1_100" y1="-24.0064465938"/>
+</g>
+</g>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+<g>
+<g transform="scale(0.0083333333) translate(10 10) translate(50 50)"/>
+</g>
+</g>
+<g transform="translate(2.1 0.6)">
+<g>
+<g transform="scale(0.0140764495) translate(13.1178448927 10) translate(57.922796534 61.0406414267)">
+<line y2="63.287814203" x1="-57.922796534" x2="40.5579787673" class="axis" y1="58.7934686503"/>
+<line y2="57.8086608973" x1="-57.9677399895" x2="-57.8778530784" class="axis-tick" y1="59.7782764033"/>
+<text x="-58.0351551728" y="61.9554880328" class="axis-label" text-anchor="middle">0</text>
+<line y2="58.3080326254" x1="-47.0254316227" x2="-46.9355447116" class="axis-tick" y1="60.2776481314"/>
+<text x="-47.092846806" y="62.4548597609" class="axis-label" text-anchor="middle">0.1</text>
+<line y2="58.8074043534" x1="-36.0831232559" x2="-35.9932363448" class="axis-tick" y1="60.7770198595"/>
+<text x="-36.1505384392" y="62.954231489" class="axis-label" text-anchor="middle">0.2</text>
+<line y2="59.3067760815" x1="-25.1408148891" x2="-25.050927978" class="axis-tick" y1="61.2763915875"/>
+<text x="-25.2082300724" y="63.4536032171" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="59.8061478096" x1="-14.1985065223" x2="-14.1086196112" class="axis-tick" y1="61.7757633156"/>
+<text x="-14.2659217056" y="63.9529749452" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="60.3055195377" x1="-3.2561981555" x2="-3.1663112444" class="axis-tick" y1="62.2751350437"/>
+<text x="-3.3236133388" y="64.4523466732" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="60.8048912658" x1="7.6861102113" x2="7.7759971224" class="axis-tick" y1="62.7745067718"/>
+<text x="7.618695028" y="64.9517184013" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="61.3042629939" x1="18.6284185781" x2="18.7183054892" class="axis-tick" y1="63.2738784999"/>
+<text x="18.5610033948" y="65.4510901294" class="axis-label" text-anchor="middle">0.7</text>
+<line y2="61.8036347219" x1="29.5707269449" x2="29.660613856" class="axis-tick" y1="63.773250228"/>
+<text x="29.5033117616" y="65.9504618575" class="axis-label" text-anchor="middle">0.8</text>
+<line y2="62.30300645" x1="40.5130353117" x2="40.6029222228" class="axis-tick" y1="64.2726219561"/>
+<text x="40.4456201284" y="66.4498335856" class="axis-label" text-anchor="middle">0.9</text>
+<text x="42.5579787673" y="65.287814203" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="start">Column 0</text>
+<line y2="-37.7991139786" x1="-57.922796534" x2="-57.922796534" class="axis" y1="58.7934686503"/>
+<line y2="58.7934686503" x1="-56.9568707077" x2="-58.8887223602" class="axis-tick" y1="58.7934686503"/>
+<text x="-60.3376110997" y="59.4934686503" class="axis-label" text-anchor="end">0.3</text>
+<line y2="42.6947048788" x1="-56.9568707077" x2="-58.8887223602" class="axis-tick" y1="42.6947048788"/>
+<text x="-60.3376110997" y="43.3947048788" class="axis-label" text-anchor="end">0.4</text>
+<line y2="26.5959411073" x1="-56.9568707077" x2="-58.8887223602" class="axis-tick" y1="26.5959411073"/>
+<text x="-60.3376110997" y="27.2959411073" class="axis-label" text-anchor="end">0.5</text>
+<line y2="10.4971773358" x1="-56.9568707077" x2="-58.8887223602" class="axis-tick" y1="10.4971773358"/>
+<text x="-60.3376110997" y="11.1971773358" class="axis-label" text-anchor="end">0.6</text>
+<line y2="-5.6015864357" x1="-56.9568707077" x2="-58.8887223602" class="axis-tick" y1="-5.6015864357"/>
+<text x="-60.3376110997" y="-4.9015864357" class="axis-label" text-anchor="end">0.7</text>
+<line y2="-21.7003502071" x1="-56.9568707077" x2="-58.8887223602" class="axis-tick" y1="-21.7003502071"/>
+<text x="-60.3376110997" y="-21.0003502071" class="axis-label" text-anchor="end">0.8</text>
+<line y2="-37.7991139786" x1="-56.9568707077" x2="-58.8887223602" class="axis-tick" y1="-37.7991139786"/>
+<text x="-60.3376110997" y="-37.0991139786" class="axis-label" text-anchor="end">0.9</text>
+<text x="-59.922796534" y="-39.7991139786" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="end">Column 1</text>
+<line y2="33.3047684259" x1="-57.922796534" x2="-40.5579787673" class="axis" y1="58.7934686503"/>
+<line y2="58.6198204726" x1="-57.6679095317" x2="-58.1776835362" class="axis-tick" y1="58.967116828"/>
+<text x="-58.5600140396" y="59.0593482061" class="axis-label" text-anchor="end">0</text>
+<line y2="55.4337329446" x1="-55.4973073109" x2="-56.0070813154" class="axis-tick" y1="55.7810292999"/>
+<text x="-56.3894118187" y="55.8732606781" class="axis-label" text-anchor="end">0.1</text>
+<line y2="52.2476454165" x1="-53.32670509" x2="-53.8364790945" class="axis-tick" y1="52.5949417718"/>
+<text x="-54.2188095979" y="52.68717315" class="axis-label" text-anchor="end">0.2</text>
+<line y2="49.0615578885" x1="-51.1561028692" x2="-51.6658768737" class="axis-tick" y1="49.4088542438"/>
+<text x="-52.0482073771" y="49.501085622" class="axis-label" text-anchor="end">0.3</text>
+<line y2="45.8754703604" x1="-48.9855006484" x2="-49.4952746529" class="axis-tick" y1="46.2227667157"/>
+<text x="-49.8776051562" y="46.3149980939" class="axis-label" text-anchor="end">0.4</text>
+<line y2="42.6893828324" x1="-46.8148984275" x2="-47.324672432" class="axis-tick" y1="43.0366791877"/>
+<text x="-47.7070029354" y="43.1289105659" class="axis-label" text-anchor="end">0.5</text>
+<line y2="39.5032953043" x1="-44.6442962067" x2="-45.1540702112" class="axis-tick" y1="39.8505916596"/>
+<text x="-45.5364007145" y="39.9428230378" class="axis-label" text-anchor="end">0.6</text>
+<line y2="36.3172077763" x1="-42.4736939859" x2="-42.9834679903" class="axis-tick" y1="36.6645041316"/>
+<text x="-43.3657984937" y="36.7567355098" class="axis-label" text-anchor="end">0.7</text>
+<line y2="33.1311202482" x1="-40.303091765" x2="-40.8128657695" class="axis-tick" y1="33.4784166035"/>
+<text x="-41.1951962729" y="33.5706479817" class="axis-label" text-anchor="end">0.8</text>
+<text x="-42.5579787673" y="31.3047684259" style="font-size:2.2;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="end">Column 2</text>
+</g>
+</g>
+<g>
+<g transform="scale(0.0140764495) translate(13.1178448927 10) translate(57.922796534 61.0406414267)">
+<g>
+<circle r="0.4545454545" class="s2_100" cx="23.3431994905" cy="39.9130361184"/>
+</g>
+<g>
+<circle r="0.4545454545" class="s2_100" cx="39.8967759148" cy="34.4169878415"/>
+</g>
+<g>
+<line y2="-54.0640430101" x1="2.0567003809" x2="2.0567003809" class="s0_100" y1="-54.9731339192"/>
+<line y2="-54.5185884647" x1="1.6021549264" x2="2.5112458354" class="s0_100" y1="-54.5185884647"/>
+</g>
+<g>
+<line y2="-39.2354669683" x1="-49.1103232184" x2="-49.1103232184" class="s0_100" y1="-40.1445578774"/>
+<line y2="-39.6900124229" x1="-49.5648686729" x2="-48.6557777638" class="s0_100" y1="-39.6900124229"/>
+</g>
+<g>
+<line y2="-33.7368421759" x1="14.3740170093" x2="14.3740170093" class="s0_100" y1="-34.645933085"/>
+<line y2="-34.1913876305" x1="13.9194715547" x2="14.8285624638" class="s0_100" y1="-34.1913876305"/>
+</g>
+<g>
+<line y2="38.6668399667" x1="36.5004298516" x2="37.207536664" class="s1_100" y1="37.9597331543"/>
+<line y2="37.9597331543" x1="36.5004298516" x2="37.207536664" class="s1_100" y1="38.6668399667"/>
+</g>
+<g>
+<line y2="37.4760167929" x1="36.6103543575" x2="37.3174611698" class="s1_100" y1="36.7689099805"/>
+<line y2="36.7689099805" x1="36.6103543575" x2="37.3174611698" class="s1_100" y1="37.4760167929"/>
+</g>
+<g>
+<line y2="34.6727402023" x1="32.2709975843" x2="32.9781043966" class="s1_100" y1="33.96563339"/>
+<line y2="33.96563339" x1="32.2709975843" x2="32.9781043966" class="s1_100" y1="34.6727402023"/>
+</g>
+<g>
+<line y2="38.8100202103" x1="33.6552510817" x2="34.3623578941" class="s1_100" y1="38.1029133979"/>
+<line y2="38.1029133979" x1="33.6552510817" x2="34.3623578941" class="s1_100" y1="38.8100202103"/>
+</g>
+</g>
+</g>
+<g>
+<g transform="scale(0.0140764495) translate(13.1178448927 10) translate(57.922796534 61.0406414267)"/>
+</g>
+<g>
+<g transform="scale(0.0140764495) translate(13.1178448927 10) translate(57.922796534 61.0406414267)"/>
+</g>
+<g>
+<g transform="scale(0.0140764495) translate(13.1178448927 10) translate(57.922796534 61.0406414267)"/>
+</g>
+<g>
+<g transform="scale(0.0140764495) translate(13.1178448927 10) translate(57.922796534 61.0406414267)"/>
+</g>
+<g>
+<g transform="scale(0.0140764495) translate(13.1178448927 10) translate(57.922796534 61.0406414267)"/>
+</g>
+<g>
+<g transform="scale(0.0140764495) translate(13.1178448927 10) translate(57.922796534 61.0406414267)"/>
+</g>
+</g>
+<g transform="translate(0.1 4.6)">
+<g>
+<text x="0.5" y="0.078" style="font-size:0.08;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="middle">Column 0</text>
+</g>
+</g>
+<g transform="translate(1.1 4.6)">
+<g>
+<text x="0.5" y="0.078" style="font-size:0.08;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="middle">Column 1</text>
+</g>
+</g>
+<g transform="translate(2.1 4.6)">
+<g>
+<text x="0.5" y="0.078" style="font-size:0.08;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="middle">Column 2</text>
+</g>
+</g>
+<g transform="translate(3.1 4.6)">
+<g>
+<text x="0.5" y="0.078" style="font-size:0.08;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="middle">Column 3</text>
+</g>
+</g>
+<g transform="translate(0.0 0.6)">
+<g>
+<text x="-0.5" y="0.078" style="font-size:0.08;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" transform="rotate(-90)" text-anchor="middle">Column 1</text>
+</g>
+</g>
+<g transform="translate(0.0 1.6)">
+<g>
+<text x="-0.5" y="0.078" style="font-size:0.08;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" transform="rotate(-90)" text-anchor="middle">Column 2</text>
+</g>
+</g>
+<g transform="translate(0.0 2.6)">
+<g>
+<text x="-0.5" y="0.078" style="font-size:0.08;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" transform="rotate(-90)" text-anchor="middle">Column 3</text>
+</g>
+</g>
+<g transform="translate(0.0 3.6)">
+<g>
+<text x="-0.5" y="0.078" style="font-size:0.08;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" transform="rotate(-90)" text-anchor="middle">Column 4</text>
+</g>
+</g>
+<g transform="translate(0.0 0.0)"/>
+<g transform="translate(0.1 0.1)">
+<g>
+<g transform="scale(0.0041666667) translate(20 10)">
+<line y2="0" x1="0" x2="0" class="axis" y1="100"/>
+<line y2="100" x1="1" x2="-1" class="axis-tick" y1="100"/>
+<text x="-2.5" y="100.7" class="axis-label" text-anchor="end">0</text>
+<line y2="95.652173913" x1="1" x2="-1" class="axis-tick" y1="95.652173913"/>
+<text x="-2.5" y="96.352173913" class="axis-label" text-anchor="end">0.01</text>
+<line y2="91.3043478261" x1="1" x2="-1" class="axis-tick" y1="91.3043478261"/>
+<text x="-2.5" y="92.0043478261" class="axis-label" text-anchor="end">0.02</text>
+<line y2="86.9565217391" x1="1" x2="-1" class="axis-tick" y1="86.9565217391"/>
+<text x="-2.5" y="87.6565217391" class="axis-label" text-anchor="end">0.03</text>
+<line y2="82.6086956522" x1="1" x2="-1" class="axis-tick" y1="82.6086956522"/>
+<text x="-2.5" y="83.3086956522" class="axis-label" text-anchor="end">0.04</text>
+<line y2="78.2608695652" x1="1" x2="-1" class="axis-tick" y1="78.2608695652"/>
+<text x="-2.5" y="78.9608695652" class="axis-label" text-anchor="end">0.05</text>
+<line y2="73.9130434783" x1="1" x2="-1" class="axis-tick" y1="73.9130434783"/>
+<text x="-2.5" y="74.6130434783" class="axis-label" text-anchor="end">0.06</text>
+<line y2="69.5652173913" x1="1" x2="-1" class="axis-tick" y1="69.5652173913"/>
+<text x="-2.5" y="70.2652173913" class="axis-label" text-anchor="end">0.07</text>
+<line y2="65.2173913043" x1="1" x2="-1" class="axis-tick" y1="65.2173913043"/>
+<text x="-2.5" y="65.9173913043" class="axis-label" text-anchor="end">0.08</text>
+<line y2="60.8695652174" x1="1" x2="-1" class="axis-tick" y1="60.8695652174"/>
+<text x="-2.5" y="61.5695652174" class="axis-label" text-anchor="end">0.09</text>
+<line y2="56.5217391304" x1="1" x2="-1" class="axis-tick" y1="56.5217391304"/>
+<text x="-2.5" y="57.2217391304" class="axis-label" text-anchor="end">0.1</text>
+<line y2="52.1739130435" x1="1" x2="-1" class="axis-tick" y1="52.1739130435"/>
+<text x="-2.5" y="52.8739130435" class="axis-label" text-anchor="end">0.11</text>
+<line y2="47.8260869565" x1="1" x2="-1" class="axis-tick" y1="47.8260869565"/>
+<text x="-2.5" y="48.5260869565" class="axis-label" text-anchor="end">0.12</text>
+<line y2="43.4782608696" x1="1" x2="-1" class="axis-tick" y1="43.4782608696"/>
+<text x="-2.5" y="44.1782608696" class="axis-label" text-anchor="end">0.13</text>
+<line y2="39.1304347826" x1="1" x2="-1" class="axis-tick" y1="39.1304347826"/>
+<text x="-2.5" y="39.8304347826" class="axis-label" text-anchor="end">0.14</text>
+<line y2="34.7826086957" x1="1" x2="-1" class="axis-tick" y1="34.7826086957"/>
+<text x="-2.5" y="35.4826086957" class="axis-label" text-anchor="end">0.15</text>
+<line y2="30.4347826087" x1="1" x2="-1" class="axis-tick" y1="30.4347826087"/>
+<text x="-2.5" y="31.1347826087" class="axis-label" text-anchor="end">0.16</text>
+<line y2="26.0869565217" x1="1" x2="-1" class="axis-tick" y1="26.0869565217"/>
+<text x="-2.5" y="26.7869565217" class="axis-label" text-anchor="end">0.17</text>
+<line y2="21.7391304348" x1="1" x2="-1" class="axis-tick" y1="21.7391304348"/>
+<text x="-2.5" y="22.4391304348" class="axis-label" text-anchor="end">0.18</text>
+<line y2="17.3913043478" x1="1" x2="-1" class="axis-tick" y1="17.3913043478"/>
+<text x="-2.5" y="18.0913043478" class="axis-label" text-anchor="end">0.19</text>
+<line y2="13.0434782609" x1="1" x2="-1" class="axis-tick" y1="13.0434782609"/>
+<text x="-2.5" y="13.7434782609" class="axis-label" text-anchor="end">0.2</text>
+<line y2="8.6956521739" x1="1" x2="-1" class="axis-tick" y1="8.6956521739"/>
+<text x="-2.5" y="9.3956521739" class="axis-label" text-anchor="end">0.21</text>
+<line y2="4.347826087" x1="1" x2="-1" class="axis-tick" y1="4.347826087"/>
+<text x="-2.5" y="5.047826087" class="axis-label" text-anchor="end">0.22</text>
+<line y2="0" x1="1" x2="-1" class="axis-tick" y1="0"/>
+<text x="-2.5" y="0.7" class="axis-label" text-anchor="end">0.23</text>
+<line y2="100" x1="0" x2="200" class="axis" y1="100"/>
+<line y2="98" x1="0" x2="0" class="axis-tick" y1="102"/>
+<text x="0" y="105.7" class="axis-label" text-anchor="middle">0</text>
+<line y2="98" x1="22.2222222222" x2="22.2222222222" class="axis-tick" y1="102"/>
+<text x="22.2222222222" y="105.7" class="axis-label" text-anchor="middle">0.1</text>
+<line y2="98" x1="44.4444444444" x2="44.4444444444" class="axis-tick" y1="102"/>
+<text x="44.4444444444" y="105.7" class="axis-label" text-anchor="middle">0.2</text>
+<line y2="98" x1="66.6666666667" x2="66.6666666667" class="axis-tick" y1="102"/>
+<text x="66.6666666667" y="105.7" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="98" x1="88.8888888889" x2="88.8888888889" class="axis-tick" y1="102"/>
+<text x="88.8888888889" y="105.7" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="98" x1="111.1111111111" x2="111.1111111111" class="axis-tick" y1="102"/>
+<text x="111.1111111111" y="105.7" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="98" x1="133.3333333333" x2="133.3333333333" class="axis-tick" y1="102"/>
+<text x="133.3333333333" y="105.7" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="98" x1="155.5555555556" x2="155.5555555556" class="axis-tick" y1="102"/>
+<text x="155.5555555556" y="105.7" class="axis-label" text-anchor="middle">0.7</text>
+<line y2="98" x1="177.7777777778" x2="177.7777777778" class="axis-tick" y1="102"/>
+<text x="177.7777777778" y="105.7" class="axis-label" text-anchor="middle">0.8</text>
+<line y2="98" x1="200" x2="200" class="axis-tick" y1="102"/>
+<text x="200" y="105.7" class="axis-label" text-anchor="middle">0.9</text>
+<rect x="0" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="0" width="2.5" y="51.690821256" height="48.309178744" class="bin0"/>
+<rect x="0" width="2.5" y="51.690821256" height="0" class="bin1"/>
+<rect x="0" width="2.5" y="51.690821256" height="0" class="bin2"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="22.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="22.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="22.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="22.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="87.5" width="2.5" y="51.690821256" height="48.309178744" class="bin0"/>
+<rect x="87.5" width="2.5" y="51.690821256" height="0" class="bin1"/>
+<rect x="87.5" width="2.5" y="51.690821256" height="0" class="bin2"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="135" width="2.5" y="51.690821256" height="48.309178744" class="bin2"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="140" width="2.5" y="51.690821256" height="48.309178744" class="bin0"/>
+<rect x="140" width="2.5" y="51.690821256" height="0" class="bin1"/>
+<rect x="140" width="2.5" y="51.690821256" height="0" class="bin2"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="177.5" width="2.5" y="51.690821256" height="48.309178744" class="bin2"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="180" width="2.5" y="3.3816425121" height="96.6183574879" class="bin1"/>
+<rect x="180" width="2.5" y="3.3816425121" height="0" class="bin2"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="185" width="2.5" y="3.3816425121" height="96.6183574879" class="bin1"/>
+<rect x="185" width="2.5" y="3.3816425121" height="0" class="bin2"/>
+<rect x="187.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="187.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="187.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="187.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin2"/>
+</g>
+</g>
+</g>
+<g transform="translate(1.1 0.1)">
+<g>
+<g transform="scale(0.0041666667) translate(20 10)">
+<line y2="0" x1="0" x2="0" class="axis" y1="100"/>
+<line y2="100" x1="1" x2="-1" class="axis-tick" y1="100"/>
+<text x="-2.5" y="100.7" class="axis-label" text-anchor="end">0</text>
+<line y2="95.652173913" x1="1" x2="-1" class="axis-tick" y1="95.652173913"/>
+<text x="-2.5" y="96.352173913" class="axis-label" text-anchor="end">0.01</text>
+<line y2="91.3043478261" x1="1" x2="-1" class="axis-tick" y1="91.3043478261"/>
+<text x="-2.5" y="92.0043478261" class="axis-label" text-anchor="end">0.02</text>
+<line y2="86.9565217391" x1="1" x2="-1" class="axis-tick" y1="86.9565217391"/>
+<text x="-2.5" y="87.6565217391" class="axis-label" text-anchor="end">0.03</text>
+<line y2="82.6086956522" x1="1" x2="-1" class="axis-tick" y1="82.6086956522"/>
+<text x="-2.5" y="83.3086956522" class="axis-label" text-anchor="end">0.04</text>
+<line y2="78.2608695652" x1="1" x2="-1" class="axis-tick" y1="78.2608695652"/>
+<text x="-2.5" y="78.9608695652" class="axis-label" text-anchor="end">0.05</text>
+<line y2="73.9130434783" x1="1" x2="-1" class="axis-tick" y1="73.9130434783"/>
+<text x="-2.5" y="74.6130434783" class="axis-label" text-anchor="end">0.06</text>
+<line y2="69.5652173913" x1="1" x2="-1" class="axis-tick" y1="69.5652173913"/>
+<text x="-2.5" y="70.2652173913" class="axis-label" text-anchor="end">0.07</text>
+<line y2="65.2173913043" x1="1" x2="-1" class="axis-tick" y1="65.2173913043"/>
+<text x="-2.5" y="65.9173913043" class="axis-label" text-anchor="end">0.08</text>
+<line y2="60.8695652174" x1="1" x2="-1" class="axis-tick" y1="60.8695652174"/>
+<text x="-2.5" y="61.5695652174" class="axis-label" text-anchor="end">0.09</text>
+<line y2="56.5217391304" x1="1" x2="-1" class="axis-tick" y1="56.5217391304"/>
+<text x="-2.5" y="57.2217391304" class="axis-label" text-anchor="end">0.1</text>
+<line y2="52.1739130435" x1="1" x2="-1" class="axis-tick" y1="52.1739130435"/>
+<text x="-2.5" y="52.8739130435" class="axis-label" text-anchor="end">0.11</text>
+<line y2="47.8260869565" x1="1" x2="-1" class="axis-tick" y1="47.8260869565"/>
+<text x="-2.5" y="48.5260869565" class="axis-label" text-anchor="end">0.12</text>
+<line y2="43.4782608696" x1="1" x2="-1" class="axis-tick" y1="43.4782608696"/>
+<text x="-2.5" y="44.1782608696" class="axis-label" text-anchor="end">0.13</text>
+<line y2="39.1304347826" x1="1" x2="-1" class="axis-tick" y1="39.1304347826"/>
+<text x="-2.5" y="39.8304347826" class="axis-label" text-anchor="end">0.14</text>
+<line y2="34.7826086957" x1="1" x2="-1" class="axis-tick" y1="34.7826086957"/>
+<text x="-2.5" y="35.4826086957" class="axis-label" text-anchor="end">0.15</text>
+<line y2="30.4347826087" x1="1" x2="-1" class="axis-tick" y1="30.4347826087"/>
+<text x="-2.5" y="31.1347826087" class="axis-label" text-anchor="end">0.16</text>
+<line y2="26.0869565217" x1="1" x2="-1" class="axis-tick" y1="26.0869565217"/>
+<text x="-2.5" y="26.7869565217" class="axis-label" text-anchor="end">0.17</text>
+<line y2="21.7391304348" x1="1" x2="-1" class="axis-tick" y1="21.7391304348"/>
+<text x="-2.5" y="22.4391304348" class="axis-label" text-anchor="end">0.18</text>
+<line y2="17.3913043478" x1="1" x2="-1" class="axis-tick" y1="17.3913043478"/>
+<text x="-2.5" y="18.0913043478" class="axis-label" text-anchor="end">0.19</text>
+<line y2="13.0434782609" x1="1" x2="-1" class="axis-tick" y1="13.0434782609"/>
+<text x="-2.5" y="13.7434782609" class="axis-label" text-anchor="end">0.2</text>
+<line y2="8.6956521739" x1="1" x2="-1" class="axis-tick" y1="8.6956521739"/>
+<text x="-2.5" y="9.3956521739" class="axis-label" text-anchor="end">0.21</text>
+<line y2="4.347826087" x1="1" x2="-1" class="axis-tick" y1="4.347826087"/>
+<text x="-2.5" y="5.047826087" class="axis-label" text-anchor="end">0.22</text>
+<line y2="0" x1="1" x2="-1" class="axis-tick" y1="0"/>
+<text x="-2.5" y="0.7" class="axis-label" text-anchor="end">0.23</text>
+<line y2="100" x1="0" x2="200" class="axis" y1="100"/>
+<line y2="98" x1="0" x2="0" class="axis-tick" y1="102"/>
+<text x="0" y="105.7" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="98" x1="33.3333333333" x2="33.3333333333" class="axis-tick" y1="102"/>
+<text x="33.3333333333" y="105.7" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="98" x1="66.6666666667" x2="66.6666666667" class="axis-tick" y1="102"/>
+<text x="66.6666666667" y="105.7" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="98" x1="100" x2="100" class="axis-tick" y1="102"/>
+<text x="100" y="105.7" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="98" x1="133.3333333333" x2="133.3333333333" class="axis-tick" y1="102"/>
+<text x="133.3333333333" y="105.7" class="axis-label" text-anchor="middle">0.7</text>
+<line y2="98" x1="166.6666666667" x2="166.6666666667" class="axis-tick" y1="102"/>
+<text x="166.6666666667" y="105.7" class="axis-label" text-anchor="middle">0.8</text>
+<line y2="98" x1="200" x2="200" class="axis-tick" y1="102"/>
+<text x="200" y="105.7" class="axis-label" text-anchor="middle">0.9</text>
+<rect x="0" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="0" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="0" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="0" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="2.5" width="2.5" y="51.690821256" height="48.309178744" class="bin2"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="22.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="22.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="22.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="22.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="27.5" width="2.5" y="51.690821256" height="48.309178744" class="bin2"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="40" width="2.5" y="51.690821256" height="48.309178744" class="bin1"/>
+<rect x="40" width="2.5" y="51.690821256" height="0" class="bin2"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="42.5" width="2.5" y="3.3816425121" height="96.6183574879" class="bin1"/>
+<rect x="42.5" width="2.5" y="3.3816425121" height="0" class="bin2"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="52.5" width="2.5" y="51.690821256" height="48.309178744" class="bin1"/>
+<rect x="52.5" width="2.5" y="51.690821256" height="0" class="bin2"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="177.5" width="2.5" y="51.690821256" height="48.309178744" class="bin0"/>
+<rect x="177.5" width="2.5" y="51.690821256" height="0" class="bin1"/>
+<rect x="177.5" width="2.5" y="51.690821256" height="0" class="bin2"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="187.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="187.5" width="2.5" y="3.3816425121" height="96.6183574879" class="bin0"/>
+<rect x="187.5" width="2.5" y="3.3816425121" height="0" class="bin1"/>
+<rect x="187.5" width="2.5" y="3.3816425121" height="0" class="bin2"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin2"/>
+</g>
+</g>
+</g>
+<g transform="translate(2.1 0.1)">
+<g>
+<g transform="scale(0.0041666667) translate(20 10)">
+<line y2="0" x1="0" x2="0" class="axis" y1="100"/>
+<line y2="100" x1="1" x2="-1" class="axis-tick" y1="100"/>
+<text x="-2.5" y="100.7" class="axis-label" text-anchor="end">0</text>
+<line y2="95.652173913" x1="1" x2="-1" class="axis-tick" y1="95.652173913"/>
+<text x="-2.5" y="96.352173913" class="axis-label" text-anchor="end">0.01</text>
+<line y2="91.3043478261" x1="1" x2="-1" class="axis-tick" y1="91.3043478261"/>
+<text x="-2.5" y="92.0043478261" class="axis-label" text-anchor="end">0.02</text>
+<line y2="86.9565217391" x1="1" x2="-1" class="axis-tick" y1="86.9565217391"/>
+<text x="-2.5" y="87.6565217391" class="axis-label" text-anchor="end">0.03</text>
+<line y2="82.6086956522" x1="1" x2="-1" class="axis-tick" y1="82.6086956522"/>
+<text x="-2.5" y="83.3086956522" class="axis-label" text-anchor="end">0.04</text>
+<line y2="78.2608695652" x1="1" x2="-1" class="axis-tick" y1="78.2608695652"/>
+<text x="-2.5" y="78.9608695652" class="axis-label" text-anchor="end">0.05</text>
+<line y2="73.9130434783" x1="1" x2="-1" class="axis-tick" y1="73.9130434783"/>
+<text x="-2.5" y="74.6130434783" class="axis-label" text-anchor="end">0.06</text>
+<line y2="69.5652173913" x1="1" x2="-1" class="axis-tick" y1="69.5652173913"/>
+<text x="-2.5" y="70.2652173913" class="axis-label" text-anchor="end">0.07</text>
+<line y2="65.2173913043" x1="1" x2="-1" class="axis-tick" y1="65.2173913043"/>
+<text x="-2.5" y="65.9173913043" class="axis-label" text-anchor="end">0.08</text>
+<line y2="60.8695652174" x1="1" x2="-1" class="axis-tick" y1="60.8695652174"/>
+<text x="-2.5" y="61.5695652174" class="axis-label" text-anchor="end">0.09</text>
+<line y2="56.5217391304" x1="1" x2="-1" class="axis-tick" y1="56.5217391304"/>
+<text x="-2.5" y="57.2217391304" class="axis-label" text-anchor="end">0.1</text>
+<line y2="52.1739130435" x1="1" x2="-1" class="axis-tick" y1="52.1739130435"/>
+<text x="-2.5" y="52.8739130435" class="axis-label" text-anchor="end">0.11</text>
+<line y2="47.8260869565" x1="1" x2="-1" class="axis-tick" y1="47.8260869565"/>
+<text x="-2.5" y="48.5260869565" class="axis-label" text-anchor="end">0.12</text>
+<line y2="43.4782608696" x1="1" x2="-1" class="axis-tick" y1="43.4782608696"/>
+<text x="-2.5" y="44.1782608696" class="axis-label" text-anchor="end">0.13</text>
+<line y2="39.1304347826" x1="1" x2="-1" class="axis-tick" y1="39.1304347826"/>
+<text x="-2.5" y="39.8304347826" class="axis-label" text-anchor="end">0.14</text>
+<line y2="34.7826086957" x1="1" x2="-1" class="axis-tick" y1="34.7826086957"/>
+<text x="-2.5" y="35.4826086957" class="axis-label" text-anchor="end">0.15</text>
+<line y2="30.4347826087" x1="1" x2="-1" class="axis-tick" y1="30.4347826087"/>
+<text x="-2.5" y="31.1347826087" class="axis-label" text-anchor="end">0.16</text>
+<line y2="26.0869565217" x1="1" x2="-1" class="axis-tick" y1="26.0869565217"/>
+<text x="-2.5" y="26.7869565217" class="axis-label" text-anchor="end">0.17</text>
+<line y2="21.7391304348" x1="1" x2="-1" class="axis-tick" y1="21.7391304348"/>
+<text x="-2.5" y="22.4391304348" class="axis-label" text-anchor="end">0.18</text>
+<line y2="17.3913043478" x1="1" x2="-1" class="axis-tick" y1="17.3913043478"/>
+<text x="-2.5" y="18.0913043478" class="axis-label" text-anchor="end">0.19</text>
+<line y2="13.0434782609" x1="1" x2="-1" class="axis-tick" y1="13.0434782609"/>
+<text x="-2.5" y="13.7434782609" class="axis-label" text-anchor="end">0.2</text>
+<line y2="8.6956521739" x1="1" x2="-1" class="axis-tick" y1="8.6956521739"/>
+<text x="-2.5" y="9.3956521739" class="axis-label" text-anchor="end">0.21</text>
+<line y2="4.347826087" x1="1" x2="-1" class="axis-tick" y1="4.347826087"/>
+<text x="-2.5" y="5.047826087" class="axis-label" text-anchor="end">0.22</text>
+<line y2="0" x1="1" x2="-1" class="axis-tick" y1="0"/>
+<text x="-2.5" y="0.7" class="axis-label" text-anchor="end">0.23</text>
+<line y2="100" x1="0" x2="200" class="axis" y1="100"/>
+<line y2="98" x1="0" x2="0" class="axis-tick" y1="102"/>
+<text x="0" y="105.7" class="axis-label" text-anchor="middle">0</text>
+<line y2="98" x1="25" x2="25" class="axis-tick" y1="102"/>
+<text x="25" y="105.7" class="axis-label" text-anchor="middle">0.1</text>
+<line y2="98" x1="50" x2="50" class="axis-tick" y1="102"/>
+<text x="50" y="105.7" class="axis-label" text-anchor="middle">0.2</text>
+<line y2="98" x1="75" x2="75" class="axis-tick" y1="102"/>
+<text x="75" y="105.7" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="98" x1="100" x2="100" class="axis-tick" y1="102"/>
+<text x="100" y="105.7" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="98" x1="125" x2="125" class="axis-tick" y1="102"/>
+<text x="125" y="105.7" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="98" x1="150" x2="150" class="axis-tick" y1="102"/>
+<text x="150" y="105.7" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="98" x1="175" x2="175" class="axis-tick" y1="102"/>
+<text x="175" y="105.7" class="axis-label" text-anchor="middle">0.7</text>
+<line y2="98" x1="200" x2="200" class="axis-tick" y1="102"/>
+<text x="200" y="105.7" class="axis-label" text-anchor="middle">0.8</text>
+<rect x="0" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="0" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="0" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="0" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="20" width="2.5" y="51.690821256" height="48.309178744" class="bin1"/>
+<rect x="20" width="2.5" y="51.690821256" height="0" class="bin2"/>
+<rect x="22.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="22.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="22.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="22.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="30" width="2.5" y="3.3816425121" height="96.6183574879" class="bin1"/>
+<rect x="30" width="2.5" y="3.3816425121" height="0" class="bin2"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="37.5" width="2.5" y="51.690821256" height="48.309178744" class="bin0"/>
+<rect x="37.5" width="2.5" y="3.3816425121" height="48.309178744" class="bin1"/>
+<rect x="37.5" width="2.5" y="3.3816425121" height="0" class="bin2"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="92.5" width="2.5" y="51.690821256" height="48.309178744" class="bin0"/>
+<rect x="92.5" width="2.5" y="51.690821256" height="0" class="bin1"/>
+<rect x="92.5" width="2.5" y="51.690821256" height="0" class="bin2"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="112.5" width="2.5" y="51.690821256" height="48.309178744" class="bin2"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="157.5" width="2.5" y="51.690821256" height="48.309178744" class="bin2"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="187.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="187.5" width="2.5" y="51.690821256" height="48.309178744" class="bin0"/>
+<rect x="187.5" width="2.5" y="51.690821256" height="0" class="bin1"/>
+<rect x="187.5" width="2.5" y="51.690821256" height="0" class="bin2"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin2"/>
+</g>
+</g>
+</g>
+<g transform="translate(3.1 0.1)">
+<g>
+<g transform="scale(0.0041666667) translate(20 10)">
+<line y2="0" x1="0" x2="0" class="axis" y1="100"/>
+<line y2="100" x1="1" x2="-1" class="axis-tick" y1="100"/>
+<text x="-2.5" y="100.7" class="axis-label" text-anchor="end">0</text>
+<line y2="91.6666666667" x1="1" x2="-1" class="axis-tick" y1="91.6666666667"/>
+<text x="-2.5" y="92.3666666667" class="axis-label" text-anchor="end">0.01</text>
+<line y2="83.3333333333" x1="1" x2="-1" class="axis-tick" y1="83.3333333333"/>
+<text x="-2.5" y="84.0333333333" class="axis-label" text-anchor="end">0.02</text>
+<line y2="75" x1="1" x2="-1" class="axis-tick" y1="75"/>
+<text x="-2.5" y="75.7" class="axis-label" text-anchor="end">0.03</text>
+<line y2="66.6666666667" x1="1" x2="-1" class="axis-tick" y1="66.6666666667"/>
+<text x="-2.5" y="67.3666666667" class="axis-label" text-anchor="end">0.04</text>
+<line y2="58.3333333333" x1="1" x2="-1" class="axis-tick" y1="58.3333333333"/>
+<text x="-2.5" y="59.0333333333" class="axis-label" text-anchor="end">0.05</text>
+<line y2="50" x1="1" x2="-1" class="axis-tick" y1="50"/>
+<text x="-2.5" y="50.7" class="axis-label" text-anchor="end">0.06</text>
+<line y2="41.6666666667" x1="1" x2="-1" class="axis-tick" y1="41.6666666667"/>
+<text x="-2.5" y="42.3666666667" class="axis-label" text-anchor="end">0.07</text>
+<line y2="33.3333333333" x1="1" x2="-1" class="axis-tick" y1="33.3333333333"/>
+<text x="-2.5" y="34.0333333333" class="axis-label" text-anchor="end">0.08</text>
+<line y2="25" x1="1" x2="-1" class="axis-tick" y1="25"/>
+<text x="-2.5" y="25.7" class="axis-label" text-anchor="end">0.09</text>
+<line y2="16.6666666667" x1="1" x2="-1" class="axis-tick" y1="16.6666666667"/>
+<text x="-2.5" y="17.3666666667" class="axis-label" text-anchor="end">0.1</text>
+<line y2="8.3333333333" x1="1" x2="-1" class="axis-tick" y1="8.3333333333"/>
+<text x="-2.5" y="9.0333333333" class="axis-label" text-anchor="end">0.11</text>
+<line y2="-0" x1="1" x2="-1" class="axis-tick" y1="-0"/>
+<text x="-2.5" y="0.7" class="axis-label" text-anchor="end">0.12</text>
+<line y2="100" x1="0" x2="200" class="axis" y1="100"/>
+<line y2="98" x1="0" x2="0" class="axis-tick" y1="102"/>
+<text x="0" y="105.7" class="axis-label" text-anchor="middle">0.1</text>
+<line y2="98" x1="33.3333333333" x2="33.3333333333" class="axis-tick" y1="102"/>
+<text x="33.3333333333" y="105.7" class="axis-label" text-anchor="middle">0.2</text>
+<line y2="98" x1="66.6666666667" x2="66.6666666667" class="axis-tick" y1="102"/>
+<text x="66.6666666667" y="105.7" class="axis-label" text-anchor="middle">0.3</text>
+<line y2="98" x1="100" x2="100" class="axis-tick" y1="102"/>
+<text x="100" y="105.7" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="98" x1="133.3333333333" x2="133.3333333333" class="axis-tick" y1="102"/>
+<text x="133.3333333333" y="105.7" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="98" x1="166.6666666667" x2="166.6666666667" class="axis-tick" y1="102"/>
+<text x="166.6666666667" y="105.7" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="98" x1="200" x2="200" class="axis-tick" y1="102"/>
+<text x="200" y="105.7" class="axis-label" text-anchor="middle">0.7</text>
+<rect x="0" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="0" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="0" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="0" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="17.5" width="2.5" y="7.4074074074" height="92.5925925926" class="bin0"/>
+<rect x="17.5" width="2.5" y="7.4074074074" height="0" class="bin1"/>
+<rect x="17.5" width="2.5" y="7.4074074074" height="0" class="bin2"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="20" width="2.5" y="7.4074074074" height="92.5925925926" class="bin0"/>
+<rect x="20" width="2.5" y="7.4074074074" height="0" class="bin1"/>
+<rect x="20" width="2.5" y="7.4074074074" height="0" class="bin2"/>
+<rect x="22.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="22.5" width="2.5" y="7.4074074074" height="92.5925925926" class="bin0"/>
+<rect x="22.5" width="2.5" y="7.4074074074" height="0" class="bin1"/>
+<rect x="22.5" width="2.5" y="7.4074074074" height="0" class="bin2"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="115" width="2.5" y="7.4074074074" height="92.5925925926" class="bin2"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="127.5" width="2.5" y="7.4074074074" height="92.5925925926" class="bin1"/>
+<rect x="127.5" width="2.5" y="7.4074074074" height="0" class="bin2"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="137.5" width="2.5" y="7.4074074074" height="92.5925925926" class="bin1"/>
+<rect x="137.5" width="2.5" y="7.4074074074" height="0" class="bin2"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="142.5" width="2.5" y="7.4074074074" height="92.5925925926" class="bin1"/>
+<rect x="142.5" width="2.5" y="7.4074074074" height="0" class="bin2"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="147.5" width="2.5" y="7.4074074074" height="92.5925925926" class="bin1"/>
+<rect x="147.5" width="2.5" y="7.4074074074" height="0" class="bin2"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="172.5" width="2.5" y="7.4074074074" height="92.5925925926" class="bin2"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="187.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="187.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="187.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="187.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin2"/>
+</g>
+</g>
+</g>
+<g transform="translate(4.1 0.1)">
+<g>
+<g transform="scale(0.0041666667) translate(20 10)">
+<line y2="0" x1="0" x2="0" class="axis" y1="100"/>
+<line y2="100" x1="1" x2="-1" class="axis-tick" y1="100"/>
+<text x="-2.5" y="100.7" class="axis-label" text-anchor="end">0</text>
+<line y2="95.652173913" x1="1" x2="-1" class="axis-tick" y1="95.652173913"/>
+<text x="-2.5" y="96.352173913" class="axis-label" text-anchor="end">0.01</text>
+<line y2="91.3043478261" x1="1" x2="-1" class="axis-tick" y1="91.3043478261"/>
+<text x="-2.5" y="92.0043478261" class="axis-label" text-anchor="end">0.02</text>
+<line y2="86.9565217391" x1="1" x2="-1" class="axis-tick" y1="86.9565217391"/>
+<text x="-2.5" y="87.6565217391" class="axis-label" text-anchor="end">0.03</text>
+<line y2="82.6086956522" x1="1" x2="-1" class="axis-tick" y1="82.6086956522"/>
+<text x="-2.5" y="83.3086956522" class="axis-label" text-anchor="end">0.04</text>
+<line y2="78.2608695652" x1="1" x2="-1" class="axis-tick" y1="78.2608695652"/>
+<text x="-2.5" y="78.9608695652" class="axis-label" text-anchor="end">0.05</text>
+<line y2="73.9130434783" x1="1" x2="-1" class="axis-tick" y1="73.9130434783"/>
+<text x="-2.5" y="74.6130434783" class="axis-label" text-anchor="end">0.06</text>
+<line y2="69.5652173913" x1="1" x2="-1" class="axis-tick" y1="69.5652173913"/>
+<text x="-2.5" y="70.2652173913" class="axis-label" text-anchor="end">0.07</text>
+<line y2="65.2173913043" x1="1" x2="-1" class="axis-tick" y1="65.2173913043"/>
+<text x="-2.5" y="65.9173913043" class="axis-label" text-anchor="end">0.08</text>
+<line y2="60.8695652174" x1="1" x2="-1" class="axis-tick" y1="60.8695652174"/>
+<text x="-2.5" y="61.5695652174" class="axis-label" text-anchor="end">0.09</text>
+<line y2="56.5217391304" x1="1" x2="-1" class="axis-tick" y1="56.5217391304"/>
+<text x="-2.5" y="57.2217391304" class="axis-label" text-anchor="end">0.1</text>
+<line y2="52.1739130435" x1="1" x2="-1" class="axis-tick" y1="52.1739130435"/>
+<text x="-2.5" y="52.8739130435" class="axis-label" text-anchor="end">0.11</text>
+<line y2="47.8260869565" x1="1" x2="-1" class="axis-tick" y1="47.8260869565"/>
+<text x="-2.5" y="48.5260869565" class="axis-label" text-anchor="end">0.12</text>
+<line y2="43.4782608696" x1="1" x2="-1" class="axis-tick" y1="43.4782608696"/>
+<text x="-2.5" y="44.1782608696" class="axis-label" text-anchor="end">0.13</text>
+<line y2="39.1304347826" x1="1" x2="-1" class="axis-tick" y1="39.1304347826"/>
+<text x="-2.5" y="39.8304347826" class="axis-label" text-anchor="end">0.14</text>
+<line y2="34.7826086957" x1="1" x2="-1" class="axis-tick" y1="34.7826086957"/>
+<text x="-2.5" y="35.4826086957" class="axis-label" text-anchor="end">0.15</text>
+<line y2="30.4347826087" x1="1" x2="-1" class="axis-tick" y1="30.4347826087"/>
+<text x="-2.5" y="31.1347826087" class="axis-label" text-anchor="end">0.16</text>
+<line y2="26.0869565217" x1="1" x2="-1" class="axis-tick" y1="26.0869565217"/>
+<text x="-2.5" y="26.7869565217" class="axis-label" text-anchor="end">0.17</text>
+<line y2="21.7391304348" x1="1" x2="-1" class="axis-tick" y1="21.7391304348"/>
+<text x="-2.5" y="22.4391304348" class="axis-label" text-anchor="end">0.18</text>
+<line y2="17.3913043478" x1="1" x2="-1" class="axis-tick" y1="17.3913043478"/>
+<text x="-2.5" y="18.0913043478" class="axis-label" text-anchor="end">0.19</text>
+<line y2="13.0434782609" x1="1" x2="-1" class="axis-tick" y1="13.0434782609"/>
+<text x="-2.5" y="13.7434782609" class="axis-label" text-anchor="end">0.2</text>
+<line y2="8.6956521739" x1="1" x2="-1" class="axis-tick" y1="8.6956521739"/>
+<text x="-2.5" y="9.3956521739" class="axis-label" text-anchor="end">0.21</text>
+<line y2="4.347826087" x1="1" x2="-1" class="axis-tick" y1="4.347826087"/>
+<text x="-2.5" y="5.047826087" class="axis-label" text-anchor="end">0.22</text>
+<line y2="0" x1="1" x2="-1" class="axis-tick" y1="0"/>
+<text x="-2.5" y="0.7" class="axis-label" text-anchor="end">0.23</text>
+<line y2="100" x1="0" x2="200" class="axis" y1="100"/>
+<line y2="98" x1="0" x2="0" class="axis-tick" y1="102"/>
+<text x="0" y="105.7" class="axis-label" text-anchor="middle">0.4</text>
+<line y2="98" x1="40" x2="40" class="axis-tick" y1="102"/>
+<text x="40" y="105.7" class="axis-label" text-anchor="middle">0.5</text>
+<line y2="98" x1="80" x2="80" class="axis-tick" y1="102"/>
+<text x="80" y="105.7" class="axis-label" text-anchor="middle">0.6</text>
+<line y2="98" x1="120" x2="120" class="axis-tick" y1="102"/>
+<text x="120" y="105.7" class="axis-label" text-anchor="middle">0.7</text>
+<line y2="98" x1="160" x2="160" class="axis-tick" y1="102"/>
+<text x="160" y="105.7" class="axis-label" text-anchor="middle">0.8</text>
+<line y2="98" x1="200" x2="200" class="axis-tick" y1="102"/>
+<text x="200" y="105.7" class="axis-label" text-anchor="middle">0.9</text>
+<rect x="0" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="0" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="0" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="0" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="2.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="2.5" width="2.5" y="3.3816425121" height="96.6183574879" class="bin0"/>
+<rect x="2.5" width="2.5" y="3.3816425121" height="0" class="bin1"/>
+<rect x="2.5" width="2.5" y="3.3816425121" height="0" class="bin2"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="7.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="10" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="12.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="15" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="17.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="20" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="22.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="22.5" width="2.5" y="51.690821256" height="48.309178744" class="bin0"/>
+<rect x="22.5" width="2.5" y="51.690821256" height="0" class="bin1"/>
+<rect x="22.5" width="2.5" y="51.690821256" height="0" class="bin2"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="25" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="27.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="30" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="32.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="35" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="37.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="40" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="42.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="45" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="47.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="50" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="52.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="55" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="57.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="60" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="62.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="65" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="67.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="67.5" width="2.5" y="51.690821256" height="48.309178744" class="bin2"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="70" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="72.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="75" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="77.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="80" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="82.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="85" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="87.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="90" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="92.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="95" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="97.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="100" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="102.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="105" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="107.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="110" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="112.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="115" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="117.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="120" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="122.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="125" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="127.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="130" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="132.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="132.5" width="2.5" y="51.690821256" height="48.309178744" class="bin1"/>
+<rect x="132.5" width="2.5" y="51.690821256" height="0" class="bin2"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="135" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="135" width="2.5" y="51.690821256" height="48.309178744" class="bin2"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="137.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="140" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="142.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="142.5" width="2.5" y="51.690821256" height="48.309178744" class="bin1"/>
+<rect x="142.5" width="2.5" y="51.690821256" height="0" class="bin2"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="145" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="147.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="147.5" width="2.5" y="51.690821256" height="48.309178744" class="bin1"/>
+<rect x="147.5" width="2.5" y="51.690821256" height="0" class="bin2"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="150" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="152.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="155" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="157.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="160" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="162.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="162.5" width="2.5" y="51.690821256" height="48.309178744" class="bin1"/>
+<rect x="162.5" width="2.5" y="51.690821256" height="0" class="bin2"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="165" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="167.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="170" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="172.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="175" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="177.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="180" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="182.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="185" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="187.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="187.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="187.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="187.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="190" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="192.5" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="195" width="2.5" y="100" height="0" class="bin2"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin-1"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin0"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin1"/>
+<rect x="197.5" width="2.5" y="100" height="0" class="bin2"/>
+</g>
+</g>
+</g>
+<g transform="translate(0.1 0.0)">
+<g>
+<text x="0.5" y="0.078" style="font-size:0.08;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="middle">Column 0</text>
+</g>
+</g>
+<g transform="translate(1.1 0.0)">
+<g>
+<text x="0.5" y="0.078" style="font-size:0.08;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="middle">Column 1</text>
+</g>
+</g>
+<g transform="translate(2.1 0.0)">
+<g>
+<text x="0.5" y="0.078" style="font-size:0.08;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="middle">Column 2</text>
+</g>
+</g>
+<g transform="translate(3.1 0.0)">
+<g>
+<text x="0.5" y="0.078" style="font-size:0.08;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="middle">Column 3</text>
+</g>
+</g>
+<g transform="translate(4.1 0.0)">
+<g>
+<text x="0.5" y="0.078" style="font-size:0.08;fill:black;font-family:Georgia, 'Cambria', 'Times New Roman', 'Nimbus Roman No9 L', serif;" text-anchor="middle">Column 4</text>
+</g>
+</g>
+<g transform="translate(4.1 1.0)">
+<g/>
+<g>
+<g transform="scale(0.0310344828) translate(9.4444444444 5)">
+<g/>
+<rect x="-10" width="110" y="0" height="22.2222222222" style="fill-opacity:0;cursor:pointer;"/>
+</g>
+</g>
+<g>
+<g transform="scale(0.0310344828) translate(9.4444444444 5)">
+<image x="0" y="0" width="100" xmlns:xlink="http://www.w3.org/1999/xlink" image-rendering="optimizeSpeed" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAZCAYAAADjRwSLAAAAMklEQVR42mNw9Vj6n4EQIFnRWye+/6OKRhUNcUUY6R6for+nJP+DMIYiEAaJwRQQrQgACBOOYrCA1cgAAAAASUVORK5CYII=" xlink:type="simple" xlink:actuate="onLoad" height="22.2222222222" preserveAspectRatio="none" xlink:show="embed"/>
+<line y2="0.8888888889" x1="0" x2="0" class="axis" y1="22.2222222222"/>
+<line y2="22.2222222222" x1="0.2133333333" x2="-0.2133333333" class="axis-tick" y1="22.2222222222"/>
+<text x="-0.5333333333" y="22.9222222222" class="axis-label" text-anchor="end">0</text>
+<line y2="19.1746031746" x1="0.2133333333" x2="-0.2133333333" class="axis-tick" y1="19.1746031746"/>
+<text x="-0.5333333333" y="19.8746031746" class="axis-label" text-anchor="end">0.1</text>
+<line y2="16.126984127" x1="0.2133333333" x2="-0.2133333333" class="axis-tick" y1="16.126984127"/>
+<text x="-0.5333333333" y="16.826984127" class="axis-label" text-anchor="end">0.2</text>
+<line y2="13.0793650794" x1="0.2133333333" x2="-0.2133333333" class="axis-tick" y1="13.0793650794"/>
+<text x="-0.5333333333" y="13.7793650794" class="axis-label" text-anchor="end">0.3</text>
+<line y2="10.0317460317" x1="0.2133333333" x2="-0.2133333333" class="axis-tick" y1="10.0317460317"/>
+<text x="-0.5333333333" y="10.7317460317" class="axis-label" text-anchor="end">0.4</text>
+<line y2="6.9841269841" x1="0.2133333333" x2="-0.2133333333" class="axis-tick" y1="6.9841269841"/>
+<text x="-0.5333333333" y="7.6841269841" class="axis-label" text-anchor="end">0.5</text>
+<line y2="3.9365079365" x1="0.2133333333" x2="-0.2133333333" class="axis-tick" y1="3.9365079365"/>
+<text x="-0.5333333333" y="4.6365079365" class="axis-label" text-anchor="end">0.6</text>
+<line y2="0.8888888889" x1="0.2133333333" x2="-0.2133333333" class="axis-tick" y1="0.8888888889"/>
+<text x="-0.5333333333" y="1.5888888889" class="axis-label" text-anchor="end">0.7</text>
+<line y2="0.8888888889" x1="100" x2="100" class="axis" y1="22.2222222222"/>
+<line y2="22.2222222222" x1="100.2133333333" x2="99.7866666667" class="axis-tick" y1="22.2222222222"/>
+<text x="100.5333333333" y="22.9222222222" class="axis-label" text-anchor="start">0</text>
+<line y2="19.1746031746" x1="100.2133333333" x2="99.7866666667" class="axis-tick" y1="19.1746031746"/>
+<text x="100.5333333333" y="19.8746031746" class="axis-label" text-anchor="start">0.1</text>
+<line y2="16.126984127" x1="100.2133333333" x2="99.7866666667" class="axis-tick" y1="16.126984127"/>
+<text x="100.5333333333" y="16.826984127" class="axis-label" text-anchor="start">0.2</text>
+<line y2="13.0793650794" x1="100.2133333333" x2="99.7866666667" class="axis-tick" y1="13.0793650794"/>
+<text x="100.5333333333" y="13.7793650794" class="axis-label" text-anchor="start">0.3</text>
+<line y2="10.0317460317" x1="100.2133333333" x2="99.7866666667" class="axis-tick" y1="10.0317460317"/>
+<text x="100.5333333333" y="10.7317460317" class="axis-label" text-anchor="start">0.4</text>
+<line y2="6.9841269841" x1="100.2133333333" x2="99.7866666667" class="axis-tick" y1="6.9841269841"/>
+<text x="100.5333333333" y="7.6841269841" class="axis-label" text-anchor="start">0.5</text>
+<line y2="3.9365079365" x1="100.2133333333" x2="99.7866666667" class="axis-tick" y1="3.9365079365"/>
+<text x="100.5333333333" y="4.6365079365" class="axis-label" text-anchor="start">0.6</text>
+<line y2="0.8888888889" x1="100.2133333333" x2="99.7866666667" class="axis-tick" y1="0.8888888889"/>
+<text x="100.5333333333" y="1.5888888889" class="axis-label" text-anchor="start">0.7</text>
+</g>
+</g>
+</g>
+<g transform="translate(5.1 0.0)">
+<g>
+<g transform="scale(0.0080808081) translate(5 11.875)">
+<path class="Dataline_2" d="M0 31.5666666667L59.375 98.35 118.75 20.1125 178.125 41.8333333333 237.5 65.16"/>
+<path class="Dataline_2" d="M0 10.7L59.375 85.6166666667 118.75 43.125 178.125 13.4833333333 237.5 31.74"/>
+<path class="Dataline_0" d="M0 55.8L59.375 5.6333333333 118.75 5.2625 178.125 88.1 237.5 97.84"/>
+<path class="Dataline_0" d="M0 99.2111111111L59.375 10.2166666667 118.75 53.725 178.125 90.6833333333 237.5 97.66"/>
+<path class="Dataline_0" d="M0 29.9777777778L59.375 5.55 118.75 80.775 178.125 89.45 237.5 88.2"/>
+<path class="Dataline_1" d="M0 6.6L59.375 78.7 118.75 83.9 178.125 35.0166666667 237.5 33.58"/>
+<path class="Dataline_1" d="M0 6.9666666667L59.375 78.2 118.75 81.1875 178.125 25.1166666667 237.5 27.52"/>
+<path class="Dataline_1" d="M0 9.9777777778L59.375 73.35 118.75 89.1 178.125 30.2 237.5 17.66"/>
+<path class="Dataline_1" d="M0 9.5111111111L59.375 79.0166666667 118.75 83.775 178.125 27.7166666667 237.5 25.64"/>
+</g>
+</g>
+<g>
+<g transform="scale(0.0080808081) translate(5 11.875)">
+<line y2="0" x1="0" x2="0" class="axis" y1="100"/>
+<text x="0" y="102.7" class="axis-label" text-anchor="middle">0</text>
+<text x="0" y="-1.3" class="axis-label" text-anchor="middle">0.9</text>
+<text x="0" class="paxis-label" y="-7">Column 0</text>
+<rect x="-28.203125" width="56.40625" y="-10" height="5" class="paxis-button"/>
+<line y2="0" x1="59.375" x2="59.375" class="axis" y1="100"/>
+<text x="59.375" y="102.7" class="axis-label" text-anchor="middle">0.3</text>
+<text x="59.375" y="-1.3" class="axis-label" text-anchor="middle">0.9</text>
+<text x="59.375" class="paxis-label" y="-7">Column 1</text>
+<rect x="31.171875" width="56.40625" y="-10" height="5" class="paxis-button"/>
+<line y2="0" x1="118.75" x2="118.75" class="axis" y1="100"/>
+<text x="118.75" y="102.7" class="axis-label" text-anchor="middle">0</text>
+<text x="118.75" y="-1.3" class="axis-label" text-anchor="middle">0.8</text>
+<text x="118.75" class="paxis-label" y="-7">Column 2</text>
+<rect x="90.546875" width="56.40625" y="-10" height="5" class="paxis-button"/>
+<line y2="0" x1="178.125" x2="178.125" class="axis" y1="100"/>
+<text x="178.125" y="102.7" class="axis-label" text-anchor="middle">0.1</text>
+<text x="178.125" y="-1.3" class="axis-label" text-anchor="middle">0.7</text>
+<text x="178.125" class="paxis-label" y="-7">Column 3</text>
+<rect x="149.921875" width="56.40625" y="-10" height="5" class="paxis-button"/>
+<line y2="0" x1="237.5" x2="237.5" class="axis" y1="100"/>
+<text x="237.5" y="102.7" class="axis-label" text-anchor="middle">0.4</text>
+<text x="237.5" y="-1.3" class="axis-label" text-anchor="middle">0.9</text>
+<text x="237.5" class="paxis-label" y="-7">Column 4</text>
+<rect x="209.296875" width="56.40625" y="-10" height="5" class="paxis-button"/>
+</g>
+</g>
+<g/>
+<g/>
+<g>
+<g transform="scale(0.0080808081) translate(5 11.875)"/>
+</g>
+<g>
+<g transform="scale(0.0080808081) translate(5 11.875)"/>
+</g>
+<g>
+<g transform="scale(0.0080808081) translate(5 11.875)"/>
+</g>
+</g>
+</g>
+</svg>
