@@ -127,8 +127,10 @@ def HiSC(data, alpha, k, verbose=False, elki=True):
                    pq[i] = Point_elki(p.id, o.id, subspace_dim, distance, -1)
                 else:
                     pq[i] = Point_paper(p.id, o.id, subspace_dim, distance, -1)
-                    
-        pq.sort(key=lambda x: (-x.subspace_dim, +x.distance, -x.id))
+        if(elki):
+            pq.sort(key=lambda x: (-x.subspace_dim, +x.distance, -x.id))
+        else:
+            pq.sort(key=lambda x: (x.subspace_dim, +x.distance, -x.id))
         
         # append o to the cluster order
         cluster_order.append(o)
@@ -320,17 +322,6 @@ def process_csv(input_filename):
     #     min_max_scaler = preprocessing.MinMaxScaler()
     #     X = min_max_scaler.fit_transform(X)    
     return X, y
-
-#TODO
-# preprocessing: calculate preference vectors for all data points
-def _distance(vec):
-    return np.linalg.norm(vec, 2) # l2 by default
-
-#TODO
-def var_a(dimension, p, q):    
-    pi_d_p = X[p][dimension]
-    pi_d_q = X[q][dimension]    
-    return (pi_d_q - pi_d_p)**2
 
 def subsp_pref_vecs(data, knn_indices, alpha):
     """
