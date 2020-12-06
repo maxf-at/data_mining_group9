@@ -9,7 +9,10 @@ from sklearn import metrics
 
 
 """
-HiSC algorithm for VU Data Mining 2020
+HiSC algorithm 
+Group 9 VU Data Mining 2020
+by: Code by RAPHAEL BEDNARSKY, MAXIMILIAN FAISSNER, LAURA JAHN
+
 Currently, it is advised to call the main function from a Jupyter Notebook,
 see HiSC_sample_notebook.ipynb
 """
@@ -306,7 +309,7 @@ def reachability_plot(data, cluster_order, labels=False, threshold=0, predecesso
 def process_csv(input_filename, sep=" ", input_filename_labels="", true_labels=True):
     """
     simple function to read csv files, save X and y
-    can be adapted to use MinMax preprocessing to scale each dimension from 0 to 1
+    can be adapted to use MinMax preprocessing to scale each data point vector from 0 to 1
     """    
     # take labels from extra file
     if input_filename_labels!="":
@@ -315,12 +318,15 @@ def process_csv(input_filename, sep=" ", input_filename_labels="", true_labels=T
         labels = np.genfromtxt(input_filename_labels, delimiter=sep,dtype='str')
         y = labels.astype(int) 
         return X, y
+    
     # take labels from the last column
     elif true_labels: 
         data = np.genfromtxt(input_filename, delimiter=sep,dtype='str')
         X = data[:,:-1].astype(float) # exclude last column --> labels
         y = data[:,-1] # labels
         return X, y
+    
+    # return only X
     else:
         data = np.genfromtxt(input_filename, delimiter=sep,dtype='str')
         X = data.astype(float) 
@@ -337,15 +343,15 @@ def subsp_pref_vecs(data, knn_indices, alpha):
         data, np array of shape (n, dimensions), where each row is a data point.
         knn_indices, np array of shape (n, k), where each row is a nearest 
         neighbour pairing and the first instance is the central node. 
-        alpha, float, threshold for high variance.
     Returns:
-        a matrix containing all the subspace preference vectors,
+        a matrix containing all the subspace preference vectors
         as a numpy array.
     """
     k = knn_indices.shape[1]
     
     ## variance 
     q = data[knn_indices]
+    
     # create p to subtract it from values of q in the right pattern
     p = np.repeat(data[knn_indices][:,0,:], repeats=k, axis=0).reshape(q.shape)
     var = np.sum((p-q)**2, axis=1) / k

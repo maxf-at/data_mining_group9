@@ -1,45 +1,34 @@
-# TODO © Namen
+
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.lines as lines
 from dataclasses import dataclass, field
 from sklearn import preprocessing
 from sklearn import neighbors
 from sklearn import metrics
 
-np.set_printoptions(linewidth=120, formatter={'float': '{: 0.3f}'.format})
 
-# struct for all datapoints like elki
+"""
+HiSC algorithm for VU Data Mining 2020
+Currently, it is advised to call the main function from a Jupyter Notebook,
+see HiSC_sample_notebook.ipynb
+"""
+
+
+# struct for all datapoints
 @dataclass
-class Point_elki:
+class Point:
     id:           int
     predecessor:  int
     subspace_dim: int
     distance:     float
-    label:        int
-        
-    # overload < (less than) operator    
-    def __lt__(self, point_2):
-        return (-self.subspace_dim, +self.distance, -self.id) < (-point_2.subspace_dim, +point_2.distance, -point_2.id)           
+    label:        int        
+       
     # overload string output
     def __str__(self):
         return f'id: {self.id:5}, pred: {self.predecessor:5}, subs: {self.subspace_dim:2}, dist: {self.distance:.5f}, label: {self.label:5}'
 
-# struct for all datapoints like paper
-@dataclass
-class Point_paper:
-    id:           int
-    predecessor:  int
-    subspace_dim: int
-    distance:     float
-    label:        int
-        
-    # overload < (less than) operator    
-    def __lt__(self, point_2):
-        return (self.subspace_dim, +self.distance, -self.id) < (point_2.subspace_dim, +point_2.distance, -point_2.id)           
-    # overload string output
-    def __str__(self):
-        return f'id: {self.id:5}, pred: {self.predecessor:5}, subs: {self.subspace_dim:2}, dist: {self.distance:.5f}, label: {self.label:5}'
-
+    
 # @param data: dataset to order
 # @param alpha: threshold value
 # @param k: number of neighbors
@@ -49,6 +38,9 @@ def HiSC(data, alpha, k, verbose=False, elki=True):
     """
     Performs the HiSC algorithm.
     Data has the features in the columns and the samples per rows.
+    
+    function uses various helper functions (bottom of file)
+    
     """
     cluster_order = []
     
@@ -65,51 +57,48 @@ def HiSC(data, alpha, k, verbose=False, elki=True):
     if verbose:
         print("Subspace vectors:\n", wp)
     
-    # the first item is chosen first by default and will be ignored for the pq
-    # cluster_order.append((np.inf, np.inf, 0))
+    # init cluster ordering
     cluster_order = []
     
-    # insert the remaining datapoints into the pq, where each is a tuple of  
-    # d1, d2 (with respect to the first point) and its index in the dataset. 
-    # This list will be kept in ascending order, even though popping from the end
-    # is faster, because bisect only works that way
-    if(elki):
-        for id in range(data.shape[0]):        
-            subspace_dim = d1(data, wp, id, 0, alpha)
-            distance = d2_elki(data, wp, id, 0)   
-            pq.append(Point_elki(id, 0, subspace_dim, distance, -1))
-    else:
-        for id in range(data.shape[0]):        
-            subspace_dim = d1(data, wp, id, 0, alpha)
-            distance = d2_paper(data, wp, id, 0)   
-            pq.append(Point_paper(id, 0, subspace_dim, distance, -1))
+    # insert the datapoints into the pq, where each point has  
+    # id, predecessor, d1, d2 (with respect to the first point).
 
-    # TODO 
-    # sort everything to get a priority queue that we will keep sorted
-    # pq.sort()
-    # not necessary, initially all are sorted by id anyway
+
+    for id in range(data.shape[0]):        
+        subspace_dim = d1(data, wp, id, 0, alpha)
+        distance = d2_elki(data, wp, id, 0)   
+        pq.append(Point(id, 0, subspace_dim, distance, -1))
+
+
+
+    print ("Running HiSC, input dataset has", len(data), "entries with", len(data[0]), "dimensions")
     
+    # outer loop for point o
     while len(pq) != 0:
         if verbose:
-            print("\n######\nPQ:", pq, "\n\nCluster Order:", cluster_order)
+            print("PQ:", pq, "\nCluster Order:", cluster_order)
         
+        # remove first element per iteration
         o = pq.pop(0) 
-        # TODO
-        # !!!!!!!!!!!!!!!
-        # for basic_ext it seems to be better to pop from the end, i.e. 
-        # take the one with the largest distance (which does not make sense)
-        # at least that corresponds to the ELKI debugging we did
-        # but it messes up the basic example
-        
-        if verbose:
-            print("o:", o)
-        
+                
+        # % complete graph, idea from https://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console
+        percent_complete = (len(data)-len(pq))/len(data)*100       
+        bar_length = 20
+        filled_length = int(percent_complete/100*bar_length)
+        rest = bar_length - filled_length
+        bar = "█" * filled_length + '_' * rest
+    
+        if not verbose:
+            print(f'\rComputing hierarchical structure |{bar}| {percent_complete:.1f}% complete', end = "\r")
+
+
         ## update the distances
         
         # list that remembers the indices in need of updating, so that we can 
         # go back over the list and remove them to not scramble things up
         needs_updating = []
         
+        # inner loop, point p
         for i in range(len(pq)):
             # calculate the distance to the o that was added last
             p = pq[i]
@@ -123,10 +112,10 @@ def HiSC(data, alpha, k, verbose=False, elki=True):
             # as well as the tuple to update with
             if subspace_dim < p.subspace_dim  or\
                (subspace_dim == p.subspace_dim and distance < p.distance): 
-                if(elki):
-                    pq[i] = Point_elki(p.id, o.id, subspace_dim, distance, -1)
-                else:
-                    pq[i] = Point_paper(p.id, o.id, subspace_dim, distance, -1)
+                pq[i] = Point(p.id, o.id, subspace_dim, distance, -1)
+
+                    
+                    
         if(elki):
             pq.sort(key=lambda x: (-x.subspace_dim, +x.distance, -x.id))
         else:
@@ -139,84 +128,19 @@ def HiSC(data, alpha, k, verbose=False, elki=True):
 
 
 # @param clus_ord: dataset to cluster
-# @param k: number of clusters (default = 6)
-# @return labels: returns an array with the labels of the dataset
+# @return y: returns an array with the labels of the dataset
 # @return threshold: number which divides dataset in noise points and clusters
-
-# def get_clusters(clus_ord, k=6):
-#     """
-#     k is the number of classes (>= 2)
-    
-#     note that I count the point that is at the threshold not as 
-#     noise point but as belonging to the next cluster, since this is the
-#     one point that started the next cluster (the distances suddenly are
-#     are low because this point has been added to the cluster ordering)
-#     """
-#     y = np.zeros(len(clus_ord), dtype=int)
-#     i = 0
-
-#     for p in clus_ord:
-#         y[i] = p.subspace_dim
-#         i += 1
-
-#     #TODO
-#     # remove the inf value 
-#     #y = y[1:]
-    
-#     # start with highest possible threshold
-#     thres = np.max(y)
-#     border = 0
-#     while np.sum(border) < k:
-#         # find indices where we are higher-equal than threshold in one position
-#         # and lower than threshold in the next position (we want to find exactly
-#         # k-1 such positions as they correspond to borders between clusters)
-#         higherequal = (y >= thres)
-#         lower = (y < thres)
-#         # set first to false, since that is inf and we want to ignore it below
-#         higherequal[0] = False
-#         # shift lower and set last one to false to ignore (since that is 
-#         # introduced from the beginning with roll)
-#         lower_shifted = np.roll(lower, -1)
-#         lower_shifted[-1] = False
-#         border = np.logical_and(higherequal, lower_shifted)
-              
-#         if np.sum(border) >= k-1:
-#             if np.sum(border) > k-1:
-#                 # simple fix of the problem
-#                 print("!!!!!!!!!!!!!!!!!!!\n Couldn't find k unambigous clusters due to tie - returned for next larger possible k\n!!!!!!!!!!!!!!!!!!!")
-                
-#             # noise is labelled with the highest int
-#             border_indices = np.append(
-#                 np.append([0], np.where(border)), 
-#                                             [len(y)])
-            
-#             labels = np.repeat(np.arange(len(border_indices)-1),
-#                                np.diff(border_indices))
-#             # set all remaining that are higher than thres to noise
-#             np.put(labels, np.where(y > thres), np.max(labels)+1)
-            
-#             # for testing #####################################
-#             #plt.axhline(y=thres, color="k")                
-#             #plt.scatter(np.arange(1, len(y)+1), y, marker="x", c=labels)
-#             #plt.title(f"k={k}")
-#             ###################################################
-            
-#             return labels, thres
-
-#         # next step
-#         thres -= 1
-        
-#         if thres < 0:
-#             raise UserWarning("Not that many clusters found! Try a lower cluster number")
-
-
+# @min_items: consecutive data points required to count as cluster
 def get_clusters(clust_ord, threshold=0.21, min_items=20):
     """
+    simple function to assign labels according to a threshold
+    to start a new label, at least min_items have to be present
     """
+    
+    # start new label vector
     y = np.zeros(len(clust_ord), dtype=int)
     i = 0    
-#     threshold = 0.21
-#     min_items = 20
+
     # list of clusters    
     list_of_clusters = []    
     current_list_of_clusters = []
@@ -229,7 +153,9 @@ def get_clusters(clust_ord, threshold=0.21, min_items=20):
             current_list_of_clusters = []
             
     list_of_clusters.append(current_list_of_clusters)    
+    
     i = 0
+    
     while True:
         current_cluster = list_of_clusters[i]
 #         print (len(current_cluster))
@@ -244,7 +170,8 @@ def get_clusters(clust_ord, threshold=0.21, min_items=20):
             y[point.id] = cluster_id+1
     for i in range(len(y)):
         y[i] -= 1 # -1 offset so that noise is -1    
-    return y
+    
+    return y # return labels
 
 
 # @param data: true dataset
@@ -254,126 +181,151 @@ def get_clusters(clust_ord, threshold=0.21, min_items=20):
 # @param labels: set of the labels_of_data
 # @param threshold: number which divides dataset in noise points and clusters
 # @return: plots the reachability and some interesting facts about the cluster algorithm
-def reachability_plot(data, cluster_order, labels_true, labels_of_data, threshold, n_cluster):
+def reachability_plot(data, cluster_order, labels, threshold, predecessor_graph=True, figsize=(16, 8), dimensions=[(0,1),(1,2)]):
+    """
+    Reachability plot for HiSC
+    input: datapoints 
+           cluster ordering
+           labels (either predicted or true labels)
+           threshold (for reachability plot)
     
+    inspired by: https://github.com/SamaelChen/hexo-practice-code/blob/master/fun/OPTICS.ipynb    
+    """
 
+    # helper function
+    # 2d plot from different input dimensions
+    def sub_plot(dim1, dim2):
+        # compute predecessor lines
+        line_plot = []    
+        if predecessor_graph:
+            for i, point in enumerate(cluster_order):             
+                if point.distance <= 0.0:
+                    continue               
+                
+                # we can exclude noise points from the predecessor plots if required...
+#                 if cluster_order[point.predecessor].label == -1:
+#                     continue                   
+                point_xdim = data[point.id][dim1]
+                point_ydim = data[point.id][dim2]        
+                point_pred_xdim = data[point.predecessor][dim1]
+                point_pred_ydim = data[point.predecessor][dim2]        
+                line_plot.append((point_xdim, point_ydim, point_pred_xdim, point_pred_ydim))
+
+        # Get the current Axes instance 
+        ax = plt.gca()
+        for x1, y1, x2, y2 in line_plot:
+            # plot lines between 2 points
+            line = lines.Line2D([x1, x2], [y1, y2], lw=1, color='gray', axes=ax)
+            ax.add_line(line)
+
+        unique_labels = set(labels) 
+        colors = [plt.cm.Spectral(color) for color in np.linspace(0, 1, len(unique_labels))]
+        
+        for label, color in zip(unique_labels, colors):
+            # set noise as black if -1 label available
+            if label == -1 or label == "-1" or label == "Noise" or label == "noise": 
+                color = (0, 0, 0, 1)
+            class_member_mask = (labels == label)
+            xy = data[class_member_mask]        
+            plt.plot(xy[:, dim1], xy[:, dim2], 'o', markerfacecolor=tuple(color), markeredgewidth=0.5, markeredgecolor='k', markersize=5)
+
+        plt.title(f'x-axis: dimension {dim1}; y-axis: dimension {dim2}')
+#         plt.legend(unique_labels)
+        plt.grid(True, alpha=0.3)
+
+    
+    # set point labels according to input labels
     for i, point in enumerate(cluster_order):
-        point.label = labels_of_data[i]
-        
-    n_clusters_ = len(set(labels_of_data)) - (1 if n_cluster else 0)
-    n_noise_ = list(labels_of_data).count(n_cluster)
-
-#     print('Estimated number of clusters: %d' % n_clusters_)
-#     print('Estimated number of noise points: %d' % n_noise_)
-#     print("Homogeneity: %0.3f" % metrics.homogeneity_score(labels_true, labels_of_data))
-#     print("Completeness: %0.3f" % metrics.completeness_score(labels_true, labels_of_data))
-#     print("V-measure: %0.3f" % metrics.v_measure_score(labels_true, labels_of_data))
-#     print("Adjusted Rand Index: %0.3f" % metrics.adjusted_rand_score(labels_true, labels_of_data))
-#     print("Adjusted Mutual Information: %0.3f" % metrics.adjusted_mutual_info_score(labels_true, labels_of_data))
-#     print("Silhouette Coefficient: %0.3f" % metrics.silhouette_score(data, labels_of_data))
-
-    # ground truth plot
-    plt.figure(figsize=(16, 7))
-    plt.subplot(1, 2, 1)
-    unique_labels = set(labels_true) # warum steht da set?
-    colors = [plt.cm.Spectral(each)
-            for each in np.linspace(0, 1, len(unique_labels))]
-    for k, col in zip(unique_labels, colors):
-        if k == 'Noise':
-            # Black used for noise.
-            col = [0, 0, 0, 1]
-
-        class_member_mask = (labels_true == k)
-
-        xy = data[class_member_mask]
-        plt.plot(xy[:, 0], xy[:, 1], 'o', markerfacecolor=tuple(col), markeredgecolor='k', markersize=8)
-    ax = plt.gca()
-    ax.set_facecolor('gray')
-    plt.title('Ground Truth %d' % len(unique_labels))
-    plt.grid(True)
-
-    # plot with our labels
-    plt.subplot(1, 2, 2)
-    unique_labels = set(labels_of_data) # warum steht da set?
-    colors = [plt.cm.Spectral(each)
-            for each in np.linspace(0, 1, len(unique_labels))]
-    for k, col in zip(unique_labels, colors):
-        if k == -1:
-            # Black used for noise.
-            col = [0, 0, 0, 1]
-
-        class_member_mask = (labels_of_data == k)
-
-        xy = data[class_member_mask]
-        plt.plot(xy[:, 0], xy[:, 1], 'o', markerfacecolor=tuple(col), markeredgecolor='k', markersize=8)
-    ax = plt.gca()
-    ax.set_facecolor('gray')
-    plt.title('Estimated number of clusters: %d' % n_clusters_)
-    plt.grid(True)
-
-    # plot reachability
-    plt.figure(figsize=(16, 7))
+        point.label = labels[i]
+   
+    # how many subplots? 
+    y_plots = int(np.ceil(len(dimensions)/2))
     
-    unique_labels = set(labels_of_data)
-    unique_labels = set(labels_true)
+    # always plot 2 plots next to each other
+    for y_plot in range(y_plots):       
+       # setup size
+        plt.figure(figsize=figsize)           
+        #  left top plot: first dimensions
+        dim1 = dimensions[y_plot*2][0]
+        dim2 = dimensions[y_plot*2][1]
+        plt.subplot(1, 2, 1)
+        sub_plot(dim1, dim2)    
+        # right top plot: other dimensions
+        if y_plot*2+1>=len(dimensions):break
+        dim1 = dimensions[y_plot*2+1][0]
+        dim2 = dimensions[y_plot*2+1][1]
+        plt.subplot(1, 2, 2)        
+        sub_plot(dim1, dim2) 
     
-    # using the spectral colourmap
-    colors = [plt.cm.Spectral(each)
-            for each in np.linspace(0, 1, len(unique_labels))]
-    
-    sequence = []
-    subspaceDim = []
-    
-    for label, color in zip(unique_labels, colors):        
-        label = int(label)
-        
-        if(label == -1):
-            color = (0, 0, 0, 1)
-        for i, point in enumerate(cluster_order):     
             
-            if(int(labels_true[point.id]) == label):
-                sequence.append(i)
-                subspaceDim.append(point.distance)
-
-        plt.bar(sequence, subspaceDim, color=tuple(color), label=label)
+    # plot reachability bargraph
+    plt.figure(figsize=figsize)  
+    unique_labels = set(labels)    
+    # using a matplotlib colourmap
+    colors = [plt.cm.Spectral(color) for color in np.linspace(0, 1, len(unique_labels))]
+    
+    bar_x = []
+    bar_y = []    
+    for label, color in zip(unique_labels, colors):        
+        label = int(label)     
+        # set noise as black if -1 label available
+        if label == -1 or label == "-1" or label == "Noise" or label == "noise": 
+            color = (0, 0, 0, 1)
+        for i, point in enumerate(cluster_order):                 
+            if int(labels[point.id]) == label:
+                bar_x.append(i)
+                bar_y.append(point.distance)                
+                
+        plt.bar(bar_x, bar_y, color=tuple(color), label=label)
+        # reset colors for next label set
+        bar_x = []
+        bar_y = []
         
-        sequence = []
-        subspaceDim = []
-        
-
-    ax = plt.gca()
-    ax.set_facecolor('gray')
-    plt.title('Reachability')   
-    plt.grid(False)  
+    # plot threshold line
     plt.plot(np.arange(len(data)), [threshold] * len(data), '--', color='red')
+        
+    ax = plt.gca()
+    plt.title('Reachability Plot')   
+    plt.grid(False)      
     plt.xticks([]) # remove x axis labels - too much information
     plt.xlabel('datapoints')
     plt.ylabel('subspace weighted distance')
-    plt.legend()
+    plt.legend(prop={'size': 16})
     plt.show()
+    
 
-##################################################
 
-#TODO
-def process_csv(input_filename, sep=" ", input_filename_labels=""):
+####################################
+# helper functions for HiSC below: #
+####################################
+
+def process_csv(input_filename, sep=" ", input_filename_labels="", true_labels=True):
     """
     simple function to read csv files, save X and y
     can be adapted to use MinMax preprocessing to scale each dimension from 0 to 1
     """    
+    # take labels from extra file
     if input_filename_labels!="":
         data = np.genfromtxt(input_filename, delimiter=sep,dtype='str')
         X = data.astype(float) 
         labels = np.genfromtxt(input_filename_labels, delimiter=sep,dtype='str')
         y = labels.astype(int) 
-    else: # take labels from the last column
+        return X, y
+    # take labels from the last column
+    elif true_labels: 
         data = np.genfromtxt(input_filename, delimiter=sep,dtype='str')
         X = data[:,:-1].astype(float) # exclude last column --> labels
         y = data[:,-1] # labels
+        return X, y
+    else:
+        data = np.genfromtxt(input_filename, delimiter=sep,dtype='str')
+        X = data.astype(float) 
+        return X
     
     # we may or may not need this later...
     #     min_max_scaler = preprocessing.MinMaxScaler()
     #     X = min_max_scaler.fit_transform(X)    
-    return X, y
+    
 
 def subsp_pref_vecs(data, knn_indices, alpha):
     """
@@ -397,6 +349,7 @@ def subsp_pref_vecs(data, knn_indices, alpha):
     # return subspace preference vectors
     return var <= alpha
 
+
 def d1(data, wp, p, q, alpha):
     """
     Input:
@@ -414,6 +367,7 @@ def d1(data, wp, p, q, alpha):
     else:
         return lambda_pq(wp, p, q)
 
+    
 def d2_elki(data, wp, p, q):
     """
     Input:
@@ -425,12 +379,13 @@ def d2_elki(data, wp, p, q):
     Output:
         d2 (int) as defined in defition 4
     
-    !!! again sth different than in the paper, see below
+    probably different than in the paper, see below
     """
-    wp_inv = np.logical_and( wp[p], wp[q])
+    wp_inv = np.logical_and(wp[p], wp[q])
 
     # return euclidian distance weighted by inverse combined pref vec
     return (np.sum( (data[p] - data[q])**2 * wp_inv ))**(1/2)
+
 
 def d2_paper(data, wp, p, q):
     """
@@ -443,13 +398,14 @@ def d2_paper(data, wp, p, q):
     Output:
         d2 (int) as defined in defition 4
     
-    !!! again sth different than in the paper, see below
+    again sth different than in the paper, see below
     """
     # inverse combined preference vector
     wp_inv = np.logical_not( np.logical_and( wp[p], wp[q]))
 
     # return euclidian distance weighted by inverse combined pref vec
     return (np.sum( (data[p] - data[q])**2 * wp_inv ))**(1/2)
+
 
 def lambda_pq(wp, p, q):
     """
@@ -461,9 +417,8 @@ def lambda_pq(wp, p, q):
         subspace dimensionality (int), denoted as lamda(p, q) in the 
         definition 3 in the paper.
     """
-    # TODO
-    # not, because we want to count the zeros
     return np.sum( np.logical_not( np.logical_and( wp[p], wp[q])))
+
 
 def distw_pq(data, wp, p, q):
     """
@@ -477,7 +432,7 @@ def distw_pq(data, wp, p, q):
         Weighted euclidian distance between the vectors with index p and q
         as given in definition 4.
     
-    !! In definition 4 the square root at the end is missing in comparison to 
-    !! the paper!
+    In definition 4 the square root at the end is missing in comparison to 
+    the paper.
     """
     return (np.sum( (data[p] - data[q])**2 * wp[p] ))**(1/2)

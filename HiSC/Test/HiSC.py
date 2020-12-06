@@ -124,7 +124,7 @@ def HiSC(data, alpha, k, verbose=False, elki=True):
             if subspace_dim < p.subspace_dim  or\
                (subspace_dim == p.subspace_dim and distance < p.distance): 
                 if(elki):
-                   pq[i] = Point_elki(p.id, o.id, subspace_dim, distance, -1)
+                    pq[i] = Point_elki(p.id, o.id, subspace_dim, distance, -1)
                 else:
                     pq[i] = Point_paper(p.id, o.id, subspace_dim, distance, -1)
         if(elki):
@@ -137,75 +137,115 @@ def HiSC(data, alpha, k, verbose=False, elki=True):
     
     return cluster_order
 
+
 # @param clus_ord: dataset to cluster
 # @param k: number of clusters (default = 6)
 # @return labels: returns an array with the labels of the dataset
 # @return threshold: number which divides dataset in noise points and clusters
-def get_clusters(clus_ord, k=6):
-    """
-    k is the number of classes (>= 2)
+
+# def get_clusters(clus_ord, k=6):
+#     """
+#     k is the number of classes (>= 2)
     
-    note that I count the point that is at the threshold not as 
-    noise point but as belonging to the next cluster, since this is the
-    one point that started the next cluster (the distances suddenly are
-    are low because this point has been added to the cluster ordering)
+#     note that I count the point that is at the threshold not as 
+#     noise point but as belonging to the next cluster, since this is the
+#     one point that started the next cluster (the distances suddenly are
+#     are low because this point has been added to the cluster ordering)
+#     """
+#     y = np.zeros(len(clus_ord), dtype=int)
+#     i = 0
+
+#     for p in clus_ord:
+#         y[i] = p.subspace_dim
+#         i += 1
+
+#     #TODO
+#     # remove the inf value 
+#     #y = y[1:]
+    
+#     # start with highest possible threshold
+#     thres = np.max(y)
+#     border = 0
+#     while np.sum(border) < k:
+#         # find indices where we are higher-equal than threshold in one position
+#         # and lower than threshold in the next position (we want to find exactly
+#         # k-1 such positions as they correspond to borders between clusters)
+#         higherequal = (y >= thres)
+#         lower = (y < thres)
+#         # set first to false, since that is inf and we want to ignore it below
+#         higherequal[0] = False
+#         # shift lower and set last one to false to ignore (since that is 
+#         # introduced from the beginning with roll)
+#         lower_shifted = np.roll(lower, -1)
+#         lower_shifted[-1] = False
+#         border = np.logical_and(higherequal, lower_shifted)
+              
+#         if np.sum(border) >= k-1:
+#             if np.sum(border) > k-1:
+#                 # simple fix of the problem
+#                 print("!!!!!!!!!!!!!!!!!!!\n Couldn't find k unambigous clusters due to tie - returned for next larger possible k\n!!!!!!!!!!!!!!!!!!!")
+                
+#             # noise is labelled with the highest int
+#             border_indices = np.append(
+#                 np.append([0], np.where(border)), 
+#                                             [len(y)])
+            
+#             labels = np.repeat(np.arange(len(border_indices)-1),
+#                                np.diff(border_indices))
+#             # set all remaining that are higher than thres to noise
+#             np.put(labels, np.where(y > thres), np.max(labels)+1)
+            
+#             # for testing #####################################
+#             #plt.axhline(y=thres, color="k")                
+#             #plt.scatter(np.arange(1, len(y)+1), y, marker="x", c=labels)
+#             #plt.title(f"k={k}")
+#             ###################################################
+            
+#             return labels, thres
+
+#         # next step
+#         thres -= 1
+        
+#         if thres < 0:
+#             raise UserWarning("Not that many clusters found! Try a lower cluster number")
+
+
+def get_clusters(clust_ord, threshold=0.21, min_items=20):
+    """
     """
     y = np.zeros(len(clus_ord), dtype=int)
-    i = 0
-
-    for p in clus_ord:
-        y[i] = p.subspace_dim
-        i += 1
-
-    #TODO
-    # remove the inf value 
-    #y = y[1:]
+    i = 0    
+#     threshold = 0.21
+#     min_items = 20
+    # list of clusters    
+    list_of_clusters = []    
+    current_list_of_clusters = []
     
-    # start with highest possible threshold
-    thres = np.max(y)
-    border = 0
-    while np.sum(border) < k:
-        # find indices where we are higher-equal than threshold in one position
-        # and lower than threshold in the next position (we want to find exactly
-        # k-1 such positions as they correspond to borders between clusters)
-        higherequal = (y >= thres)
-        lower = (y < thres)
-        # set first to false, since that is inf and we want to ignore it below
-        higherequal[0] = False
-        # shift lower and set last one to false to ignore (since that is 
-        # introduced from the beginning with roll)
-        lower_shifted = np.roll(lower, -1)
-        lower_shifted[-1] = False
-        border = np.logical_and(higherequal, lower_shifted)
-              
-        if np.sum(border) >= k-1:
-            if np.sum(border) > k-1:
-                # simple fix of the problem
-                print("!!!!!!!!!!!!!!!!!!!\n Couldn't find k unambigous clusters due to tie - returned for next larger possible k\n!!!!!!!!!!!!!!!!!!!")
-                
-            # noise is labelled with the highest int
-            border_indices = np.append(
-                np.append([0], np.where(border)), 
-                                            [len(y)])
+    for current_cluster in clust_ord:
+        if current_cluster.distance < threshold:
+            current_list_of_clusters.append(current_cluster)    
+        else:
+            list_of_clusters.append(current_list_of_clusters)
+            current_list_of_clusters = []
             
-            labels = np.repeat(np.arange(len(border_indices)-1),
-                               np.diff(border_indices))
-            # set all remaining that are higher than thres to noise
-            np.put(labels, np.where(y > thres), np.max(labels)+1)
-            
-            # for testing #####################################
-            #plt.axhline(y=thres, color="k")                
-            #plt.scatter(np.arange(1, len(y)+1), y, marker="x", c=labels)
-            #plt.title(f"k={k}")
-            ###################################################
-            
-            return labels, thres
+    list_of_clusters.append(current_list_of_clusters)    
+    i = 0
+    while True:
+        current_cluster = list_of_clusters[i]
+#         print (len(current_cluster))
+        if len(current_cluster) < min_items:
+            list_of_clusters.pop(i)
+        else:
+            i += 1
+        if i+1>len(list_of_clusters):
+            break   
+    for cluster_id, cluster in enumerate(list_of_clusters):        
+        for point in cluster:
+            y[point.id] = cluster_id+1
+    for i in range(len(y)):
+        y[i] -= 1 # -1 offset so that noise is -1    
+    return y
 
-        # next step
-        thres -= 1
-        
-        if thres < 0:
-            raise UserWarning("Not that many clusters found! Try a lower cluster number")
 
 # @param data: true dataset
 # @param cluster_order: ordered dataset
@@ -215,29 +255,27 @@ def get_clusters(clus_ord, k=6):
 # @param threshold: number which divides dataset in noise points and clusters
 # @return: plots the reachability and some interesting facts about the cluster algorithm
 def reachability_plot(data, cluster_order, labels_true, labels_of_data, threshold, n_cluster):
-    i = 0
-    for point in cluster_order:
-        point.label = labels_of_data[i]
-        i += 1
+    
 
+    for i, point in enumerate(cluster_order):
+        point.label = labels_of_data[i]
+        
     n_clusters_ = len(set(labels_of_data)) - (1 if n_cluster else 0)
     n_noise_ = list(labels_of_data).count(n_cluster)
-    sequence = []
-    subspaceDim = []
 
-    print('Estimated number of clusters: %d' % n_clusters_)
-    print('Estimated number of noise points: %d' % n_noise_)
-    print("Homogeneity: %0.3f" % metrics.homogeneity_score(labels_true, labels_of_data))
-    print("Completeness: %0.3f" % metrics.completeness_score(labels_true, labels_of_data))
-    print("V-measure: %0.3f" % metrics.v_measure_score(labels_true, labels_of_data))
-    print("Adjusted Rand Index: %0.3f" % metrics.adjusted_rand_score(labels_true, labels_of_data))
-    print("Adjusted Mutual Information: %0.3f" % metrics.adjusted_mutual_info_score(labels_true, labels_of_data))
-    print("Silhouette Coefficient: %0.3f" % metrics.silhouette_score(data, labels_of_data))
+#     print('Estimated number of clusters: %d' % n_clusters_)
+#     print('Estimated number of noise points: %d' % n_noise_)
+#     print("Homogeneity: %0.3f" % metrics.homogeneity_score(labels_true, labels_of_data))
+#     print("Completeness: %0.3f" % metrics.completeness_score(labels_true, labels_of_data))
+#     print("V-measure: %0.3f" % metrics.v_measure_score(labels_true, labels_of_data))
+#     print("Adjusted Rand Index: %0.3f" % metrics.adjusted_rand_score(labels_true, labels_of_data))
+#     print("Adjusted Mutual Information: %0.3f" % metrics.adjusted_mutual_info_score(labels_true, labels_of_data))
+#     print("Silhouette Coefficient: %0.3f" % metrics.silhouette_score(data, labels_of_data))
 
-    #TODO
+    # ground truth plot
     plt.figure(figsize=(16, 7))
     plt.subplot(1, 2, 1)
-    unique_labels = set(labels_true)
+    unique_labels = set(labels_true) # warum steht da set?
     colors = [plt.cm.Spectral(each)
             for each in np.linspace(0, 1, len(unique_labels))]
     for k, col in zip(unique_labels, colors):
@@ -254,8 +292,9 @@ def reachability_plot(data, cluster_order, labels_true, labels_of_data, threshol
     plt.title('Ground Truth %d' % len(unique_labels))
     plt.grid(True)
 
+    # plot with our labels
     plt.subplot(1, 2, 2)
-    unique_labels = set(labels_of_data)
+    unique_labels = set(labels_of_data) # warum steht da set?
     colors = [plt.cm.Spectral(each)
             for each in np.linspace(0, 1, len(unique_labels))]
     for k, col in zip(unique_labels, colors):
@@ -272,51 +311,64 @@ def reachability_plot(data, cluster_order, labels_true, labels_of_data, threshol
     plt.title('Estimated number of clusters: %d' % n_clusters_)
     plt.grid(True)
 
-    #plot reachability
+    # plot reachability
     plt.figure(figsize=(16, 7))
+    
     unique_labels = set(labels_of_data)
+    unique_labels = set(labels_true)
+    
+    # using the spectral colourmap
     colors = [plt.cm.Spectral(each)
             for each in np.linspace(0, 1, len(unique_labels))]
-    for label, color in zip(unique_labels, colors):
-        if(label == -1):
-            # Black used for noise.
-            color = [0, 0, 0, 1]
-
-        for point in cluster_order:
-            if(point.label == label):
-                sequence.append(str(point.id))
-                subspaceDim.append(point.subspace_dim)
+    
+    sequence = []
+    subspaceDim = []
+    
+    for label, color in zip(unique_labels, colors):        
+        label = int(label)
         
         if(label == -1):
-            plt.plot(sequence, subspaceDim, 'o', markerfacecolor=tuple(color), markersize=8, label = "Noise Point")
-        else:
-            plt.plot(sequence, subspaceDim, 'o', markerfacecolor=tuple(color), markersize=8, label = "Cluster " + str(label))#
+            color = (0, 0, 0, 1)
+        for i, point in enumerate(cluster_order):     
+            
+            if(int(labels_true[point.id]) == label):
+                sequence.append(i)
+                subspaceDim.append(point.distance)
 
+        plt.bar(sequence, subspaceDim, color=tuple(color), label=label)
+        
         sequence = []
         subspaceDim = []
+        
 
     ax = plt.gca()
     ax.set_facecolor('gray')
     plt.title('Reachability')   
-    plt.grid(True)  
+    plt.grid(False)  
     plt.plot(np.arange(len(data)), [threshold] * len(data), '--', color='red')
-    plt.xlabel('id')
-    plt.ylabel('subspace dimensionality')
+    plt.xticks([]) # remove x axis labels - too much information
+    plt.xlabel('datapoints')
+    plt.ylabel('subspace weighted distance')
     plt.legend()
-
     plt.show()
 
 ##################################################
 
 #TODO
-def process_csv(input_filename):
+def process_csv(input_filename, sep=" ", input_filename_labels=""):
     """
     simple function to read csv files, save X and y
     can be adapted to use MinMax preprocessing to scale each dimension from 0 to 1
-    """
-    data = np.genfromtxt(input_filename, delimiter=' ',dtype='str')
-    X = data[:,:-1].astype(float) # exclude last column --> labels
-    y = data[:,-1] # labels
+    """    
+    if input_filename_labels!="":
+        data = np.genfromtxt(input_filename, delimiter=sep,dtype='str')
+        X = data.astype(float) 
+        labels = np.genfromtxt(input_labels, delimiter=sep,dtype='str')
+        y = labels.astype(int) 
+    else: # take labels from the last column
+        data = np.genfromtxt(input_filename, delimiter=sep,dtype='str')
+        X = data[:,:-1].astype(float) # exclude last column --> labels
+        y = data[:,-1] # labels
     
     # we may or may not need this later...
     #     min_max_scaler = preprocessing.MinMaxScaler()
