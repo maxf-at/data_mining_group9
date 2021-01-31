@@ -9,62 +9,30 @@ from sklearn.utils.validation import check_is_fitted
 from grakel import Kernel, Graph
 from numpy import zeros, einsum
 import numpy as np
-from tudataset.tud_benchmark.auxiliarymethods import datasets as dp, kernel_evaluation
-from tudataset.tud_benchmark.auxiliarymethods import auxiliary_methods as aux
 
-class NodeLabelKernel(Kernel):
-    """Vertex Histogram kernel as found in :cite:`Sugiyama2015NIPS`
+"""
+This file has all the kernels defined. Notice we used Grakel library to make our way of generating kernels more structural.
+Based on the Grakel tutorial: https://ysig.github.io/GraKeL/0.1a8/documentation/creating_kernels.html
+"""
 
-    Parameters
-    ----------
-    None.
-
-    Attributes
-    ----------
-    None.
-
-    """
+class VertexHistogramLinearKernel(Kernel):
+    """Vertex Histogram kernel as found in :cite:`Sugiyama2015NIPS`"""
 
     def __init__(self,
                  n_jobs=5,
                  verbose=False,
                  normalize=False,
-                 # kernel_param_1=kernel_param_1_default,
-                 # ...
-                 # kernel_param_n=kernel_param_n_default,
                  ):
+
         """Initialise an `odd_sth` kernel."""
-
-        # Add new parameters
-        #self._valid_parameters |= new_parameters
-
-        super(NodeLabelKernel, self).__init__(n_jobs=n_jobs, verbose=verbose, normalize=normalize)
-
-        # Get parameters and check the new ones
-        # @for i=1 to num_new_parameters
-        #   self.kernel_param_i = kernel_param_i
-
-        # self.initialized_.update({
-        #    param_needing_initialization_1 : False
-        #             ...
-        #    param_needing_initialization_m : False
-        # })
+        super(VertexHistogramLinearKernel, self).__init__(n_jobs=n_jobs, verbose=verbose, normalize=normalize)
 
     def initialize_(self):
         """Initialize all transformer arguments, needing initialization."""
         if not self.initialized_["n_jobs"]:
-            # n_jobs is not used in this kernel
-            # numpy utilises low-level parallelization for calculating matrix operations
             if self.n_jobs is not None:
                 warnings.warn('no implemented parallelization for VertexHistogram')
             self.initialized_["n_jobs"] = True
-
-        # for i=1 .. m
-        #     if not self.initialized_["param_needing_initialization_i"]:
-        #         # Apply checks (raise ValueError or TypeError accordingly)
-        #         # calculate derived fields stored on self._derived_field_ia .. z
-        #         self.initialized_["param_needing_initialization_i"] = True
-
 
     def parse_input(self, X):
         """Parse and check the given input for vertex kernel.
@@ -143,6 +111,140 @@ class NodeLabelKernel(Kernel):
                 raise ValueError('parsed input is empty')
 
             return features
+
+    def _calculate_kernel_matrix(self, Y=None):
+        """Calculate the kernel matrix given a target_graph and a kernel.
+
+        Each a matrix is calculated between all elements of Y on the rows and
+        all elements of X on the columns.
+
+        Parameters
+        ----------
+        Y : np.array, default=None
+            The array between samples and features.
+
+        Returns
+        -------
+        K : numpy array, shape = [n_targets, n_inputs]
+            The kernel matrix: a calculation between all pairs of graphs
+            between targets and inputs. If Y is None targets and inputs
+            are the taken from self.X. Otherwise Y corresponds to targets
+            and self.X to inputs.
+
+        """
+        if Y is None:
+
+            K = self.X.dot(self.X.T)
+        else:
+            K = Y[:, :self.X.shape[1]].dot(self.X.T)
+        return K
+
+    def diagonal(self):
+        """Calculate the kernel matrix diagonal of the fitted data.
+
+        Returns
+        -------
+        X_diag : np.array
+            The diagonal of the kernel matrix, of the fitted. This consists
+            of each element calculated with itself.
+        """
+        # Check is fit had been called
+        check_is_fitted(self, ['X', '_Y'])
+        try:
+            check_is_fitted(self, ['_X_diag'])
+        except NotFittedError:
+            # Calculate diagonal of X
+            self._X_diag = einsum('ij,ij->i', self.X, self.X)
+
+        Y_diag = einsum('ij,ij->i', self._Y, self._Y)
+        return self._X_diag, Y_diag
+
+class VertexHistogramKernelModified(Kernel):
+    """Vertex Histogram kernel as found in :cite:`Sugiyama2015NIPS`"""
+
+    def __init__(self,
+                 n_jobs=5,
+                 verbose=False,
+                 normalize=False,
+                 ):
+        """Initialise an `odd_sth` kernel."""
+
+
+        super(VertexHistogramKernelModified, self).__init__(n_jobs=n_jobs, verbose=verbose, normalize=normalize)
+
+    def initialize_(self):
+        """Initialize all transformer arguments, needing initialization."""
+        if not self.initialized_["n_jobs"]:
+            # n_jobs is not used in this kernel
+            # numpy utilises low-level parallelization for calculating matrix operations
+            if self.n_jobs is not None:
+                warnings.warn('no implemented parallelization for VertexHistogram')
+            self.initialized_["n_jobs"] = True
+
+
+    def parse_input(self, X):
+        """Parse and check the given input for vertex kernel.
+
+        Parameters
+        ----------
+        X : iterable
+            For the input to pass the test, we must have:
+            Each element must be an iterable with at most three features and at
+            least one. The first that is obligatory is a valid graph structure
+            (adjacency matrix or edge_dictionary) while the second is
+            node_labels and the third edge_labels (that fitting the given graph
+            format).
+
+        Returns
+        -------
+        out : np.array, shape=(len(X), n_labels)
+            A numpy array for frequency (cols) histograms for all Graphs (rows).
+
+        """
+        if not isinstance(X, Iterable):
+            raise TypeError('input must be an iterable\n')
+        else:
+            attribute_vector = self.generate_attribute_histogram(X)
+
+            qunatile_list = []
+            for q in np.linspace(0, 1, 50):
+                qunatile_list.append(np.quantile(attribute_vector, q))
+
+            features = self.categorize_attribute_data(X, qunatile_list)
+            return features
+
+    def categorize_attribute_data(self, X, quantiles):
+        SSE_count = 1
+        features = np.zeros(shape=(600, 49))
+        for i in range(0, len(X)):
+            attributes_list = []
+            for ss in range(0, len(X[i][1])):
+                attributes_list.append(X[i][1][SSE_count])
+                SSE_count += 1
+
+            # categorizing based on quantiles
+            vector = []
+
+            for q, q_val in enumerate(quantiles):
+                if (q == 49):
+                    break
+                q_count = len([i for i in attributes_list if (i >= q_val and i <= quantiles[q + 1])])
+                vector.append(q_count)
+
+            features[i] = vector
+
+        return features
+
+    def generate_attribute_histogram(self, X):
+        SSE_count = 1
+        attribute_vector = []
+        for i in range(0, len(X)):
+            for ss in range(0, len(X[i][1])):
+                attribute_val = X[i][1][SSE_count]
+                attribute_vector.append(attribute_val)
+                SSE_count += 1
+
+        return attribute_vector
 
     def _calculate_kernel_matrix(self, Y=None):
         """Calculate the kernel matrix given a target_graph and a kernel.
